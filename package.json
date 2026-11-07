@@ -1,0 +1,13 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Place your assets in the following directories: - **Resume/CV**: Place PDF/DOCX into `assets/documents/` (e.g. `resume.pdf`) - **Profile Photo**: Place your headshot into `assets/images/` (e.g. `photo.png` or `avatar.jpg`) - **Data**: Review or update `data/profile.json` (auto-extracted from your hackathons)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

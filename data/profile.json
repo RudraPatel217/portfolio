@@ -1,0 +1,67 @@
+{
+  "name": "Rudra Patel",
+  "title": "Full-Stack & AI Systems Engineer",
+  "email": "rj423513@gmail.com",
+  "github": "https://github.com/RudraPatel217",
+  "linkedin": "https://www.linkedin.com/in/rudrapatel217/",
+  "unstop": "https://unstop.com/u/rudrapat96265",
+  "otherProfiles": {},
+  "location": "India",
+  "bio": "Passionate Full-Stack & AI Engineer specializing in autonomous multi-agent systems, explainable AI, geospatial data platforms, and enterprise solutions. Hackathon finalist and builder of high-performance applications with React, Next.js, FastAPI, and Docker.",
+  "skills": {
+    "frontend": ["React 19", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "MapLibre GL JS"],
+    "backend": ["Python", "FastAPI", "PostgreSQL", "Supabase", "PostGIS", "MinIO / S3", "REST APIs"],
+    "ai_ml": ["NVIDIA Nemotron", "XGBoost", "SHAP (Explainable AI)", "Multi-Agent Systems", "Prompt Engineering"],
+    "devops_tools": ["Docker", "Git", "GitHub Actions", "Vercel", "Linux", "Postman"]
+  },
+  "projects": [
+    {
+      "title": "DevRescue AI",
+      "tagline": "Autonomous Bug Investigation & Repair Console",
+      "description": "Multi-agent cyber-console that investigates and repairs software bugs autonomously with deep code analysis and ML risk scoring.",
+      "techStack": ["FastAPI", "React 19", "NVIDIA Nemotron-3.5", "XGBoost", "Docker"],
+      "demoUrl": "https://dev-rescue-ai.vercel.app",
+      "githubUrl": "https://github.com/RudraPatel217/DevRescue-AI-"
+    },
+    {
+      "title": "BhuSetu",
+      "tagline": "Real-Time National Land Acquisition & Geospatial Management",
+      "description": "High-performance geospatial platform streamlining infrastructure land acquisition, cadastral parcel mapping, and compensation workflows.",
+      "techStack": ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "MapLibre GL", "FastAPI", "Supabase PostGIS", "MinIO"],
+      "demoUrl": "",
+      "githubUrl": "https://github.com/Jenil-Mistry/BhuSetu"
+    },
+    {
+      "title": "ThreatVision",
+      "tagline": "Explainable AI (XAI) Malware Detection & Threat Intelligence",
+      "description": "Cybersecurity intelligence platform combining ML detection with SHAP explainability to reveal exactly why and how files are classified as threats.",
+      "techStack": ["FastAPI", "React 18", "Vite", "Tailwind CSS", "XGBoost", "SHAP", "Docker"],
+      "demoUrl": "",
+      "githubUrl": ""
+    },
+    {
+      "title": "AssetFlow",
+      "tagline": "Enterprise Asset & Resource Management ERP",
+      "description": "Built for Odoo Hackathon (Team Terminal). Streamlines physical asset lifecycles, shared resource bookings, and cross-department allocation.",
+      "techStack": ["Full-Stack ERP", "Clean Architecture", "Role-based Workflows"],
+      "demoUrl": "",
+      "githubUrl": "https://github.com/Darshilmodi15/odoo-hackathon---AssetFlow"
+    },
+    {
+      "title": "TechFusion SafeSphere",
+      "tagline": "Intelligent Transit Safety & Real-Time Telemetry Dashboard",
+      "description": "Glassmorphic emergency safety suite featuring interactive SOS countdown, synthesized audio siren, voice guardian, safe-haven routing, and live telemetry streaming.",
+      "techStack": ["JavaScript", "Web Audio API", "Web Speech API", "Telemetry Streaming", "Tailwind CSS"],
+      "demoUrl": "https://koushik2024-code.github.io/TechFusion-v2v/",
+      "githubUrl": "https://github.com/koushik2024-code/TechFusion-v2v"
+    }
+  ],
+  "experience": [],
+  "education": [],
+  "achievements": [
+    "Odoo Hackathon Contender (Team Terminal)",
+    "Tech Eximius Hackathon - ThreatVision",
+    "HackX Prototype Innovator"
+  ]
+}
+
