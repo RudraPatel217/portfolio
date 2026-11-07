@@ -29,6 +29,8 @@
 
         this.clock = new THREE.Clock();
         this.mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
+        this.scrollY = 0;
+        this.targetScrollY = window.pageYOffset || 0;
         this.currentMode = 'neural'; // 'neural', 'galaxy', 'matrix'
         this.particleCount = window.innerWidth < 768 ? 800 : 1800;
 
@@ -244,6 +246,10 @@
           }
         });
 
+        window.addEventListener('scroll', () => {
+          this.targetScrollY = window.pageYOffset;
+        });
+
         window.addEventListener('mousemove', (e) => {
           this.mouse.targetX = (e.clientX / window.innerWidth - 0.5) * 2;
           this.mouse.targetY = (e.clientY / window.innerHeight - 0.5) * 2;
@@ -290,6 +296,15 @@
         // Smooth Mouse Lerp
         this.mouse.x += (this.mouse.targetX - this.mouse.x) * 0.05;
         this.mouse.y += (this.mouse.targetY - this.mouse.y) * 0.05;
+
+        // Smooth Scroll Interpolation for Camera Choreography
+        this.scrollY += (this.targetScrollY - this.scrollY) * 0.05;
+        const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+        const scrollProgress = Math.min(Math.max(this.scrollY / maxScroll, 0), 1);
+
+        this.camera.position.z = 8 + Math.sin(scrollProgress * Math.PI) * 2;
+        this.camera.position.y = -scrollProgress * 3;
+        this.camera.rotation.z = Math.sin(scrollProgress * Math.PI * 2) * 0.04;
 
         // Rotate Neural Core
         if (this.coreGroup && this.coreGroup.visible) {

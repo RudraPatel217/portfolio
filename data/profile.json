@@ -1,67 +1,141 @@
 {
   "name": "Rudra Patel",
   "title": "Full-Stack & AI Systems Engineer",
+  "tagline": "Building Intelligent Solutions with AI & Technology",
   "email": "rj423513@gmail.com",
+  "phone": "+91 63531 80218",
+  "location": "Ahmedabad, Gujarat, India",
   "github": "https://github.com/RudraPatel217",
   "linkedin": "https://www.linkedin.com/in/rudrapatel217/",
   "unstop": "https://unstop.com/u/rudrapat96265",
-  "otherProfiles": {},
-  "location": "India",
-  "bio": "Passionate Full-Stack & AI Engineer specializing in autonomous multi-agent systems, explainable AI, geospatial data platforms, and enterprise solutions. Hackathon finalist and builder of high-performance applications with React, Next.js, FastAPI, and Docker.",
+  "education": [
+    {
+      "degree": "B.Tech in Computer Science & Engineering (AI & ML)",
+      "institution": "Adani University, Gujarat",
+      "period": "2025 – 2029",
+      "score": "CGPA: 8.22 / 10 | JEE Mains: 93.27%ile",
+      "status": "Current: 2nd Year"
+    },
+    {
+      "degree": "Higher Secondary (Class XII, Science)",
+      "institution": "Parth School of Science & Tech.",
+      "period": "2025",
+      "score": "84.87 Percentile"
+    },
+    {
+      "degree": "Secondary School Certificate (Class X)",
+      "institution": "Ambe School",
+      "period": "2022",
+      "score": "89.77 Percentile"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Software Engineering & Web Development Intern",
+      "company": "SATVAWEB",
+      "period": "June 2026 – July 2026",
+      "type": "Remote / Work from Home",
+      "highlights": [
+        "Website Performance & SEO Analyzer: Engineered automated diagnostic utilities using Python and JavaScript to audit Core Web Vitals, page speed metrics, and on-page technical health indicators.",
+        "Automated Data Pipelines: Built Python scripts for automated Excel report generation and metric aggregation, eliminating hours of manual documentation weekly.",
+        "Activity Tracking System: Designed an employee workflow tracking platform to monitor project milestones and compute team productivity metrics."
+      ]
+    }
+  ],
   "skills": {
-    "frontend": ["React 19", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "MapLibre GL JS"],
-    "backend": ["Python", "FastAPI", "PostgreSQL", "Supabase", "PostGIS", "MinIO / S3", "REST APIs"],
-    "ai_ml": ["NVIDIA Nemotron", "XGBoost", "SHAP (Explainable AI)", "Multi-Agent Systems", "Prompt Engineering"],
-    "devops_tools": ["Docker", "Git", "GitHub Actions", "Vercel", "Linux", "Postman"]
+    "languages": ["Python", "JavaScript (ES6+)", "C", "SQL"],
+    "web_backend": ["FastAPI", "Flask", "Streamlit", "RESTful APIs", "HTML5", "CSS3", "PostgreSQL", "Next.js", "React 19"],
+    "ai_automation": ["Gemini API / Google AI Studio", "LLM Prompt Engineering", "NVIDIA Nemotron", "XGBoost", "SHAP (Explainable AI)", "Multi-Agent Systems", "Web Scraping", "Data Extraction"],
+    "developer_tools": ["Git", "GitHub", "VS Code", "Linux Basics", "Docker", "PostGIS", "MapLibre GL"]
   },
   "projects": [
     {
       "title": "DevRescue AI",
-      "tagline": "Autonomous Bug Investigation & Repair Console",
-      "description": "Multi-agent cyber-console that investigates and repairs software bugs autonomously with deep code analysis and ML risk scoring.",
-      "techStack": ["FastAPI", "React 19", "NVIDIA Nemotron-3.5", "XGBoost", "Docker"],
+      "category": "ai fullstack",
+      "badge": "01 // AUTONOMOUS CYBER-CONSOLE",
+      "tagline": "Autonomous Bug Investigation & Repair Platform",
+      "description": "Multi-agent engineering console providing continuous software reliability. Automates repository log ingestion, AST-based vulnerability analysis with NVIDIA Nemotron-3.5, and generates real-time PR repairs alongside an XGBoost code-risk classification model.",
+      "techStack": ["React 19", "FastAPI", "NVIDIA Nemotron-3.5", "XGBoost", "Docker", "GitHub API"],
       "demoUrl": "https://dev-rescue-ai.vercel.app",
       "githubUrl": "https://github.com/RudraPatel217/DevRescue-AI-"
     },
     {
       "title": "BhuSetu",
-      "tagline": "Real-Time National Land Acquisition & Geospatial Management",
-      "description": "High-performance geospatial platform streamlining infrastructure land acquisition, cadastral parcel mapping, and compensation workflows.",
-      "techStack": ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "MapLibre GL", "FastAPI", "Supabase PostGIS", "MinIO"],
+      "category": "fullstack",
+      "badge": "02 // GEOSPATIAL GIS",
+      "tagline": "National Land Acquisition & Management Platform",
+      "description": "High-performance geospatial infrastructure platform streamlining cadastral parcel mapping, statutory compensation workflows, and boundary layer management. Powered by MapLibre GL JS, PostgreSQL/PostGIS spatial extensions, and zero-ORM FastAPI endpoints.",
+      "techStack": ["Next.js", "React 19", "MapLibre GL", "PostGIS", "Supabase", "MinIO S3", "Docker"],
       "demoUrl": "",
       "githubUrl": "https://github.com/Jenil-Mistry/BhuSetu"
     },
     {
       "title": "ThreatVision",
-      "tagline": "Explainable AI (XAI) Malware Detection & Threat Intelligence",
-      "description": "Cybersecurity intelligence platform combining ML detection with SHAP explainability to reveal exactly why and how files are classified as threats.",
-      "techStack": ["FastAPI", "React 18", "Vite", "Tailwind CSS", "XGBoost", "SHAP", "Docker"],
+      "category": "ai hackathon",
+      "badge": "03 // CYBERSECURITY XAI",
+      "tagline": "Explainable AI (XAI) Malware Detection Platform",
+      "description": "Cybersecurity threat intelligence suite. Pairs high-accuracy XGBoost malware classification with SHAP waterfall feature attributions to provide security analysts with transparent, visual explanations of suspicious binary signals.",
+      "techStack": ["FastAPI", "React 18", "Vite", "XGBoost", "SHAP", "Docker"],
+      "demoUrl": "",
+      "githubUrl": ""
+    },
+    {
+      "title": "Domain Intelligence & SEO Auditor",
+      "category": "fullstack ai",
+      "badge": "04 // DIAGNOSTIC TOOL",
+      "tagline": "End-to-End Website Diagnostic & DOM Inspection Tool",
+      "description": "Developed diagnostic tool auditing critical SEO tags, canonical URLs, Open Graph schemas, structured data, internal links, image alt text, and page load latency with JavaScript-rendered DOM inspection and bot-protection / WAF detection routines.",
+      "techStack": ["Python", "Streamlit", "REST APIs", "DOM Inspection", "SEO Analysis"],
       "demoUrl": "",
       "githubUrl": ""
     },
     {
       "title": "AssetFlow",
-      "tagline": "Enterprise Asset & Resource Management ERP",
-      "description": "Built for Odoo Hackathon (Team Terminal). Streamlines physical asset lifecycles, shared resource bookings, and cross-department allocation.",
-      "techStack": ["Full-Stack ERP", "Clean Architecture", "Role-based Workflows"],
+      "category": "fullstack hackathon",
+      "badge": "05 // ENTERPRISE ERP",
+      "tagline": "Enterprise Asset & Resource Management System",
+      "description": "Developed for the Odoo Hackathon with Team Terminal. Streamlines physical asset lifecycles, shared resource bookings, and cross-department allocation with clean architecture and role-based access control (RBAC).",
+      "techStack": ["Enterprise ERP", "Clean Architecture", "RBAC", "State Machines", "Team Terminal"],
       "demoUrl": "",
       "githubUrl": "https://github.com/Darshilmodi15/odoo-hackathon---AssetFlow"
     },
     {
-      "title": "TechFusion SafeSphere",
-      "tagline": "Intelligent Transit Safety & Real-Time Telemetry Dashboard",
-      "description": "Glassmorphic emergency safety suite featuring interactive SOS countdown, synthesized audio siren, voice guardian, safe-haven routing, and live telemetry streaming.",
-      "techStack": ["JavaScript", "Web Audio API", "Web Speech API", "Telemetry Streaming", "Tailwind CSS"],
+      "title": "SafeSphere",
+      "category": "fullstack hackathon",
+      "badge": "06 // SAFETY & TELEMETRY",
+      "tagline": "Women's Safety & Rapid SOS Platform",
+      "description": "Safety-focused web application integrating one-touch SOS dispatch, real-time geolocation sharing, Web Audio dual-tone synthesized sirens, Web Speech voice keyword triggers, and trusted emergency contacts under the TechFusion / Vibe 2 Vision hackathon.",
+      "techStack": ["JavaScript", "Geolocation APIs", "Web Audio API", "Web Speech API", "Tailwind CSS"],
       "demoUrl": "https://koushik2024-code.github.io/TechFusion-v2v/",
       "githubUrl": "https://github.com/koushik2024-code/TechFusion-v2v"
+    },
+    {
+      "title": "Air Pollution & Environmental AQI Intelligence",
+      "category": "ai hackathon",
+      "badge": "07 // IOT & DATA SCIENCE",
+      "tagline": "Environmental Monitoring & AQI Visualizer",
+      "description": "Environmental monitoring dashboard synthesizing historical atmospheric parameters and real-time Air Quality Index (AQI) readings with predictive pollution trend visualizers. Qualified as a national hackathon finalist.",
+      "techStack": ["Python", "Data Analysis", "Predictive Analytics", "Hackathon Finalist"],
+      "demoUrl": "",
+      "githubUrl": ""
     }
   ],
-  "experience": [],
-  "education": [],
-  "achievements": [
-    "Odoo Hackathon Contender (Team Terminal)",
-    "Tech Eximius Hackathon - ThreatVision",
-    "HackX Prototype Innovator"
+  "hackathons": [
+    {
+      "title": "Smart India Hackathon (SIH 2026)",
+      "achievement": "Cleared university-level internal selection round for building scalable technological solutions."
+    },
+    {
+      "title": "Tech Eximius Hackathon",
+      "achievement": "Advanced through prototype presentation and technical evaluation rounds to the finals with ThreatVision."
+    },
+    {
+      "title": "Odoo Hackathon",
+      "achievement": "Enterprise ERP solution AssetFlow with Team Terminal."
+    },
+    {
+      "title": "Speaker & Recognition",
+      "achievement": "Presented technical talk on 'Artificial Intelligence and Society' at Adani University; recipient of GitHub Student Developer Pack."
+    }
   ]
 }
-

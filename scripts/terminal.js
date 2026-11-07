@@ -46,9 +46,14 @@ Builder of DevRescue AI (NVIDIA Nemotron), BhuSetu (PostGIS GIS), and ThreatVisi
   &bull; LinkedIn: <a href="https://www.linkedin.com/in/rudrapatel217/" target="_blank" style="color:#38bdf8">linkedin.com/in/rudrapatel217</a>
   &bull; Unstop: <a href="https://unstop.com/u/rudrapat96265" target="_blank" style="color:#38bdf8">unstop.com/u/rudrapat96265</a>`,
 
+    experience: `Work & Education:
+  &bull; <span style="color:#38bdf8;">SATVAWEB</span> (June 2026 – July 2026) — Software Engineering & Web Development Intern (Remote)
+  &bull; <span style="color:#38bdf8;">Adani University, Gujarat</span> — B.Tech in CSE (AI & ML), CGPA: 8.22 / 10 (2025–2029)
+  &bull; JEE Mains: 93.27%ile | Class XII: 84.87%ile | Class X: 89.77%ile`,
+
     resume: () => {
-      window.open('assets/documents/Rudra_Patel_Resume.html', '_blank');
-      return 'Opening Rudra_Patel_Resume in a new tab...';
+      window.open('assets/documents/Rudra_Patel_Resume.pdf', '_blank');
+      return 'Opening official Rudra_Patel_Resume.pdf...';
     },
 
     'sudo hire': () => {

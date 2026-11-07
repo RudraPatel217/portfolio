@@ -50,8 +50,16 @@ const PROJECT_DETAILS = {
     tags: ["FastAPI", "React 18", "Vite", "XGBoost", "SHAP", "Docker", "Tailwind CSS"],
     links: []
   },
+  "domain intelligence & seo auditor": {
+    badge: "DIAGNOSTIC SUITE // 04",
+    title: "Domain Intelligence & SEO Auditor",
+    tagline: "End-to-End Website Diagnostic & DOM Inspection Suite",
+    desc: "An end-to-end website diagnostic tool auditing critical SEO tags, canonical URLs, Open Graph schemas, structured data, internal links, image alt text, and page load latency. Features JavaScript-rendered DOM inspection and bot-protection / WAF detection routines with actionable multi-format optimization export capabilities.",
+    tags: ["Python", "Streamlit", "REST APIs", "DOM Inspection", "WAF Detection", "SEO Analytics"],
+    links: []
+  },
   "assetflow": {
-    badge: "ENTERPRISE ERP // 04",
+    badge: "ENTERPRISE ERP // 05",
     title: "AssetFlow",
     tagline: "Enterprise Asset & Resource Management System",
     desc: "Built for the Odoo Hackathon by Team Terminal. AssetFlow unifies physical equipment tracking, room/resource reservations, and cross-department custody audits into a decoupled, clean-architecture ERP. Enforces strict role-based access control (RBAC), finite state machine asset lifecycles, and audit logging to eliminate spreadsheet inefficiencies.",
@@ -61,7 +69,7 @@ const PROJECT_DETAILS = {
     ]
   },
   "techfusion safesphere": {
-    badge: "SAFETY & TELEMETRY // 05",
+    badge: "SAFETY & TELEMETRY // 06",
     title: "TechFusion SafeSphere",
     tagline: "Transit Safety & Real-Time Telemetry Dashboard",
     desc: "SafeSphere is an intelligent personal safety dashboard designed for transit and night travel. Combines real-time location telemetry streams with motion-driven routing that maps safe havens. Includes an interactive SOS countdown, a Web Audio dual-tone synthesized alarm siren, and Web Speech API voice guardian triggers.",
@@ -71,8 +79,16 @@ const PROJECT_DETAILS = {
       { text: "GitHub Repository ↗", href: "https://github.com/koushik2024-code/TechFusion-v2v" }
     ]
   },
+  "air pollution & aqi intelligence": {
+    badge: "DATA SCIENCE & IOT // 07",
+    title: "Air Pollution & AQI Intelligence",
+    tagline: "Environmental Monitoring & Atmospheric Visualizer",
+    desc: "Built an environmental monitoring dashboard synthesizing historical atmospheric parameters and real-time Air Quality Index (AQI) readings. Qualified as a national hackathon finalist by presenting predictive pollution trend visualizers and community advisory metrics.",
+    tags: ["Python", "Data Analysis", "Predictive Analytics", "Hackathon Finalist"],
+    links: []
+  },
   "hackx prototype": {
-    badge: "HARDWARE TELEMETRY // 06",
+    badge: "HARDWARE TELEMETRY // 08",
     title: "HackX Prototype",
     tagline: "Environmental & Air Quality Telemetry",
     desc: "An embedded hardware telemetry prototype monitoring environmental particulate matter and atmospheric shifts. Integrates real-time sensor polling, threshold alerting algorithms, and modular reporting dashboards.",

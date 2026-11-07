@@ -61,6 +61,38 @@ body {
   overflow-x: hidden;
 }
 
+/* Scroll Reading Progress Bar */
+#scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-cyan), #ffffff);
+  box-shadow: 0 0 12px var(--accent-cyan);
+  z-index: 10001;
+  transition: width 0.08s linear;
+}
+
+/* Footer Status & Live Clock */
+.footer-live-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.footer-live-status .live-pulse-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulse-glow 2s infinite;
+}
+
 /* 3D WebGL Background Canvas */
 #webgl-canvas {
   position: fixed;
