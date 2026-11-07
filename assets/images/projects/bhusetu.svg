@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bsBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1210"/>
+      <stop offset="100%" stop-color="#10221c"/>
+    </linearGradient>
+    <linearGradient id="mapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1815"/>
+      <stop offset="100%" stop-color="#142b22"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" rx="16" fill="url(#bsBg)"/>
+  <rect width="800" height="480" rx="16" fill="none" stroke="#234a3b" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect width="800" height="44" rx="16" fill="#0b1713"/>
+  <rect y="43" width="800" height="1" fill="#19362b"/>
+  <circle cx="28" cy="22" r="5.5" fill="#ef4444"/>
+  <circle cx="46" cy="22" r="5.5" fill="#eab308"/>
+  <circle cx="64" cy="22" r="5.5" fill="#22c55e"/>
+
+  <rect x="220" y="10" width="360" height="24" rx="6" fill="#12261e" stroke="#244a3b" stroke-width="1"/>
+  <text x="245" y="26" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500">BhuSetu // National GIS Cadastral Engine</text>
+  <circle cx="234" cy="22" r="3" fill="#10b981"/>
+
+  <!-- Top Title Strip -->
+  <g transform="translate(32, 64)">
+    <text x="0" y="22" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="700">BhuSetu &mdash; National Geospatial Land GIS</text>
+    <text x="0" y="42" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Next.js &bull; MapLibre GL JS Vector Tiles &bull; PostGIS Spatial Queries &bull; MinIO S3 Docs</text>
+
+    <!-- Status pill -->
+    <rect x="540" y="4" width="196" height="40" rx="8" fill="#133327" stroke="#34d399" stroke-width="1"/>
+    <text x="556" y="24" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">POSTGIS SPATIAL</text>
+    <text x="556" y="38" fill="#a7f3d0" font-family="'Inter', sans-serif" font-size="10">Vector Boundary Verified</text>
+  </g>
+
+  <!-- Left: Vector Map Canvas Mockup -->
+  <g transform="translate(32, 130)">
+    <rect width="430" height="318" rx="10" fill="url(#mapGrad)" stroke="#1d4234" stroke-width="1"/>
+    
+    <!-- Map Grid Lines -->
+    <path d="M 0,60 L 430,60 M 0,120 L 430,120 M 0,180 L 430,180 M 0,240 L 430,240" stroke="#16382b" stroke-width="1" stroke-dasharray="4"/>
+    <path d="M 80,0 L 80,318 M 160,0 L 160,318 M 240,0 L 240,318 M 320,0 L 320,318" stroke="#16382b" stroke-width="1" stroke-dasharray="4"/>
+
+    <!-- Cadastral Parcels Polygons -->
+    <polygon points="60,80 170,50 210,130 90,150" fill="#134e38" fill-opacity="0.4" stroke="#10b981" stroke-width="1.5"/>
+    <text x="110" y="105" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="10">P-104</text>
+
+    <polygon points="175,52 310,40 330,120 215,128" fill="#134e38" fill-opacity="0.3" stroke="#10b981" stroke-width="1.5"/>
+    <text x="245" y="90" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="10">P-105</text>
+
+    <!-- Selected Active Parcel with Glow -->
+    <polygon points="95,155 230,135 270,260 120,275" fill="#047857" fill-opacity="0.6" stroke="#34d399" stroke-width="2.5"/>
+    <circle cx="180" cy="200" r="4" fill="#ffffff"/>
+    <text x="145" y="220" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">PARCEL #4409</text>
+    <text x="155" y="235" fill="#a7f3d0" font-family="'JetBrains Mono', monospace" font-size="10">14,250 m²</text>
+
+    <polygon points="235,140 360,130 390,240 275,255" fill="#134e38" fill-opacity="0.3" stroke="#10b981" stroke-width="1.5"/>
+    <text x="310" y="195" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="10">P-107</text>
+
+    <!-- Map Zoom Controls -->
+    <rect x="380" y="20" width="30" height="60" rx="4" fill="#0d241c" stroke="#244f3e" stroke-width="1"/>
+    <text x="390" y="42" fill="#ffffff" font-size="16" font-weight="700">+</text>
+    <line x1="380" y1="50" x2="410" y2="50" stroke="#244f3e"/>
+    <text x="392" y="70" fill="#ffffff" font-size="16" font-weight="700">&minus;</text>
+  </g>
+
+  <!-- Right: Parcel Details & Compensation HUD -->
+  <g transform="translate(480, 130)">
+    <rect width="288" height="318" rx="10" fill="#0f221b" stroke="#1d4234" stroke-width="1"/>
+    <text x="20" y="28" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">PARCEL AUDIT // GUJ-AHM-4409</text>
+    
+    <g transform="translate(20, 52)">
+      <text x="0" y="14" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Cadastral Area:</text>
+      <text x="130" y="14" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">14,250 sq. meters</text>
+
+      <text x="0" y="40" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Survey Number:</text>
+      <text x="130" y="40" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">Block 102/A</text>
+
+      <text x="0" y="66" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Spatial Validity:</text>
+      <text x="130" y="66" fill="#10b981" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">100% (Topology OK)</text>
+
+      <text x="0" y="92" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">MinIO Deeds:</text>
+      <text x="130" y="92" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">4 PDFs Indexed</text>
+    </g>
+
+    <line x1="20" y1="180" x2="268" y2="180" stroke="#1b3d30" stroke-width="1"/>
+
+    <text x="20" y="206" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">STATUTORY COMPENSATION</text>
+    <rect x="20" y="218" width="248" height="42" rx="6" fill="#14362a" stroke="#255944" stroke-width="1"/>
+    <text x="32" y="244" fill="#34d399" font-family="'Plus Jakarta Sans', sans-serif" font-size="17" font-weight="800">&#8377; 4,82,50,000</text>
+    
+    <text x="20" y="285" fill="#a7f3d0" font-family="'Inter', sans-serif" font-size="10">Automated Direct Benefit Calculation</text>
+  </g>
+</svg>

@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c10"/>
+      <stop offset="100%" stop-color="#121622"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141824"/>
+      <stop offset="100%" stop-color="#181d2e"/>
+    </linearGradient>
+    <linearGradient id="mintGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#66e3d2"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="480" rx="16" fill="url(#bgGrad)"/>
+  <rect width="800" height="480" rx="16" fill="none" stroke="#262f45" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect width="800" height="44" rx="16" fill="#0d1017"/>
+  <rect y="43" width="800" height="1" fill="#202738"/>
+  <circle cx="28" cy="22" r="5.5" fill="#ef4444"/>
+  <circle cx="46" cy="22" r="5.5" fill="#eab308"/>
+  <circle cx="64" cy="22" r="5.5" fill="#22c55e"/>
+
+  <!-- URL Bar -->
+  <rect x="180" y="10" width="440" height="24" rx="6" fill="#141926" stroke="#252d40" stroke-width="1"/>
+  <text x="210" y="26" fill="#66e3d2" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500">https://website-analyser-rudra.streamlit.app</text>
+  <circle cx="198" cy="22" r="3" fill="#22c55e"/>
+
+  <!-- App Header -->
+  <g transform="translate(32, 64)">
+    <text x="0" y="24" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="700">Domain Intelligence &amp; SEO Auditor</text>
+    <text x="0" y="44" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Automated DOM Extraction, Core Web Vitals, Security Headers &amp; Heuristic Checks</text>
+
+    <!-- Target Domain Pill -->
+    <rect x="470" y="8" width="266" height="34" rx="8" fill="#151b2b" stroke="#38bdf8" stroke-width="1"/>
+    <text x="486" y="30" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="12">audit: enterprise-target.io</text>
+    <rect x="680" y="13" width="48" height="24" rx="5" fill="#38bdf8"/>
+    <text x="692" y="29" fill="#090b0e" font-family="'Inter', sans-serif" font-size="10" font-weight="700">SCAN</text>
+  </g>
+
+  <!-- Metrics Grid -->
+  <!-- Score 1: SEO Health -->
+  <g transform="translate(32, 134)">
+    <rect width="168" height="130" rx="10" fill="url(#cardGrad)" stroke="#222a3d" stroke-width="1"/>
+    <text x="16" y="28" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">OVERALL HEALTH</text>
+    <circle cx="84" cy="74" r="34" fill="none" stroke="#1e2638" stroke-width="6"/>
+    <circle cx="84" cy="74" r="34" fill="none" stroke="url(#mintGrad)" stroke-width="6" stroke-dasharray="213" stroke-dashoffset="21" stroke-linecap="round"/>
+    <text x="84" y="80" text-anchor="middle" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800">92%</text>
+    <text x="84" y="118" text-anchor="middle" fill="#66e3d2" font-family="'Inter', sans-serif" font-size="10" font-weight="600">PASSED ALL CHECKS</text>
+  </g>
+
+  <!-- Metric 2: Core Web Vitals -->
+  <g transform="translate(216, 134)">
+    <rect width="180" height="130" rx="10" fill="url(#cardGrad)" stroke="#222a3d" stroke-width="1"/>
+    <text x="16" y="28" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">CORE WEB VITALS</text>
+    
+    <text x="16" y="56" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="11">LCP: <tspan fill="#22c55e" font-weight="700">1.18s (Good)</tspan></text>
+    <rect x="16" y="62" width="148" height="4" rx="2" fill="#1e2638"/>
+    <rect x="16" y="62" width="128" height="4" rx="2" fill="#22c55e"/>
+
+    <text x="16" y="86" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="11">FID: <tspan fill="#22c55e" font-weight="700">12ms (Good)</tspan></text>
+    <rect x="16" y="92" width="148" height="4" rx="2" fill="#1e2638"/>
+    <rect x="16" y="92" width="140" height="4" rx="2" fill="#22c55e"/>
+
+    <text x="16" y="116" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="11">CLS: <tspan fill="#38bdf8" font-weight="700">0.012 (Stable)</tspan></text>
+  </g>
+
+  <!-- Metric 3: Security & WAF Diagnostics -->
+  <g transform="translate(412, 134)">
+    <rect width="356" height="130" rx="10" fill="url(#cardGrad)" stroke="#222a3d" stroke-width="1"/>
+    <text x="20" y="28" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">SECURITY &amp; HEADERS AUDIT</text>
+    
+    <g transform="translate(20, 44)">
+      <circle cx="6" cy="10" r="4" fill="#22c55e"/>
+      <text x="18" y="14" fill="#ffffff" font-family="'Inter', sans-serif" font-size="12">TLS 1.3 / Strict-Transport-Security</text>
+      <text x="260" y="14" fill="#22c55e" font-family="'JetBrains Mono', monospace" font-size="11">ACTIVE</text>
+    </g>
+
+    <g transform="translate(20, 72)">
+      <circle cx="6" cy="10" r="4" fill="#22c55e"/>
+      <text x="18" y="14" fill="#ffffff" font-family="'Inter', sans-serif" font-size="12">Content-Security-Policy (CSP)</text>
+      <text x="260" y="14" fill="#22c55e" font-family="'JetBrains Mono', monospace" font-size="11">VERIFIED</text>
+    </g>
+
+    <g transform="translate(20, 100)">
+      <circle cx="6" cy="10" r="4" fill="#38bdf8"/>
+      <text x="18" y="14" fill="#ffffff" font-family="'Inter', sans-serif" font-size="12">WAF Protection Heuristics</text>
+      <text x="260" y="14" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11">CLOUDFLARE</text>
+    </g>
+  </g>
+
+  <!-- Bottom Data Table: DOM Inspection Details -->
+  <g transform="translate(32, 280)">
+    <rect width="736" height="168" rx="10" fill="#0f131d" stroke="#1f2738" stroke-width="1"/>
+    
+    <rect width="736" height="32" rx="10" fill="#141a26"/>
+    <text x="24" y="21" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">TAG AUDIT</text>
+    <text x="220" y="21" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">STATUS</text>
+    <text x="360" y="21" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">OBSERVED VALUE</text>
+    <text x="640" y="21" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">HEURISTIC</text>
+
+    <!-- Row 1 -->
+    <text x="24" y="58" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">Canonical Tag</text>
+    <rect x="220" y="46" width="60" height="18" rx="4" fill="#163828"/>
+    <text x="232" y="59" fill="#22c55e" font-family="'Inter', sans-serif" font-size="10" font-weight="700">MATCH</text>
+    <text x="360" y="58" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">rel="canonical" self-referential</text>
+    <text x="640" y="58" fill="#66e3d2" font-family="'Inter', sans-serif" font-size="11">Optimal</text>
+
+    <!-- Row 2 -->
+    <text x="24" y="88" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">OpenGraph Schema</text>
+    <rect x="220" y="76" width="60" height="18" rx="4" fill="#163828"/>
+    <text x="226" y="89" fill="#22c55e" font-family="'Inter', sans-serif" font-size="10" font-weight="700">8 TAGS</text>
+    <text x="360" y="88" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">og:title, og:image, og:description, twitter:card</text>
+    <text x="640" y="88" fill="#66e3d2" font-family="'Inter', sans-serif" font-size="11">Complete</text>
+
+    <!-- Row 3 -->
+    <text x="24" y="118" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">Structured Data</text>
+    <rect x="220" y="106" width="70" height="18" rx="4" fill="#182c40"/>
+    <text x="226" y="119" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="10" font-weight="700">JSON-LD</text>
+    <text x="360" y="118" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">Schema.org/SoftwareApplication detected</text>
+    <text x="640" y="118" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="11">Valid</text>
+
+    <!-- Row 4 -->
+    <text x="24" y="148" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">Report Generation</text>
+    <rect x="220" y="136" width="60" height="18" rx="4" fill="#163828"/>
+    <text x="227" y="149" fill="#22c55e" font-family="'Inter', sans-serif" font-size="10" font-weight="700">READY</text>
+    <text x="360" y="148" fill="#cbd5e1" font-family="'JetBrains Mono', monospace" font-size="11">Forensic Excel XLSX report exported (28KB)</text>
+    <text x="640" y="148" fill="#66e3d2" font-family="'Inter', sans-serif" font-size="11">1-Click DL</text>
+  </g>
+</svg>

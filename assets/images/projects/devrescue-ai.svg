@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="drBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080e14"/>
+      <stop offset="100%" stop-color="#0f1a26"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" rx="16" fill="url(#drBg)"/>
+  <rect width="800" height="480" rx="16" fill="none" stroke="#1d3047" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect width="800" height="44" rx="16" fill="#09121c"/>
+  <rect y="43" width="800" height="1" fill="#1b2a3d"/>
+  <circle cx="28" cy="22" r="5.5" fill="#ef4444"/>
+  <circle cx="46" cy="22" r="5.5" fill="#eab308"/>
+  <circle cx="64" cy="22" r="5.5" fill="#22c55e"/>
+
+  <rect x="220" y="10" width="360" height="24" rx="6" fill="#101d2c" stroke="#223752" stroke-width="1"/>
+  <text x="245" y="26" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500">https://dev-rescue-ai.vercel.app [LIVE]</text>
+  <circle cx="232" cy="22" r="3" fill="#22c55e"/>
+
+  <!-- Top Info Strip -->
+  <g transform="translate(32, 64)">
+    <text x="0" y="22" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="700">DevRescue AI // Autonomous Bug Repair</text>
+    <text x="0" y="42" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Multi-Agent System &bull; NVIDIA Nemotron LLM &bull; AST Syntax Parser &bull; Automated PR Generation</text>
+
+    <!-- Multi-Agent Badge -->
+    <rect x="530" y="4" width="206" height="40" rx="8" fill="#102538" stroke="#38bdf8" stroke-width="1"/>
+    <text x="548" y="24" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">AGENT STATE: IDLE</text>
+    <text x="548" y="38" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="10">4 Orchestrated Micro-Agents</text>
+  </g>
+
+  <!-- Multi-Agent Pipeline Strip -->
+  <g transform="translate(32, 126)">
+    <rect width="736" height="54" rx="8" fill="#0c1622" stroke="#1d3047" stroke-width="1"/>
+    
+    <!-- Step 1 -->
+    <rect x="16" y="12" width="160" height="30" rx="6" fill="#12253b"/>
+    <circle cx="30" cy="27" r="4" fill="#22c55e"/>
+    <text x="42" y="31" fill="#ffffff" font-family="'Inter', sans-serif" font-size="11" font-weight="600">1. Log Ingestor</text>
+
+    <text x="186" y="32" fill="#38bdf8" font-size="14">&rarr;</text>
+
+    <!-- Step 2 -->
+    <rect x="204" y="12" width="160" height="30" rx="6" fill="#12253b"/>
+    <circle cx="218" cy="27" r="4" fill="#22c55e"/>
+    <text x="230" y="31" fill="#ffffff" font-family="'Inter', sans-serif" font-size="11" font-weight="600">2. AST Triager</text>
+
+    <text x="374" y="32" fill="#38bdf8" font-size="14">&rarr;</text>
+
+    <!-- Step 3 -->
+    <rect x="392" y="12" width="160" height="30" rx="6" fill="#163352" stroke="#38bdf8" stroke-width="1"/>
+    <circle cx="406" cy="27" r="4" fill="#38bdf8"/>
+    <text x="418" y="31" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="11" font-weight="700">3. Nemotron LLM</text>
+
+    <text x="562" y="32" fill="#38bdf8" font-size="14">&rarr;</text>
+
+    <!-- Step 4 -->
+    <rect x="580" y="12" width="140" height="30" rx="6" fill="#12253b"/>
+    <circle cx="594" cy="27" r="4" fill="#22c55e"/>
+    <text x="606" y="31" fill="#ffffff" font-family="'Inter', sans-serif" font-size="11" font-weight="600">4. GitHub PR</text>
+  </g>
+
+  <!-- Code Patch Diff View -->
+  <g transform="translate(32, 196)">
+    <rect width="736" height="252" rx="10" fill="#09111c" stroke="#1d3047" stroke-width="1"/>
+    <rect width="736" height="32" rx="10" fill="#0f1c2d"/>
+    <text x="20" y="21" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">PATCH // src/controllers/auth.controller.ts (Automated Bug Repair)</text>
+
+    <!-- Code line 1 -->
+    <text x="20" y="58" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="12">42 |  export async function verifyToken(req: Request, res: Response) {</text>
+
+    <!-- Line 2 (Vulnerable Code in Red) -->
+    <rect x="14" y="68" width="708" height="26" fill="#3b111a"/>
+    <text x="20" y="85" fill="#f87171" font-family="'JetBrains Mono', monospace" font-size="12">-       const token = req.headers['authorization']; // Unsanitized AST Token</text>
+
+    <!-- Line 3 (Repaired Code in Green) -->
+    <rect x="14" y="98" width="708" height="26" fill="#0f3322"/>
+    <text x="20" y="115" fill="#4ade80" font-family="'JetBrains Mono', monospace" font-size="12">+       const token = sanitizeBearerToken(req.headers['authorization'] ?? '');</text>
+
+    <!-- Line 4 -->
+    <text x="20" y="145" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="12">44 |      if (!token) return res.status(401).json({ error: 'Unauthorized' });</text>
+    <text x="20" y="170" fill="#64748b" font-family="'JetBrains Mono', monospace" font-size="12">45 |      const payload = await jwtService.verify(token);</text>
+
+    <!-- Footer Bar -->
+    <rect x="14" y="196" width="708" height="42" rx="6" fill="#132338"/>
+    <text x="28" y="222" fill="#ffffff" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Verified by Test Suite:</text>
+    <text x="170" y="222" fill="#22c55e" font-family="'JetBrains Mono', monospace" font-size="11">14 PASSING &bull; 0 REGRESSIONS</text>
+    <rect x="580" y="204" width="130" height="26" rx="4" fill="#38bdf8"/>
+    <text x="598" y="221" fill="#090b0e" font-family="'Inter', sans-serif" font-size="11" font-weight="700">DEPLOYED PR ↗</text>
+  </g>
+</svg>

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ssBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#140b0e"/>
+      <stop offset="100%" stop-color="#241117"/>
+    </linearGradient>
+    <radialGradient id="beaconGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#f43f5e" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="800" height="480" rx="16" fill="url(#ssBg)"/>
+  <rect width="800" height="480" rx="16" fill="none" stroke="#4a1d27" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect width="800" height="44" rx="16" fill="#180e12"/>
+  <rect y="43" width="800" height="1" fill="#33161e"/>
+  <circle cx="28" cy="22" r="5.5" fill="#ef4444"/>
+  <circle cx="46" cy="22" r="5.5" fill="#eab308"/>
+  <circle cx="64" cy="22" r="5.5" fill="#22c55e"/>
+
+  <rect x="220" y="10" width="360" height="24" rx="6" fill="#261218" stroke="#4a1e27" stroke-width="1"/>
+  <text x="245" y="26" fill="#fb7185" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500">https://koushik2024-code.github.io/TechFusion-v2v/</text>
+  <circle cx="234" cy="22" r="3" fill="#f43f5e"/>
+
+  <!-- Top Title Strip -->
+  <g transform="translate(32, 64)">
+    <text x="0" y="22" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="700">SafeSphere &mdash; Rapid SOS &amp; Safety Telemetry</text>
+    <text x="0" y="42" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">TechFusion Hackathon &bull; Web Audio Synthesizer Siren &bull; Web Speech Keyword &bull; Live Geolocation</text>
+
+    <!-- Beacon Status -->
+    <rect x="540" y="4" width="196" height="40" rx="8" fill="#38101a" stroke="#f43f5e" stroke-width="1"/>
+    <text x="556" y="24" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">SOS RADAR ACTIVE</text>
+    <text x="556" y="38" fill="#fda4af" font-family="'Inter', sans-serif" font-size="10">Emergency Telemetry Engaged</text>
+  </g>
+
+  <!-- Left: GPS Radar Map with Beacon -->
+  <g transform="translate(32, 130)">
+    <rect width="420" height="318" rx="10" fill="#1a0c10" stroke="#3d1620" stroke-width="1"/>
+    
+    <!-- Radar Rings -->
+    <circle cx="210" cy="159" r="130" fill="none" stroke="#4a1a24" stroke-width="1" stroke-dasharray="3"/>
+    <circle cx="210" cy="159" r="90" fill="none" stroke="#4a1a24" stroke-width="1" stroke-dasharray="3"/>
+    <circle cx="210" cy="159" r="50" fill="none" stroke="#642230" stroke-width="1"/>
+
+    <!-- Crosshair Lines -->
+    <line x1="210" y1="20" x2="210" y2="298" stroke="#3d1620" stroke-width="1"/>
+    <line x1="20" y1="159" x2="400" y2="159" stroke="#3d1620" stroke-width="1"/>
+
+    <!-- Glowing SOS Beacon -->
+    <circle cx="210" cy="159" r="45" fill="url(#beaconGlow)"/>
+    <circle cx="210" cy="159" r="8" fill="#f43f5e"/>
+    <circle cx="210" cy="159" r="3" fill="#ffffff"/>
+
+    <text x="210" y="195" text-anchor="middle" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">ONE-TOUCH SOS BEACON</text>
+    <text x="210" y="210" text-anchor="middle" fill="#fda4af" font-family="'JetBrains Mono', monospace" font-size="10">23.0225° N, 72.5714° E</text>
+  </g>
+
+  <!-- Right: Telemetry Controls & Audio Status -->
+  <g transform="translate(470, 130)">
+    <rect width="298" height="318" rx="10" fill="#1c0d12" stroke="#3d1620" stroke-width="1"/>
+    <text x="20" y="28" fill="#fb7185" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">INCIDENT DISPATCH CONTROLS</text>
+
+    <g transform="translate(20, 52)">
+      <text x="0" y="14" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Synthesized Siren:</text>
+      <text x="140" y="14" fill="#22c55e" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">880Hz DUAL TONE</text>
+
+      <text x="0" y="44" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Voice Keyword:</text>
+      <text x="140" y="44" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">"HELP" / "EMERGENCY"</text>
+
+      <text x="0" y="74" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">GPS Accuracy:</text>
+      <text x="140" y="74" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11">&plusmn;3.2 meters</text>
+
+      <text x="0" y="104" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">SMS Notification:</text>
+      <text x="140" y="104" fill="#22c55e" font-family="'JetBrains Mono', monospace" font-size="11">3 CONTACTS DISPATCHED</text>
+    </g>
+
+    <line x1="20" y1="184" x2="278" y2="184" stroke="#33141c" stroke-width="1"/>
+
+    <text x="20" y="210" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">AUDIO WAVEFORM TELEMETRY</text>
+    <!-- Waveform bars -->
+    <g transform="translate(20, 224)">
+      <rect x="0" y="10" width="8" height="24" rx="2" fill="#f43f5e"/>
+      <rect x="14" y="4" width="8" height="36" rx="2" fill="#f43f5e"/>
+      <rect x="28" y="14" width="8" height="16" rx="2" fill="#f43f5e"/>
+      <rect x="42" y="2" width="8" height="40" rx="2" fill="#f43f5e"/>
+      <rect x="56" y="8" width="8" height="28" rx="2" fill="#f43f5e"/>
+      <rect x="70" y="16" width="8" height="12" rx="2" fill="#f43f5e"/>
+      <rect x="84" y="0" width="8" height="44" rx="2" fill="#f43f5e"/>
+      <rect x="98" y="12" width="8" height="20" rx="2" fill="#f43f5e"/>
+      <rect x="112" y="6" width="8" height="32" rx="2" fill="#f43f5e"/>
+      <rect x="126" y="14" width="8" height="16" rx="2" fill="#f43f5e"/>
+    </g>
+
+    <rect x="20" y="280" width="258" height="26" rx="5" fill="#f43f5e"/>
+    <text x="65" y="297" fill="#ffffff" font-family="'Inter', sans-serif" font-size="11" font-weight="700">EXPLORE TECHFUSION DEMO ↗</text>
+  </g>
+</svg>

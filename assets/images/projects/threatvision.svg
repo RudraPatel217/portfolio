@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tvBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c10"/>
+      <stop offset="100%" stop-color="#15121e"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" rx="16" fill="url(#tvBg)"/>
+  <rect width="800" height="480" rx="16" fill="none" stroke="#2c223a" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect width="800" height="44" rx="16" fill="#0f0d17"/>
+  <rect y="43" width="800" height="1" fill="#251c33"/>
+  <circle cx="28" cy="22" r="5.5" fill="#ef4444"/>
+  <circle cx="46" cy="22" r="5.5" fill="#eab308"/>
+  <circle cx="64" cy="22" r="5.5" fill="#22c55e"/>
+
+  <rect x="220" y="10" width="360" height="24" rx="6" fill="#181426" stroke="#2d2242" stroke-width="1"/>
+  <text x="250" y="26" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500">ThreatVision XAI // SOC Forensics Console</text>
+  <circle cx="236" cy="22" r="3" fill="#a855f7"/>
+
+  <!-- Top Info Strip -->
+  <g transform="translate(32, 64)">
+    <text x="0" y="22" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="700">Explainable AI (XAI) Malware Detection</text>
+    <text x="0" y="42" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Static PE Header Decomposition, XGBoost Classifier &amp; Mathematical SHAP Feature Attributions</text>
+
+    <!-- Threat Verdict Pill -->
+    <rect x="520" y="4" width="216" height="42" rx="8" fill="#29111c" stroke="#f43f5e" stroke-width="1.2"/>
+    <text x="536" y="24" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700">VERDICT: MALICIOUS</text>
+    <text x="536" y="38" fill="#fda4af" font-family="'Inter', sans-serif" font-size="10">98.4% Confidence &bull; 18.2ms</text>
+  </g>
+
+  <!-- Left: PE Metrics & Classification -->
+  <g transform="translate(32, 130)">
+    <rect width="320" height="318" rx="10" fill="#120f1c" stroke="#251b36" stroke-width="1"/>
+    <text x="20" y="28" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">TELEMETRY // PE ARTIFACT</text>
+    
+    <g transform="translate(20, 50)">
+      <text x="0" y="14" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Sample Binary:</text>
+      <text x="140" y="14" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">trojan_win32_drop.exe</text>
+
+      <text x="0" y="40" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">File Size:</text>
+      <text x="140" y="40" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">1,842 KB</text>
+
+      <text x="0" y="66" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Shannon Entropy:</text>
+      <text x="140" y="66" fill="#ef4444" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">7.84 (Packed/Encrypted)</text>
+
+      <text x="0" y="92" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">PE Subsystem:</text>
+      <text x="140" y="92" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">IMAGE_SUBSYSTEM_WINDOWS_GUI</text>
+
+      <text x="0" y="118" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Authenticode Cert:</text>
+      <text x="140" y="118" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">UNSIGNED (Anomaly)</text>
+
+      <text x="0" y="144" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">Suspicious Imports:</text>
+      <text x="140" y="144" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="11">VirtualAllocEx, WriteProcessMemory</text>
+    </g>
+
+    <line x1="20" y1="220" x2="300" y2="220" stroke="#251b36" stroke-width="1"/>
+    
+    <text x="20" y="244" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">XGBOOST MODEL INFERENCE</text>
+    <rect x="20" y="256" width="280" height="8" rx="4" fill="#201730"/>
+    <rect x="20" y="256" width="275" height="8" rx="4" fill="url(#redGrad)"/>
+    <text x="20" y="284" fill="#ffffff" font-family="'Inter', sans-serif" font-size="11">Model: 31-Feature TreeExplainer</text>
+    <text x="240" y="284" fill="#a855f7" font-family="'JetBrains Mono', monospace" font-size="11">p=0.984</text>
+  </g>
+
+  <!-- Right: SHAP Waterfall Attribution Chart -->
+  <g transform="translate(372, 130)">
+    <rect width="396" height="318" rx="10" fill="#120f1c" stroke="#251b36" stroke-width="1"/>
+    <text x="20" y="28" fill="#c084fc" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600">SHAP WATERFALL ATTRIBUTION (WHY MALICIOUS?)</text>
+    <text x="20" y="46" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="10">Features pushing prediction toward Malicious (Red) vs Benign (Blue)</text>
+
+    <!-- SHAP Bar 1 -->
+    <g transform="translate(20, 68)">
+      <text x="0" y="14" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">section_entropy > 7.5</text>
+      <rect x="180" y="2" width="140" height="18" rx="3" fill="url(#redGrad)"/>
+      <text x="328" y="16" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">+0.42</text>
+    </g>
+
+    <!-- SHAP Bar 2 -->
+    <g transform="translate(20, 104)">
+      <text x="0" y="14" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">missing_authenticode</text>
+      <rect x="180" y="2" width="105" height="18" rx="3" fill="url(#redGrad)"/>
+      <text x="295" y="16" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">+0.31</text>
+    </g>
+
+    <!-- SHAP Bar 3 -->
+    <g transform="translate(20, 140)">
+      <text x="0" y="14" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">virtual_raw_size_diff</text>
+      <rect x="180" y="2" width="85" height="18" rx="3" fill="url(#redGrad)"/>
+      <text x="275" y="16" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">+0.26</text>
+    </g>
+
+    <!-- SHAP Bar 4 -->
+    <g transform="translate(20, 176)">
+      <text x="0" y="14" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">injection_api_calls</text>
+      <rect x="180" y="2" width="65" height="18" rx="3" fill="url(#redGrad)"/>
+      <text x="255" y="16" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">+0.19</text>
+    </g>
+
+    <!-- SHAP Bar 5 (Negative / Pushes benign) -->
+    <g transform="translate(20, 212)">
+      <text x="0" y="14" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">standard_gui_subsystem</text>
+      <rect x="130" y="2" width="50" height="18" rx="3" fill="url(#cyanGrad)"/>
+      <text x="75" y="16" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">-0.14</text>
+    </g>
+
+    <!-- Summary Box -->
+    <rect x="20" y="254" width="356" height="46" rx="6" fill="#1b1528" stroke="#36254e" stroke-width="1"/>
+    <text x="32" y="274" fill="#e9d5ff" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Explainability Summary for SOC Analyst:</text>
+    <text x="32" y="290" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="10">High entropy + process injection imports account for 74% of the malware signal.</text>
+  </g>
+</svg>

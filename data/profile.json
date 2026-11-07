@@ -50,64 +50,70 @@
   },
   "projects": [
     {
-      "title": "DevRescue AI",
+      "title": "Domain Intelligence & SEO Auditor",
       "category": "ai fullstack",
-      "badge": "01 // AUTONOMOUS CYBER-CONSOLE",
-      "tagline": "Autonomous Bug Investigation & Repair Platform",
-      "description": "Multi-agent engineering console providing continuous software reliability. Automates repository log ingestion, AST-based vulnerability analysis with NVIDIA Nemotron-3.5, and generates real-time PR repairs alongside an XGBoost code-risk classification model.",
-      "techStack": ["React 19", "FastAPI", "NVIDIA Nemotron-3.5", "XGBoost", "Docker", "GitHub API"],
-      "demoUrl": "https://dev-rescue-ai.vercel.app",
-      "githubUrl": "https://github.com/RudraPatel217/DevRescue-AI-"
-    },
-    {
-      "title": "BhuSetu",
-      "category": "fullstack",
-      "badge": "02 // GEOSPATIAL GIS",
-      "tagline": "National Land Acquisition & Management Platform",
-      "description": "High-performance geospatial infrastructure platform streamlining cadastral parcel mapping, statutory compensation workflows, and boundary layer management. Powered by MapLibre GL JS, PostgreSQL/PostGIS spatial extensions, and zero-ORM FastAPI endpoints.",
-      "techStack": ["Next.js", "React 19", "MapLibre GL", "PostGIS", "Supabase", "MinIO S3", "Docker"],
-      "demoUrl": "",
-      "githubUrl": "https://github.com/Jenil-Mistry/BhuSetu"
+      "badge": "01 // FLAGSHIP DEPLOYMENT",
+      "tagline": "End-to-End Website Diagnostic & DOM Inspection Suite",
+      "description": "Automated site health diagnostic crawler auditing critical SEO meta tags, canonical headers, Open Graph schemas, JSON-LD structured data, and security headers with one-click forensic Excel exports.",
+      "techStack": ["Python", "Streamlit", "DOM Crawler", "SEO Diagnostics", "Excel Export"],
+      "demoUrl": "https://website-analyser-rudra.streamlit.app/",
+      "githubUrl": "https://github.com/RudraPatel217",
+      "image": "assets/images/projects/website-analyzer.svg"
     },
     {
       "title": "ThreatVision",
       "category": "ai hackathon",
-      "badge": "03 // CYBERSECURITY XAI",
-      "tagline": "Explainable AI (XAI) Malware Detection Platform",
-      "description": "Cybersecurity threat intelligence suite. Pairs high-accuracy XGBoost malware classification with SHAP waterfall feature attributions to provide security analysts with transparent, visual explanations of suspicious binary signals.",
+      "badge": "02 // CYBERSECURITY XAI",
+      "tagline": "Explainable AI (XAI) Malware Detection Prototype",
+      "description": "Pairs sub-millisecond static PE feature extraction with an XGBoost classifier and mathematical SHAP waterfall feature attributions, explaining exactly which byte anomalies drive suspicious verdicts.",
       "techStack": ["FastAPI", "React 18", "Vite", "XGBoost", "SHAP", "Docker"],
       "demoUrl": "",
-      "githubUrl": ""
+      "githubUrl": "https://github.com/RudraPatel217",
+      "image": "assets/images/projects/threatvision.svg"
     },
     {
-      "title": "Domain Intelligence & SEO Auditor",
-      "category": "fullstack ai",
-      "badge": "04 // DIAGNOSTIC TOOL",
-      "tagline": "End-to-End Website Diagnostic & DOM Inspection Tool",
-      "description": "Developed diagnostic tool auditing critical SEO tags, canonical URLs, Open Graph schemas, structured data, internal links, image alt text, and page load latency with JavaScript-rendered DOM inspection and bot-protection / WAF detection routines.",
-      "techStack": ["Python", "Streamlit", "REST APIs", "DOM Inspection", "SEO Analysis"],
-      "demoUrl": "",
-      "githubUrl": ""
+      "title": "DevRescue AI",
+      "category": "ai fullstack",
+      "badge": "03 // AUTONOMOUS CYBER-CONSOLE",
+      "tagline": "Autonomous Bug Investigation & Repair Platform",
+      "description": "Multi-agent engineering console providing continuous software reliability. Automates repository log ingestion, AST-based vulnerability analysis with NVIDIA Nemotron-3.5, and generates real-time PR repairs alongside an XGBoost code-risk classification model.",
+      "techStack": ["React 19", "FastAPI", "NVIDIA Nemotron-3.5", "XGBoost", "Docker", "GitHub API"],
+      "demoUrl": "https://dev-rescue-ai.vercel.app",
+      "githubUrl": "https://github.com/RudraPatel217/DevRescue-AI-",
+      "image": "assets/images/projects/devrescue-ai.svg"
     },
     {
       "title": "AssetFlow",
       "category": "fullstack hackathon",
-      "badge": "05 // ENTERPRISE ERP",
+      "badge": "04 // ENTERPRISE ERP",
       "tagline": "Enterprise Asset & Resource Management System",
       "description": "Developed for the Odoo Hackathon with Team Terminal. Streamlines physical asset lifecycles, shared resource bookings, and cross-department allocation with clean architecture and role-based access control (RBAC).",
       "techStack": ["Enterprise ERP", "Clean Architecture", "RBAC", "State Machines", "Team Terminal"],
       "demoUrl": "",
-      "githubUrl": "https://github.com/Darshilmodi15/odoo-hackathon---AssetFlow"
+      "githubUrl": "https://github.com/Darshilmodi15/odoo-hackathon---AssetFlow",
+      "image": "assets/images/projects/assetflow.svg"
     },
     {
-      "title": "SafeSphere",
+      "title": "BhuSetu",
+      "category": "fullstack",
+      "badge": "05 // GEOSPATIAL GIS",
+      "tagline": "National Land Acquisition & Management Platform",
+      "description": "High-performance geospatial infrastructure platform streamlining cadastral parcel mapping, statutory compensation workflows, and boundary layer management. Powered by MapLibre GL JS, PostgreSQL/PostGIS spatial extensions, and zero-ORM FastAPI endpoints.",
+      "techStack": ["Next.js", "React 19", "MapLibre GL", "PostGIS", "Supabase", "MinIO S3", "Docker"],
+      "demoUrl": "",
+      "githubUrl": "https://github.com/Jenil-Mistry/BhuSetu",
+      "image": "assets/images/projects/bhusetu.svg"
+    },
+    {
+      "title": "TechFusion SafeSphere",
       "category": "fullstack hackathon",
       "badge": "06 // SAFETY & TELEMETRY",
       "tagline": "Women's Safety & Rapid SOS Platform",
       "description": "Safety-focused web application integrating one-touch SOS dispatch, real-time geolocation sharing, Web Audio dual-tone synthesized sirens, Web Speech voice keyword triggers, and trusted emergency contacts under the TechFusion / Vibe 2 Vision hackathon.",
       "techStack": ["JavaScript", "Geolocation APIs", "Web Audio API", "Web Speech API", "Tailwind CSS"],
       "demoUrl": "https://koushik2024-code.github.io/TechFusion-v2v/",
-      "githubUrl": "https://github.com/koushik2024-code/TechFusion-v2v"
+      "githubUrl": "https://github.com/koushik2024-code/TechFusion-v2v",
+      "image": "assets/images/projects/safesphere.svg"
     },
     {
       "title": "Air Pollution & Environmental AQI Intelligence",
@@ -117,7 +123,8 @@
       "description": "Environmental monitoring dashboard synthesizing historical atmospheric parameters and real-time Air Quality Index (AQI) readings with predictive pollution trend visualizers. Qualified as a national hackathon finalist.",
       "techStack": ["Python", "Data Analysis", "Predictive Analytics", "Hackathon Finalist"],
       "demoUrl": "",
-      "githubUrl": ""
+      "githubUrl": "",
+      "image": "assets/images/projects/aqi-intelligence.svg"
     }
   ],
   "hackathons": [

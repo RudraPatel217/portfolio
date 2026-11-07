@@ -50,12 +50,15 @@ const PROJECT_DETAILS = {
     links: []
   },
   "domain intelligence & seo auditor": {
-    badge: "DIAGNOSTIC SUITE // 04",
+    badge: "FLAGSHIP DEPLOYMENT // 01",
     title: "Domain Intelligence & SEO Auditor",
     tagline: "End-to-End Website Diagnostic & DOM Inspection Suite",
-    desc: "An end-to-end website diagnostic tool auditing critical SEO tags, canonical URLs, Open Graph schemas, structured data, internal links, image alt text, and page load latency. Features JavaScript-rendered DOM inspection and bot-protection / WAF detection routines with actionable multi-format optimization export capabilities.",
-    tags: ["Python", "Streamlit", "REST APIs", "DOM Inspection", "WAF Detection", "SEO Analytics"],
-    links: []
+    desc: "A live full-stack website crawler and SEO diagnostic product auditing critical meta tags, canonical headers, Open Graph schemas, JSON-LD structured data, and security headers with JavaScript-rendered DOM inspection and one-click forensic Excel export.",
+    tags: ["Python", "Streamlit", "DOM Crawler", "SEO Diagnostics", "Security Headers", "Excel Export"],
+    links: [
+      { text: "Live Streamlit App ↗", href: "https://website-analyser-rudra.streamlit.app/" },
+      { text: "GitHub ↗", href: "https://github.com/RudraPatel217" }
+    ]
   },
   "assetflow": {
     badge: "ENTERPRISE ERP // 05",
@@ -164,16 +167,26 @@ function initProjectModal() {
     if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
   });
 
-  // Attach click listener to project card titles
-  document.querySelectorAll('.project-case-card .case-title').forEach(titleElem => {
+  // Attach click listener to project card titles and media previews
+  document.querySelectorAll('.project-case-card').forEach(card => {
+    const titleElem = card.querySelector('.case-title');
+    const mediaElem = card.querySelector('.case-media-preview');
+    if (!titleElem) return;
+
+    const key = titleElem.textContent.trim().toLowerCase();
     titleElem.style.cursor = 'pointer';
     titleElem.title = 'Click to inspect architectural details';
     titleElem.addEventListener('click', () => {
-      const key = titleElem.textContent.trim().toLowerCase();
-      if (PROJECT_DETAILS[key]) {
-        openModal(PROJECT_DETAILS[key]);
-      }
+      if (PROJECT_DETAILS[key]) openModal(PROJECT_DETAILS[key]);
     });
+
+    if (mediaElem) {
+      mediaElem.style.cursor = 'pointer';
+      mediaElem.title = 'Click to inspect architectural details';
+      mediaElem.addEventListener('click', () => {
+        if (PROJECT_DETAILS[key]) openModal(PROJECT_DETAILS[key]);
+      });
+    }
   });
 }
 

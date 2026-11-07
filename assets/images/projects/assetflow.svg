@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="afBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c0e14"/>
+      <stop offset="100%" stop-color="#161a26"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" rx="16" fill="url(#afBg)"/>
+  <rect width="800" height="480" rx="16" fill="none" stroke="#262f45" stroke-width="1.5"/>
+
+  <!-- Window Header -->
+  <rect width="800" height="44" rx="16" fill="#0f111a"/>
+  <rect y="43" width="800" height="1" fill="#202738"/>
+  <circle cx="28" cy="22" r="5.5" fill="#ef4444"/>
+  <circle cx="46" cy="22" r="5.5" fill="#eab308"/>
+  <circle cx="64" cy="22" r="5.5" fill="#22c55e"/>
+
+  <rect x="220" y="10" width="360" height="24" rx="6" fill="#171c2c" stroke="#28334d" stroke-width="1"/>
+  <text x="245" y="26" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="500">AssetFlow ERP // Odoo Hackathon Finalist</text>
+  <circle cx="234" cy="22" r="3" fill="#38bdf8"/>
+
+  <!-- Top Title Strip -->
+  <g transform="translate(32, 64)">
+    <text x="0" y="22" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="700">AssetFlow &mdash; Enterprise Asset &amp; Resource ERP</text>
+    <text x="0" y="42" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Team Terminal &bull; Clean Architecture &bull; Finite State Machines &bull; Role-Based Access Control</text>
+
+    <!-- Badge -->
+    <rect x="520" y="4" width="216" height="40" rx="8" fill="#162238" stroke="#38bdf8" stroke-width="1"/>
+    <text x="536" y="24" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">ODOO HACKATHON</text>
+    <text x="536" y="38" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="10">Enterprise Finalist Prototype</text>
+  </g>
+
+  <!-- State Machine Flow Strip -->
+  <g transform="translate(32, 126)">
+    <rect width="736" height="54" rx="8" fill="#111624" stroke="#232d45" stroke-width="1"/>
+    
+    <rect x="16" y="12" width="130" height="30" rx="6" fill="#172033"/>
+    <text x="36" y="31" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">1. Draft Request</text>
+
+    <text x="156" y="32" fill="#38bdf8" font-size="14">&rarr;</text>
+
+    <rect x="176" y="12" width="140" height="30" rx="6" fill="#1a2740" stroke="#38bdf8" stroke-width="1"/>
+    <text x="194" y="31" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="11" font-weight="700">2. RBAC Approval</text>
+
+    <text x="326" y="32" fill="#38bdf8" font-size="14">&rarr;</text>
+
+    <rect x="346" y="12" width="140" height="30" rx="6" fill="#172033"/>
+    <text x="366" y="31" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">3. Active Allocation</text>
+
+    <text x="496" y="32" fill="#38bdf8" font-size="14">&rarr;</text>
+
+    <rect x="516" y="12" width="120" height="30" rx="6" fill="#172033"/>
+    <text x="536" y="31" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">4. Maintenance</text>
+
+    <text x="646" y="32" fill="#38bdf8" font-size="14">&rarr;</text>
+
+    <rect x="666" y="12" width="54" height="30" rx="6" fill="#172033"/>
+    <text x="674" y="31" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">End</text>
+  </g>
+
+  <!-- Asset Table View -->
+  <g transform="translate(32, 196)">
+    <rect width="736" height="252" rx="10" fill="#101420" stroke="#212a40" stroke-width="1"/>
+    <rect width="736" height="34" rx="10" fill="#151a2b"/>
+    
+    <text x="24" y="22" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">ASSET ID</text>
+    <text x="150" y="22" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">DESCRIPTION</text>
+    <text x="370" y="22" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">DEPARTMENT</text>
+    <text x="520" y="22" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">LIFECYCLE STATE</text>
+    <text x="660" y="22" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">ACTION</text>
+
+    <!-- Row 1 -->
+    <text x="24" y="62" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11">AST-9901</text>
+    <text x="150" y="62" fill="#ffffff" font-family="'Inter', sans-serif" font-size="11">Dell Dual RTX 4090 AI Cluster</text>
+    <text x="370" y="62" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="11">AI Systems Lab</text>
+    <rect x="520" y="48" width="90" height="20" rx="4" fill="#163828"/>
+    <text x="532" y="62" fill="#22c55e" font-family="'Inter', sans-serif" font-size="10" font-weight="700">RESERVED</text>
+    <text x="660" y="62" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="11">Inspect ↗</text>
+
+    <!-- Row 2 -->
+    <text x="24" y="100" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11">AST-8840</text>
+    <text x="150" y="100" fill="#ffffff" font-family="'Inter', sans-serif" font-size="11">Cisco Catalyst 48-Port Switch</text>
+    <text x="370" y="100" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="11">Infrastructure</text>
+    <rect x="520" y="86" width="105" height="20" rx="4" fill="#3b2d14"/>
+    <text x="530" y="100" fill="#eab308" font-family="'Inter', sans-serif" font-size="10" font-weight="700">MAINTENANCE</text>
+    <text x="660" y="100" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="11">Inspect ↗</text>
+
+    <!-- Row 3 -->
+    <text x="24" y="138" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11">AST-7721</text>
+    <text x="150" y="138" fill="#ffffff" font-family="'Inter', sans-serif" font-size="11">MacBook Pro M3 Max (36GB)</text>
+    <text x="370" y="138" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="11">Engineering</text>
+    <rect x="520" y="124" width="85" height="20" rx="4" fill="#162e45"/>
+    <text x="532" y="138" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="10" font-weight="700">ALLOCATED</text>
+    <text x="660" y="138" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="11">Inspect ↗</text>
+
+    <!-- Row 4 -->
+    <text x="24" y="176" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11">AST-6612</text>
+    <text x="150" y="176" fill="#ffffff" font-family="'Inter', sans-serif" font-size="11">Ubiquiti UniFi AP Enterprise</text>
+    <text x="370" y="176" fill="#cbd5e1" font-family="'Inter', sans-serif" font-size="11">Adani Campus</text>
+    <rect x="520" y="162" width="90" height="20" rx="4" fill="#163828"/>
+    <text x="532" y="176" fill="#22c55e" font-family="'Inter', sans-serif" font-size="10" font-weight="700">AVAILABLE</text>
+    <text x="660" y="176" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="11">Inspect ↗</text>
+  </g>
+</svg>

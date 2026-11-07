@@ -710,7 +710,7 @@ body {
   backdrop-filter: blur(20px);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-lg);
-  padding: 38px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -724,6 +724,35 @@ body {
   background: var(--bg-card-hover);
   transform: translateY(-6px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+.case-media-preview {
+  width: 100%;
+  aspect-ratio: 16 / 9.6;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 22px;
+  background: #090c12;
+  border: 1px solid var(--border-subtle);
+  position: relative;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+.case-media-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-case-card:hover .case-media-preview img {
+  transform: scale(1.03);
+}
+
+.project-case-card:hover .case-media-preview {
+  border-color: var(--border-medium);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
 }
 
 .case-top-meta {
