@@ -39,12 +39,21 @@
         <ul class="nav-menu" id="nav-menu">
           <li><a href="#services" class="nav-link">Services</a></li>
           <li><a href="#projects" class="nav-link">Selected Work</a></li>
+          <li><a href="#journey" class="nav-link">Journey</a></li>
           <li><a href="#terminal" class="nav-link">Console</a></li>
           <li><a href="#faq" class="nav-link">FAQ</a></li>
           <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
 
         <div class="nav-right">
+          <!-- Theme Accent Color Cycle -->
+          <button class="icon-button" id="theme-color-btn" title="Cycle Accent Color (Cyan / Emerald / Violet)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <circle cx="12" cy="12" r="4" fill="currentColor"></circle>
+            </svg>
+          </button>
+
           <!-- Audio Toggle -->
           <button class="icon-button" id="sound-toggle-btn" title="Toggle Programmatic Audio">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -536,6 +545,102 @@
       </div>
     </section>
 
+    <!-- Journey & Hackathon Timeline Section -->
+    <section class="section" id="journey">
+      <div class="container">
+        <div class="section-badge">
+          <span class="dot"></span>
+          Timeline &amp; Recognition
+        </div>
+        <h2 class="section-heading">
+          Engineering Journey <br>
+          <span class="gradient-text">&amp; Track Record.</span>
+        </h2>
+        <p class="section-subheading">
+          Key milestones, hackathons, and systems built across rapid innovation cycles.
+        </p>
+
+        <div class="timeline-track">
+          
+          <div class="timeline-milestone">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta-row">
+                <span class="timeline-year">2026 // AUTONOMOUS AI</span>
+                <span class="case-badge">FEATURED LAUNCH</span>
+              </div>
+              <h3 class="timeline-role-title">DevRescue AI &mdash; Autonomous Bug Repair Console</h3>
+              <div class="timeline-context">Lead Full-Stack &amp; AI Architect</div>
+              <p class="timeline-text">
+                Architected continuous software reliability console integrating AST parsing, NVIDIA Nemotron, and an XGBoost risk classification model for automated PR repairs.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-milestone">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta-row">
+                <span class="timeline-year">2026 // GEOSPATIAL GIS</span>
+                <span class="case-badge">NATIONAL INFRASTRUCTURE</span>
+              </div>
+              <h3 class="timeline-role-title">BhuSetu &mdash; National Land Acquisition GIS</h3>
+              <div class="timeline-context">Geospatial Backend &amp; Map Engineering</div>
+              <p class="timeline-text">
+                Designed cadastral parcel mapping infrastructure using PostgreSQL/PostGIS, MapLibre GL JS vector rendering, and zero-ORM FastAPI high-throughput endpoints.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-milestone">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta-row">
+                <span class="timeline-year">2026 // HACKATHON FINALIST</span>
+                <span class="case-badge">ODOO HACKATHON</span>
+              </div>
+              <h3 class="timeline-role-title">AssetFlow &mdash; Enterprise Resource ERP</h3>
+              <div class="timeline-context">Team Terminal &bull; Full-Stack Builder</div>
+              <p class="timeline-text">
+                Built modular enterprise ERP digitizing physical asset lifecycles, cross-department scheduling, and role-based access audits during the competitive Odoo Hackathon.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-milestone">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta-row">
+                <span class="timeline-year">2026 // XAI CYBERSECURITY</span>
+                <span class="case-badge">TECH EXIMIUS</span>
+              </div>
+              <h3 class="timeline-role-title">ThreatVision &mdash; Explainable AI Threat Intelligence</h3>
+              <div class="timeline-context">ML &amp; Explainability Engineer</div>
+              <p class="timeline-text">
+                Created transparent malware classification suite with XGBoost and SHAP waterfall feature attributions, mapping malicious binary signals to MITRE ATT&CK vectors.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-milestone">
+            <div class="timeline-node"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta-row">
+                <span class="timeline-year">2026 // IOT PROTOTYPE</span>
+                <span class="case-badge">HACKX</span>
+              </div>
+              <h3 class="timeline-role-title">HackX Prototype &mdash; Environmental Air Telemetry</h3>
+              <div class="timeline-context">Hardware &amp; Telemetry Innovator</div>
+              <p class="timeline-text">
+                Developed embedded atmospheric sensor prototype transmitting real-time air quality metrics with dynamic threshold alerts and visual dashboard telemetry.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
     <!-- Interactive Cyber Terminal -->
     <section class="section" id="terminal">
       <div class="container">
@@ -752,13 +857,36 @@
 
   </div>
 
+  <!-- Project Architecture Modal -->
+  <div class="modal-backdrop" id="project-modal">
+    <div class="modal-content-card">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      <span class="modal-project-badge" id="modal-badge">ARCHITECTURAL OVERVIEW</span>
+      <h2 class="modal-project-title" id="modal-title">Project Title</h2>
+      <p class="modal-project-tagline" id="modal-tagline">Tagline goes here</p>
+      
+      <div class="modal-section-title">Deep Dive &amp; Engineering Decisions</div>
+      <p class="modal-body-text" id="modal-desc">Detailed architecture explanation...</p>
+
+      <div class="modal-section-title">Core Technology Stack</div>
+      <div class="modal-tags-row" id="modal-tags">
+        <!-- Tags populated dynamically -->
+      </div>
+
+      <div class="modal-actions-row" id="modal-links">
+        <!-- Links populated dynamically -->
+      </div>
+    </div>
+  </div>
+
   <!-- Toast Notification -->
   <div class="toast-notice" id="toast-notice">
     <span id="toast-message">Notification message</span>
   </div>
 
   <!-- Scripts -->
-  <script type="module" src="scripts/three-scene.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+  <script src="scripts/three-scene.js"></script>
   <script src="scripts/audio.js"></script>
   <script src="scripts/terminal.js"></script>
   <script src="scripts/app.js"></script>
