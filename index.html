@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rudra Patel | Full-Stack & AI Systems Engineer</title>
-  <meta name="description" content="Portfolio of Rudra Patel — Full-Stack & AI Systems Engineer specializing in autonomous multi-agent consoles, explainable AI, and geospatial platforms.">
+  <title>Rudra Patel — Full-Stack &amp; AI Systems Engineer</title>
+  <meta name="description" content="Portfolio of Rudra Patel — Full-Stack &amp; AI Systems Engineer specializing in autonomous multi-agent consoles, geospatial platforms, and explainable AI.">
   
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/images/avatar.svg">
 
-  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Stylesheet -->
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -22,104 +22,139 @@
   <!-- 3D WebGL Background Canvas -->
   <canvas id="webgl-canvas"></canvas>
 
-  <!-- Foreground Content -->
   <div class="content-wrapper">
 
-    <!-- Navigation Bar -->
-    <nav class="navbar" id="navbar">
-      <a href="#hero" class="nav-brand">
-        <div class="nav-brand-logo">RP</div>
-        <span class="nav-brand-name">Rudra Patel</span>
-      </a>
-
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#terminal" class="nav-link">Terminal</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <!-- Sound Effect Toggle -->
-        <button class="sound-toggle-btn" id="sound-toggle-btn" title="Toggle Cyber Audio">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-          </svg>
-        </button>
-
-        <!-- Resume Download Button -->
-        <a href="assets/documents/Rudra_Patel_Resume.html" target="_blank" class="btn-secondary" style="padding: 8px 16px; font-size: 0.85rem;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-            <polyline points="7 10 12 15 17 10"></polyline>
-            <line x1="12" y1="15" x2="12" y2="3"></line>
-          </svg>
-          Resume
+    <!-- Floating Navigation Bar (Micheel / Gr8r Style) -->
+    <header>
+      <nav class="navbar" id="navbar">
+        <a href="#hero" class="nav-brand">
+          <div class="nav-logo-box">RP</div>
+          <span class="nav-brand-title">Rudra Patel</span>
+          <div class="nav-status-indicator">
+            <span class="pulse-dot"></span>
+            <span>Available</span>
+          </div>
         </a>
 
-        <!-- Mobile Menu Hamburger -->
-        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Navigation">
-          &#9776;
-        </button>
-      </div>
-    </nav>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#projects" class="nav-link">Selected Work</a></li>
+          <li><a href="#terminal" class="nav-link">Console</a></li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
 
-    <!-- Hero Section -->
+        <div class="nav-right">
+          <!-- Audio Toggle -->
+          <button class="icon-button" id="sound-toggle-btn" title="Toggle Programmatic Audio">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+          </button>
+
+          <!-- Resume Link -->
+          <a href="assets/documents/Rudra_Patel_Resume.html" target="_blank" class="btn-pill-secondary" style="padding: 8px 18px; font-size: 0.85rem;">
+            Resume ↗
+          </a>
+
+          <!-- Let's Talk CTA -->
+          <a href="#contact" class="btn-pill-primary" style="padding: 8px 20px; font-size: 0.85rem;">
+            Let's Talk
+          </a>
+
+          <!-- Mobile Toggle -->
+          <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle Menu">
+            &#9776;
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section (Editorial High-Impact Layout) -->
     <section class="section hero-section" id="hero">
       <div class="container">
-        <div class="hero-grid">
+        <div class="hero-editorial-wrap">
           
-          <div class="hero-content">
-            <div class="hero-status-pill">
-              <span class="status-dot"></span>
-              <span>Available for High-Impact Roles &amp; Engineering Teams</span>
+          <div class="hero-left-content">
+            <div class="hero-badge-strip">
+              <div class="section-badge">
+                <span class="dot"></span>
+                Full-Stack &amp; AI Systems Engineer
+              </div>
             </div>
 
-            <h1 class="hero-title">
-              Engineering Resilient
-              <span class="hero-title-name">AI &amp; Full-Stack Systems</span>
+            <h1 class="hero-main-title">
+              Crafting Intelligent <br>
+              <span class="name-highlight">AI &amp; Distributed</span> <br>
+              Web Architectures.
             </h1>
 
-            <p class="hero-subtitle">
-              &gt; Autonomous Multi-Agent Consoles &bull; Geospatial GIS &bull; Explainable AI
+            <p class="hero-lead-text">
+              I am <strong>Rudra Patel</strong>. I engineer high-performance systems from the ground up &mdash; specializing in autonomous multi-agent consoles (DevRescue AI), national geospatial GIS platforms (BhuSetu), and explainable cyber intelligence (ThreatVision).
             </p>
 
-            <p class="hero-desc">
-              I am <strong>Rudra Patel</strong>, a builder specializing in distributed architectures, AI agent orchestration (DevRescue AI), spatial platforms (BhuSetu), and cyber threat intelligence (ThreatVision). Turning complex engineering problems into polished, high-performance software.
-            </p>
-
-            <div class="hero-cta-group">
-              <a href="#projects" class="btn-primary">
-                Explore Featured Systems
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
+            <div class="hero-actions-group">
+              <a href="#projects" class="btn-pill-primary">
+                Selected Work
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="7" y1="17" x2="17" y2="7"></line>
+                  <polyline points="7 7 17 7 17 17"></polyline>
                 </svg>
               </a>
 
-              <a href="#terminal" class="btn-secondary">
+              <a href="#terminal" class="btn-pill-secondary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="4 17 10 11 4 5"></polyline>
                   <line x1="12" y1="19" x2="20" y2="19"></line>
                 </svg>
-                Launch Cyber Console
+                Open Cyber Console
               </a>
             </div>
 
-            <div class="hero-social-strip">
-              <span class="hero-social-label">Connect:</span>
-              
-              <!-- GitHub -->
-              <a href="https://github.com/RudraPatel217" target="_blank" rel="noopener noreferrer" class="social-icon-link" title="GitHub">
+            <!-- Stats Bar (Micheel Signature) -->
+            <div class="hero-stats-row">
+              <div class="hero-stat-item">
+                <div class="stat-metric">06+</div>
+                <div class="stat-label">Production &amp; Hackathon Systems</div>
+              </div>
+              <div class="hero-stat-item">
+                <div class="stat-metric">100%</div>
+                <div class="stat-label">Real-World Architectures</div>
+              </div>
+              <div class="hero-stat-item">
+                <div class="stat-metric">Top 5%</div>
+                <div class="stat-label">Hackathon Finalist</div>
+              </div>
+              <div class="hero-stat-item">
+                <div class="stat-metric">60 FPS</div>
+                <div class="stat-label">WebGL Three.js Engine</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Portrait & 3D Interactive Card -->
+          <div class="hero-portrait-card">
+            <div class="portrait-avatar-wrapper">
+              <img src="assets/images/avatar.svg" alt="Rudra Patel Profile" class="portrait-avatar-img">
+            </div>
+
+            <div class="portrait-info-block">
+              <h3 class="portrait-name">Rudra Patel</h3>
+              <p class="portrait-role">FULL-STACK &amp; AI BUILDER</p>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
+                Building robust, scalable applications with React 19, FastAPI, PostGIS &amp; Machine Learning models.
+              </p>
+            </div>
+
+            <div class="portrait-socials">
+              <a href="https://github.com/RudraPatel217" target="_blank" rel="noopener noreferrer" class="social-pill-link" title="GitHub Profile">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                 </svg>
               </a>
 
-              <!-- LinkedIn -->
-              <a href="https://www.linkedin.com/in/rudrapatel217/" target="_blank" rel="noopener noreferrer" class="social-icon-link" title="LinkedIn">
+              <a href="https://www.linkedin.com/in/rudrapatel217/" target="_blank" rel="noopener noreferrer" class="social-pill-link" title="LinkedIn Profile">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                   <rect x="2" y="9" width="4" height="12"></rect>
@@ -127,68 +162,27 @@
                 </svg>
               </a>
 
-              <!-- Unstop -->
-              <a href="https://unstop.com/u/rudrapat96265" target="_blank" rel="noopener noreferrer" class="social-icon-link" title="Unstop">
+              <a href="https://unstop.com/u/rudrapat96265" target="_blank" rel="noopener noreferrer" class="social-pill-link" title="Unstop Profile">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="12" cy="12" r="10"></circle>
                   <polygon points="10 8 16 12 10 16 10 8"></polygon>
                 </svg>
               </a>
 
-              <!-- Direct Email -->
-              <a href="mailto:rj423513@gmail.com" class="social-icon-link" title="Email Rudra">
+              <a href="mailto:rj423513@gmail.com" class="social-pill-link" title="Email Rudra">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                   <polyline points="22,6 12,13 2,6"></polyline>
                 </svg>
               </a>
             </div>
-          </div>
 
-          <!-- Hero 3D HUD & Avatar Card -->
-          <div class="hero-hud-card">
-            <div class="hero-hud-header">
-              <span class="hud-title">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                  <polyline points="2 17 12 22 22 17"></polyline>
-                  <polyline points="2 12 12 17 22 12"></polyline>
-                </svg>
-                SYS_PROFILE // ACTIVE
-              </span>
-              <span class="project-badge">VERIFIED</span>
-            </div>
-
-            <div class="hud-avatar-box">
-              <img src="assets/images/avatar.svg" alt="Rudra Patel Cyber Avatar" class="hud-avatar-img">
-            </div>
-
-            <div class="hud-stats-grid">
-              <div class="hud-stat-box">
-                <div class="hud-stat-number">6+</div>
-                <div class="hud-stat-label">Production &amp; Hackathon Systems</div>
-              </div>
-              <div class="hud-stat-box">
-                <div class="hud-stat-number">100%</div>
-                <div class="hud-stat-label">Full-Stack &amp; AI Integration</div>
-              </div>
-              <div class="hud-stat-box">
-                <div class="hud-stat-number">Multi-Agent</div>
-                <div class="hud-stat-label">AI Architecture</div>
-              </div>
-              <div class="hud-stat-box">
-                <div class="hud-stat-number">60 FPS</div>
-                <div class="hud-stat-label">Three.js WebGL Engine</div>
-              </div>
-            </div>
-
-            <!-- Scene Switcher HUD -->
-            <div class="hud-scene-switcher">
-              <span class="hud-scene-desc">3D WebGL Scene:</span>
+            <div class="scene-mode-controls">
+              <span style="font-size: 0.76rem; color: var(--text-muted); font-family: var(--font-mono);">3D WebGL:</span>
               <div class="scene-btn-group">
-                <button class="scene-mode-pill active" data-mode="neural">Neural Core</button>
-                <button class="scene-mode-pill" data-mode="galaxy">Cosmic</button>
-                <button class="scene-mode-pill" data-mode="matrix">Matrix</button>
+                <button class="scene-pill active" data-mode="neural">Neural</button>
+                <button class="scene-pill" data-mode="galaxy">Cosmic</button>
+                <button class="scene-pill" data-mode="matrix">Matrix</button>
               </div>
             </div>
           </div>
@@ -197,286 +191,344 @@
       </div>
     </section>
 
-    <!-- About Section (Bento Grid) -->
-    <section class="section" id="about">
+    <!-- Tech Brand / Stack Ticker (Micheel Signature) -->
+    <div class="brand-ticker-section">
       <div class="container">
-        <div class="section-tag">About &amp; Core Philosophy</div>
-        <h2 class="section-title">Architecting Software That <span>Actually Scales</span></h2>
-        <p class="section-subtitle">A blend of systems engineering, machine learning precision, and responsive product design.</p>
+        <div class="ticker-track">
+          <div class="ticker-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            FastAPI
+          </div>
+          <div class="ticker-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path></svg>
+            React 19
+          </div>
+          <div class="ticker-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path></svg>
+            Next.js
+          </div>
+          <div class="ticker-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg>
+            NVIDIA Nemotron
+          </div>
+          <div class="ticker-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            XGBoost &amp; SHAP
+          </div>
+          <div class="ticker-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon></svg>
+            PostGIS Spatial
+          </div>
+          <div class="ticker-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle></svg>
+            Docker
+          </div>
+          <div class="ticker-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline></svg>
+            Three.js
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <div class="bento-grid">
+    <!-- Structured Services & Engineering (01, 02, 03, 04 Gr8r Grid) -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-badge">
+          <span class="dot"></span>
+          Core Disciplines
+        </div>
+        <h2 class="section-heading">
+          Engineering Capabilities <br>
+          <span class="gradient-text">Built for Scale &amp; Speed.</span>
+        </h2>
+        <p class="section-subheading">
+          Bridging modern machine learning intelligence with production-grade backend infrastructures and responsive user experiences.
+        </p>
+
+        <div class="services-grid">
           
-          <div class="bento-card col-8">
-            <h3 class="bento-card-title">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-              Systems &amp; Agent Engineering
-            </h3>
-            <p class="bento-card-text">
-              I specialize in bridging the gap between cutting-edge AI models (NVIDIA Nemotron, XGBoost, SHAP) and robust real-world backend infrastructure. Whether orchestrating autonomous multi-agent code investigation for <strong>DevRescue AI</strong> or architecting geospatial spatial querying for national infrastructure in <strong>BhuSetu</strong>, I build with high throughput, zero unnecessary fluff, and resilient containerized pipelines.
+          <!-- Service 01 -->
+          <div class="service-card">
+            <div class="service-num">/ 01</div>
+            <h3 class="service-title">Autonomous AI &amp; Multi-Agent Systems</h3>
+            <p class="service-desc">
+              Designing multi-agent orchestration frameworks that ingest source repositories, analyze AST syntax trees, triage vulnerabilities, and generate automated repair PRs with LLMs (NVIDIA Nemotron).
             </p>
-            <ul class="bento-highlight-list">
-              <li class="bento-highlight-item">
-                <span class="bullet">&bull;</span>
-                <span><strong>Autonomous Agents:</strong> Real-time bug repair, automated PR generation, vulnerability triage.</span>
+            <ul class="service-features-list">
+              <li class="service-feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Autonomous code analysis &amp; bug repair agents
               </li>
-              <li class="bento-highlight-item">
-                <span class="bullet">&bull;</span>
-                <span><strong>Geospatial &amp; Distributed Systems:</strong> MapLibre vector rendering, PostGIS RPCs, local MinIO S3 clustering.</span>
+              <li class="service-feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Predictive risk classification with XGBoost
               </li>
-              <li class="bento-highlight-item">
-                <span class="bullet">&bull;</span>
-                <span><strong>Explainable AI (XAI):</strong> SHAP waterfall attributions for transparent binary threat detection.</span>
+              <li class="service-feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Authenticated GitHub workflows &amp; PR dispatch
               </li>
             </ul>
           </div>
 
-          <div class="bento-card col-4">
-            <h3 class="bento-card-title">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 14 14"></polyline>
-              </svg>
-              Current Focus
-            </h3>
-            <p class="bento-card-text">
-              Deep-diving into multi-agent orchestration, high-concurrency Python/FastAPI architectures, React 19 hydration optimizations, and WebGL 3D user experiences.
+          <!-- Service 02 -->
+          <div class="service-card">
+            <div class="service-num">/ 02</div>
+            <h3 class="service-title">Enterprise Web &amp; Distributed ERPs</h3>
+            <p class="service-desc">
+              Constructing scalable web platforms with clean architecture principles. Experienced in role-based workflows (RBAC), finite state machine asset lifecycles, and high-concurrency RESTful APIs.
             </p>
-            <div style="margin-top: 20px; padding: 14px; background: rgba(5, 8, 17, 0.7); border: 1px solid var(--border-subtle); border-radius: 8px;">
-              <div style="font-size: 0.82rem; color: var(--accent-cyan); font-family: var(--font-mono); margin-bottom: 4px;">LOCATION &amp; AVAILABILITY</div>
-              <div style="font-size: 0.95rem; font-weight: 600; color: #ffffff;">India &bull; Remote / Hybrid Ready</div>
-            </div>
+            <ul class="service-features-list">
+              <li class="service-feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Modular ERP architecture (Odoo Hackathon)
+              </li>
+              <li class="service-feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Strict RBAC &amp; state machine transitions
+              </li>
+              <li class="service-feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Next.js &amp; React 19 hydration &amp; responsive UI
+              </li>
+            </ul>
           </div>
 
-          <div class="bento-card col-6">
-            <h3 class="bento-card-title">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
-              Hackathon Track Record
-            </h3>
-            <p class="bento-card-text">
-              Hackathons are my proving ground. From the <strong>Odoo Hackathon</strong> (Team Terminal building enterprise ERP AssetFlow) to <strong>Tech Eximius</strong> (ThreatVision XAI platform) and <strong>HackX</strong>, I thrive in rapid prototyping sprints where architectural clarity beats hasty boilerplate.
+          <!-- Service 03 -->
+          <div class="service-card">
+            <div class="service-num">/ 03</div>
+            <h3 class="service-title">Geospatial Infrastructure &amp; PostGIS GIS</h3>
+            <p class="service-desc">
+              Engineering high-throughput geospatial data systems for national infrastructure projects, handling cadastral boundaries, MapLibre vector tile rendering, and S3/MinIO spatial document storage.
             </p>
+            <ul class="service-features-list">
+              <li class="service-feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                PostGIS spatial querying &amp; parcel mapping
+              </li>
+              <li class="service-feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                MapLibre GL vector layer rendering
+              </li>
+              <li class="service-feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Zero-ORM FastAPI performance optimization
+              </li>
+            </ul>
           </div>
 
-          <div class="bento-card col-6">
-            <h3 class="bento-card-title">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                <line x1="8" y1="21" x2="16" y2="21"></line>
-                <line x1="12" y1="17" x2="12" y2="21"></line>
-              </svg>
-              Performance-First Stack
-            </h3>
-            <p class="bento-card-text">
-              Zero ORM overhead when executing sub-millisecond database queries. Modern asynchronous Python with FastAPI. Component-driven React 19 and Next.js interfaces styled with purposeful micro-interactions and GPU-accelerated canvas visuals.
+          <!-- Service 04 -->
+          <div class="service-card">
+            <div class="service-num">/ 04</div>
+            <h3 class="service-title">Explainable AI (XAI) &amp; Threat Intelligence</h3>
+            <p class="service-desc">
+              Developing transparent machine learning solutions for cybersecurity and threat detection. Applying SHAP feature attributions so engineers understand exactly why models make specific decisions.
             </p>
+            <ul class="service-features-list">
+              <li class="service-feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Binary telemetry &amp; malware classification
+              </li>
+              <li class="service-feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                SHAP waterfall feature attributions
+              </li>
+              <li class="service-feature-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Docker containerized inference pipelines
+              </li>
+            </ul>
           </div>
 
         </div>
       </div>
     </section>
 
-    <!-- Featured Projects Section -->
+    <!-- Featured Case Studies (Editorial Projects Grid) -->
     <section class="section" id="projects">
       <div class="container">
-        <div class="section-tag">Featured Deployments</div>
-        <h2 class="section-title">Production Systems &amp; <span>Hackathon Work</span></h2>
-        <p class="section-subtitle">Real code, live demos, and open architectures. Hover over any project to inspect the 3D perspective.</p>
+        <div class="section-badge">
+          <span class="dot"></span>
+          Selected Case Studies
+        </div>
+        <h2 class="section-heading">
+          Featured Deployments <br>
+          <span class="gradient-text">&amp; Hackathon Projects.</span>
+        </h2>
+        <p class="section-subheading">
+          Explore real engineering architectures built with live links, production repositories, and zero fluff.
+        </p>
 
-        <!-- Category Filters -->
-        <div class="project-filter-bar">
-          <button class="filter-btn active" data-filter="all">All Systems</button>
-          <button class="filter-btn" data-filter="ai">AI &amp; Machine Learning</button>
-          <button class="filter-btn" data-filter="fullstack">Full-Stack &amp; Web</button>
-          <button class="filter-btn" data-filter="hackathon">Hackathon Finalists</button>
+        <div class="project-filters-wrap">
+          <button class="filter-pill active" data-filter="all">All Work</button>
+          <button class="filter-pill" data-filter="ai">AI &amp; Machine Learning</button>
+          <button class="filter-pill" data-filter="fullstack">Full-Stack &amp; Web</button>
+          <button class="filter-pill" data-filter="hackathon">Hackathon Finalists</button>
         </div>
 
-        <div class="projects-grid">
+        <div class="projects-editorial-grid">
           
-          <!-- Project 1: DevRescue AI -->
-          <div class="project-card" data-category="ai fullstack">
+          <!-- Case 01: DevRescue AI -->
+          <div class="project-case-card" data-category="ai fullstack">
             <div>
-              <div class="project-header">
-                <span class="project-badge">AI Cyber Console</span>
-                <div class="project-links">
-                  <a href="https://dev-rescue-ai.vercel.app" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Live Demo">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                  <a href="https://github.com/RudraPatel217/DevRescue-AI-" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Repository">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
-                </div>
+              <div class="case-top-meta">
+                <span class="case-index">01 // AI CYBER CONSOLE</span>
+                <span class="case-badge">LIVE DEMO</span>
               </div>
-              <h3 class="project-title">DevRescue AI</h3>
-              <p class="project-tagline">Autonomous Bug Investigation &amp; Repair Console</p>
-              <p class="project-desc">
-                Multi-agent engineering console providing continuous software reliability. Automates repository log ingestion, AST-based vulnerability analysis with NVIDIA Nemotron-3.5, and generates real-time PR repairs alongside an XGBoost code-risk classification model.
+              <h3 class="case-title">DevRescue AI</h3>
+              <p class="case-tagline">Autonomous Bug Investigation &amp; Repair Platform</p>
+              <p class="case-desc">
+                Multi-agent console that ingests software logs, runs AST vulnerability scans with NVIDIA Nemotron-3.5, assesses predictive code risk with XGBoost, and generates automated pull requests for immediate remediation.
               </p>
+              <div class="case-tags-bar">
+                <span class="case-tag">React 19</span>
+                <span class="case-tag">FastAPI</span>
+                <span class="case-tag">NVIDIA Nemotron</span>
+                <span class="case-tag">XGBoost</span>
+                <span class="case-tag">Docker</span>
+              </div>
             </div>
-            <div class="project-tags">
-              <span class="tech-tag">React 19</span>
-              <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">NVIDIA Nemotron</span>
-              <span class="tech-tag">XGBoost</span>
-              <span class="tech-tag">Docker</span>
+            <div class="case-footer-actions">
+              <a href="https://dev-rescue-ai.vercel.app" target="_blank" rel="noopener noreferrer" class="case-action-btn">
+                Live Console ↗
+              </a>
+              <a href="https://github.com/RudraPatel217/DevRescue-AI-" target="_blank" rel="noopener noreferrer" class="case-action-btn">
+                GitHub ↗
+              </a>
             </div>
           </div>
 
-          <!-- Project 2: BhuSetu -->
-          <div class="project-card" data-category="fullstack">
+          <!-- Case 02: BhuSetu -->
+          <div class="project-case-card" data-category="fullstack">
             <div>
-              <div class="project-header">
-                <span class="project-badge">Geospatial GIS</span>
-                <div class="project-links">
-                  <a href="https://github.com/Jenil-Mistry/BhuSetu" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Repository">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
-                </div>
+              <div class="case-top-meta">
+                <span class="case-index">02 // GEOSPATIAL PLATFORM</span>
+                <span class="case-badge">GIS INFRASTRUCTURE</span>
               </div>
-              <h3 class="project-title">BhuSetu</h3>
-              <p class="project-tagline">National Land Acquisition &amp; Management Platform</p>
-              <p class="project-desc">
-                High-performance geospatial infrastructure platform streamlining cadastral parcel mapping, statutory compensation workflows, and boundary layer management. Powered by MapLibre GL JS, PostgreSQL/PostGIS spatial extensions, and zero-ORM FastAPI endpoints.
+              <h3 class="case-title">BhuSetu</h3>
+              <p class="case-tagline">National Land Acquisition &amp; Management System</p>
+              <p class="case-desc">
+                Geospatial infrastructure platform designed to streamline infrastructure land acquisition, cadastral parcel mapping, and compensation calculation with zero-ORM FastAPI services, MapLibre GL, and PostGIS.
               </p>
+              <div class="case-tags-bar">
+                <span class="case-tag">Next.js</span>
+                <span class="case-tag">MapLibre GL</span>
+                <span class="case-tag">PostGIS</span>
+                <span class="case-tag">Supabase</span>
+                <span class="case-tag">MinIO S3</span>
+              </div>
             </div>
-            <div class="project-tags">
-              <span class="tech-tag">Next.js</span>
-              <span class="tech-tag">MapLibre GL</span>
-              <span class="tech-tag">PostGIS</span>
-              <span class="tech-tag">Supabase</span>
-              <span class="tech-tag">MinIO S3</span>
+            <div class="case-footer-actions">
+              <a href="https://github.com/Jenil-Mistry/BhuSetu" target="_blank" rel="noopener noreferrer" class="case-action-btn">
+                Inspect Repository ↗
+              </a>
             </div>
           </div>
 
-          <!-- Project 3: ThreatVision -->
-          <div class="project-card" data-category="ai hackathon">
+          <!-- Case 03: ThreatVision -->
+          <div class="project-case-card" data-category="ai hackathon">
             <div>
-              <div class="project-header">
-                <span class="project-badge">Cybersecurity XAI</span>
-                <div class="project-links">
-                  <span class="project-icon-link" title="Tech Eximius Hackathon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                    </svg>
-                  </span>
-                </div>
+              <div class="case-top-meta">
+                <span class="case-index">03 // CYBERSECURITY XAI</span>
+                <span class="case-badge">TECH EXIMIUS</span>
               </div>
-              <h3 class="project-title">ThreatVision</h3>
-              <p class="project-tagline">Explainable AI (XAI) Malware Detection Platform</p>
-              <p class="project-desc">
-                Cybersecurity threat intelligence suite. "Don't just detect threats. See inside them." Pairs high-accuracy XGBoost malware classification with SHAP waterfall feature attributions to show engineers exactly why a binary is flagged as malicious.
+              <h3 class="case-title">ThreatVision</h3>
+              <p class="case-tagline">Explainable AI (XAI) Malware Detection Platform</p>
+              <p class="case-desc">
+                Cybersecurity intelligence engine built under the motto: "Don't just detect threats. See inside them." Combines high-accuracy XGBoost malware classification with SHAP waterfall explanations to break down file attributes.
               </p>
+              <div class="case-tags-bar">
+                <span class="case-tag">FastAPI</span>
+                <span class="case-tag">React 18</span>
+                <span class="case-tag">XGBoost</span>
+                <span class="case-tag">SHAP</span>
+                <span class="case-tag">Docker</span>
+              </div>
             </div>
-            <div class="project-tags">
-              <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">React 18</span>
-              <span class="tech-tag">XGBoost</span>
-              <span class="tech-tag">SHAP</span>
-              <span class="tech-tag">Docker</span>
+            <div class="case-footer-actions">
+              <span class="case-action-btn" style="cursor: default; opacity: 0.85;">
+                Tech Eximius Project
+              </span>
             </div>
           </div>
 
-          <!-- Project 4: AssetFlow -->
-          <div class="project-card" data-category="fullstack hackathon">
+          <!-- Case 04: AssetFlow -->
+          <div class="project-case-card" data-category="fullstack hackathon">
             <div>
-              <div class="project-header">
-                <span class="project-badge">Odoo Hackathon</span>
-                <div class="project-links">
-                  <a href="https://github.com/Darshilmodi15/odoo-hackathon---AssetFlow" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Repository">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
-                </div>
+              <div class="case-top-meta">
+                <span class="case-index">04 // ENTERPRISE ERP</span>
+                <span class="case-badge">ODOO HACKATHON</span>
               </div>
-              <h3 class="project-title">AssetFlow</h3>
-              <p class="project-tagline">Enterprise Asset &amp; Resource Management System</p>
-              <p class="project-desc">
-                Developed for the Odoo Hackathon with Team Terminal. Solves physical resource allocation across cross-functional operations with strict role-based access control (RBAC), multi-stage lifecycle auditing, and reservation management.
+              <h3 class="case-title">AssetFlow</h3>
+              <p class="case-tagline">Enterprise Asset &amp; Resource Management System</p>
+              <p class="case-desc">
+                Engineered for the Odoo Hackathon with Team Terminal. Streamlines asset tracking, reservation approvals, and lifecycle maintenance through a clean architecture ERP model with strict role-based controls.
               </p>
+              <div class="case-tags-bar">
+                <span class="case-tag">Enterprise ERP</span>
+                <span class="case-tag">RBAC</span>
+                <span class="case-tag">Team Terminal</span>
+                <span class="case-tag">Clean Architecture</span>
+              </div>
             </div>
-            <div class="project-tags">
-              <span class="tech-tag">Enterprise ERP</span>
-              <span class="tech-tag">RBAC</span>
-              <span class="tech-tag">Clean Architecture</span>
-              <span class="tech-tag">Team Terminal</span>
+            <div class="case-footer-actions">
+              <a href="https://github.com/Darshilmodi15/odoo-hackathon---AssetFlow" target="_blank" rel="noopener noreferrer" class="case-action-btn">
+                GitHub ↗
+              </a>
             </div>
           </div>
 
-          <!-- Project 5: TechFusion SafeSphere -->
-          <div class="project-card" data-category="fullstack">
+          <!-- Case 05: TechFusion SafeSphere -->
+          <div class="project-case-card" data-category="fullstack">
             <div>
-              <div class="project-header">
-                <span class="project-badge">Safety &amp; Telemetry</span>
-                <div class="project-links">
-                  <a href="https://koushik2024-code.github.io/TechFusion-v2v/" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="Live Deployment">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                      <polyline points="15 3 21 3 21 9"></polyline>
-                      <line x1="10" y1="14" x2="21" y2="3"></line>
-                    </svg>
-                  </a>
-                  <a href="https://github.com/koushik2024-code/TechFusion-v2v" target="_blank" rel="noopener noreferrer" class="project-icon-link" title="GitHub Repository">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
-                </div>
+              <div class="case-top-meta">
+                <span class="case-index">05 // TELEMETRY &amp; AUDIO</span>
+                <span class="case-badge">LIVE DEMO</span>
               </div>
-              <h3 class="project-title">TechFusion SafeSphere</h3>
-              <p class="project-tagline">Transit Safety &amp; Live Telemetry Dashboard</p>
-              <p class="project-desc">
-                Proactive personal security dashboard featuring glassmorphic controls, real-time location telemetry streams, motion-driven route calculation, Web Audio siren synthesizer, and Web Speech API voice guardian triggers.
+              <h3 class="case-title">TechFusion SafeSphere</h3>
+              <p class="case-tagline">Transit Safety &amp; Real-Time Telemetry Dashboard</p>
+              <p class="case-desc">
+                Personal transit safety dashboard featuring real-time location telemetry streams, motion-driven safe haven routing, Web Audio dual-tone synthesized sirens, and Web Speech voice triggers.
               </p>
+              <div class="case-tags-bar">
+                <span class="case-tag">Web Audio API</span>
+                <span class="case-tag">Web Speech API</span>
+                <span class="case-tag">Live Telemetry</span>
+                <span class="case-tag">Tailwind CSS</span>
+              </div>
             </div>
-            <div class="project-tags">
-              <span class="tech-tag">Web Audio API</span>
-              <span class="tech-tag">Web Speech API</span>
-              <span class="tech-tag">Telemetry Streaming</span>
-              <span class="tech-tag">Tailwind CSS</span>
+            <div class="case-footer-actions">
+              <a href="https://koushik2024-code.github.io/TechFusion-v2v/" target="_blank" rel="noopener noreferrer" class="case-action-btn">
+                Live Deployment ↗
+              </a>
+              <a href="https://github.com/koushik2024-code/TechFusion-v2v" target="_blank" rel="noopener noreferrer" class="case-action-btn">
+                GitHub ↗
+              </a>
             </div>
           </div>
 
-          <!-- Project 6: HackX Air Quality -->
-          <div class="project-card" data-category="hackathon">
+          <!-- Case 06: HackX Prototype -->
+          <div class="project-case-card" data-category="hackathon">
             <div>
-              <div class="project-header">
-                <span class="project-badge">IoT Innovation</span>
-                <div class="project-links">
-                  <span class="project-icon-link" title="HackX Prototype">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
-                      <rect x="9" y="9" width="6" height="6"></rect>
-                      <line x1="9" y1="1" x2="9" y2="4"></line>
-                      <line x1="15" y1="1" x2="15" y2="4"></line>
-                      <line x1="9" y1="20" x2="9" y2="23"></line>
-                      <line x1="15" y1="20" x2="15" y2="23"></line>
-                    </svg>
-                  </span>
-                </div>
+              <div class="case-top-meta">
+                <span class="case-index">06 // IOT TELEMETRY</span>
+                <span class="case-badge">HACKX</span>
               </div>
-              <h3 class="project-title">HackX Prototype</h3>
-              <p class="project-tagline">Environmental &amp; Air Quality Telemetry</p>
-              <p class="project-desc">
-                Embedded sensor telemetry prototype monitoring air particulate matter and atmospheric shifts with real-time alerting algorithms and modular reporting dashboards.
+              <h3 class="case-title">HackX Prototype</h3>
+              <p class="case-tagline">Environmental &amp; Air Quality Telemetry</p>
+              <p class="case-desc">
+                Hardware-integrated atmospheric monitoring prototype tracking particulate matter, air quality index shifts, and delivering predictive alerts with modular visualization dashboards.
               </p>
+              <div class="case-tags-bar">
+                <span class="case-tag">IoT Telemetry</span>
+                <span class="case-tag">Environmental Sensors</span>
+                <span class="case-tag">HackX 2026</span>
+              </div>
             </div>
-            <div class="project-tags">
-              <span class="tech-tag">Hardware Telemetry</span>
-              <span class="tech-tag">Data Visualization</span>
-              <span class="tech-tag">HackX 2026</span>
+            <div class="case-footer-actions">
+              <span class="case-action-btn" style="cursor: default; opacity: 0.85;">
+                Hardware Prototype
+              </span>
             </div>
           </div>
 
@@ -487,9 +539,17 @@
     <!-- Interactive Cyber Terminal -->
     <section class="section" id="terminal">
       <div class="container">
-        <div class="section-tag">Interactive Terminal</div>
-        <h2 class="section-title">Cyber Command <span>Interface</span></h2>
-        <p class="section-subtitle">Type <code>help</code>, <code>projects</code>, <code>skills</code>, <code>resume</code>, or <code>sudo hire</code> to interact directly with the profile engine.</p>
+        <div class="section-badge">
+          <span class="dot"></span>
+          Developer Console
+        </div>
+        <h2 class="section-heading">
+          Interactive Shell <br>
+          <span class="gradient-text">Direct Profile Query.</span>
+        </h2>
+        <p class="section-subheading">
+          Recruiters and engineers can explore credentials, projects, and skills through an interactive zsh-style terminal interface. Type <code>help</code> to begin.
+        </p>
 
         <div class="terminal-wrapper">
           <div class="terminal-header">
@@ -499,11 +559,11 @@
               <span class="dot dot-green"></span>
             </div>
             <div class="terminal-title">rudra@cyber-console: ~ (zsh)</div>
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-cyan);">ONLINE</div>
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: #10b981;">SYS_READY</div>
           </div>
 
           <div class="terminal-body" id="terminal-body">
-            <div>Welcome to <strong>Rudra Patel's Interactive Cyber Terminal [Version 2.4.0]</strong>.</div>
+            <div>Welcome to <strong>Rudra Patel's Interactive Cyber Terminal [v2.4.0]</strong>.</div>
             <div style="color: var(--text-muted); margin-bottom: 12px;">Type <span style="color: var(--accent-cyan); font-weight: bold;">help</span> to inspect available operational commands.</div>
             <div><span style="color: #38bdf8;">rudra@cyber-console:~$</span> <span style="color: #ffffff;">about</span></div>
             <div style="margin-top: 4px; margin-bottom: 12px;">
@@ -511,101 +571,69 @@
             </div>
           </div>
 
-          <div style="padding: 0 24px 20px;">
-            <div class="terminal-input-row">
-              <span class="terminal-prompt">rudra@cyber-console:~$</span>
-              <input type="text" id="terminal-input" class="terminal-input" placeholder="Type command here (e.g. 'help', 'projects', 'resume')..." autocomplete="off" spellcheck="false">
-            </div>
+          <div class="terminal-input-row">
+            <span class="terminal-prompt">rudra@cyber-console:~$</span>
+            <input type="text" id="terminal-input" class="terminal-input" placeholder="Type command here (e.g. 'help', 'projects', 'resume', 'sudo hire')..." autocomplete="off" spellcheck="false">
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- Technical Skills Matrix -->
-    <section class="section" id="skills">
+    <!-- Interactive FAQ Section (Micheel Signature) -->
+    <section class="section" id="faq">
       <div class="container">
-        <div class="section-tag">Skills &amp; Capabilities</div>
-        <h2 class="section-title">Engineered <span>Technology Matrix</span></h2>
-        <p class="section-subtitle">Tools, frameworks, and foundational platforms I deploy across projects.</p>
+        <div class="section-badge">
+          <span class="dot"></span>
+          Common Inquiries
+        </div>
+        <h2 class="section-heading">
+          Frequently Asked <br>
+          <span class="gradient-text">Questions.</span>
+        </h2>
+        <p class="section-subheading">
+          Direct answers regarding technical capabilities, hackathon experience, and availability for high-impact teams.
+        </p>
 
-        <div class="skills-grid-container">
+        <div class="faq-list">
           
-          <!-- Frontend -->
-          <div class="skill-category-card">
-            <h3 class="category-title">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-              Frontend Engineering
-            </h3>
-            <div class="skill-items">
-              <span class="skill-chip">React 19</span>
-              <span class="skill-chip">Next.js</span>
-              <span class="skill-chip">TypeScript</span>
-              <span class="skill-chip">Tailwind CSS</span>
-              <span class="skill-chip">Vite</span>
-              <span class="skill-chip">Three.js</span>
-              <span class="skill-chip">MapLibre GL JS</span>
+          <div class="faq-item">
+            <div class="faq-question-row">
+              <h3 class="faq-question">What is your primary technology stack?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              My core stack covers modern Python with <strong>FastAPI</strong>, <strong>React 19</strong>, <strong>Next.js</strong>, and <strong>TypeScript</strong>. On the data and infrastructure side, I work extensively with <strong>PostgreSQL / PostGIS</strong> (geospatial), <strong>Supabase</strong>, <strong>MinIO / S3</strong>, and <strong>Docker</strong>. For machine learning, I deploy <strong>NVIDIA Nemotron</strong>, <strong>XGBoost</strong>, and <strong>SHAP</strong> for explainability.
             </div>
           </div>
 
-          <!-- Backend -->
-          <div class="skill-category-card">
-            <h3 class="category-title">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
-                <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
-                <line x1="6" y1="6" x2="6.01" y2="6"></line>
-                <line x1="6" y1="18" x2="6.01" y2="18"></line>
-              </svg>
-              Backend &amp; Distributed Systems
-            </h3>
-            <div class="skill-items">
-              <span class="skill-chip">Python 3.11+</span>
-              <span class="skill-chip">FastAPI</span>
-              <span class="skill-chip">PostgreSQL</span>
-              <span class="skill-chip">PostGIS</span>
-              <span class="skill-chip">Supabase</span>
-              <span class="skill-chip">MinIO / S3</span>
-              <span class="skill-chip">RESTful APIs</span>
+          <div class="faq-item">
+            <div class="faq-question-row">
+              <h3 class="faq-question">What was your contribution to DevRescue AI and BhuSetu?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              In <strong>DevRescue AI</strong>, I orchestrated the multi-agent investigation pipeline that hooks into GitHub repositories, analyzes code syntax trees with LLMs, and computes bug severity using an XGBoost risk engine. In <strong>BhuSetu</strong>, I engineered the geospatial land acquisition backend, implementing high-throughput MapLibre GL tile rendering and zero-ORM PostGIS spatial queries.
             </div>
           </div>
 
-          <!-- AI & ML -->
-          <div class="skill-category-card">
-            <h3 class="category-title">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14.93V17a1 1 0 0 1-2 0v-.07A7 7 0 0 1 5.07 11H5a1 1 0 0 1 0-2h.07A7 7 0 0 1 11 3.07V3a1 1 0 0 1 2 0v.07A7 7 0 0 1 18.93 9H19a1 1 0 0 1 0 2h-.07A7 7 0 0 1 13 16.93z"></path>
-              </svg>
-              AI &amp; Machine Learning
-            </h3>
-            <div class="skill-items">
-              <span class="skill-chip">NVIDIA Nemotron</span>
-              <span class="skill-chip">XGBoost</span>
-              <span class="skill-chip">SHAP (Explainable AI)</span>
-              <span class="skill-chip">Multi-Agent Systems</span>
-              <span class="skill-chip">Prompt Engineering</span>
+          <div class="faq-item">
+            <div class="faq-question-row">
+              <h3 class="faq-question">Are you available for full-time roles, internships, or hackathon sprints?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              Yes! I am actively looking for high-impact engineering opportunities, backend/full-stack developer roles, and AI engineering positions. I am open to remote, hybrid, or on-site opportunities in India and globally.
             </div>
           </div>
 
-          <!-- DevOps -->
-          <div class="skill-category-card">
-            <h3 class="category-title">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="3"></circle>
-                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-              </svg>
-              DevOps &amp; Infrastructure
-            </h3>
-            <div class="skill-items">
-              <span class="skill-chip">Docker</span>
-              <span class="skill-chip">Git</span>
-              <span class="skill-chip">GitHub Actions</span>
-              <span class="skill-chip">Linux</span>
-              <span class="skill-chip">Vercel</span>
-              <span class="skill-chip">Postman</span>
+          <div class="faq-item">
+            <div class="faq-question-row">
+              <h3 class="faq-question">Why use a 3D Three.js canvas on your portfolio?</h3>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              I believe developer portfolios should embody both technical rigor and creative craftsmanship. The Three.js canvas demonstrates GPU-accelerated WebGL performance, responsive particle systems, and interactive physics running at 60 FPS without degrading page performance.
             </div>
           </div>
 
@@ -616,69 +644,62 @@
     <!-- Contact & Direct Channels -->
     <section class="section" id="contact">
       <div class="container">
-        <div class="section-tag">Initialize Contact</div>
-        <h2 class="section-title">Let's Build <span>Together</span></h2>
-        <p class="section-subtitle">Interested in collaborating, recruiting for engineering teams, or exploring hackathon synergies? Send a message directly.</p>
+        <div class="section-badge">
+          <span class="dot"></span>
+          Get In Touch
+        </div>
+        <h2 class="section-heading">
+          Have an Opportunity or Project? <br>
+          <span class="gradient-text">Let's Connect.</span>
+        </h2>
+        <p class="section-subheading">
+          Whether you want to discuss engineering roles, collaborate on hackathons, or chat about multi-agent systems &mdash; feel free to reach out.
+        </p>
 
-        <div class="contact-grid">
+        <div class="contact-editorial-grid">
           
-          <!-- Channels -->
-          <div class="contact-info-panel">
-            <div>
-              <h3 style="font-size: 1.5rem; font-weight: 700; color: #ffffff; margin-bottom: 12px;">Direct Reachout</h3>
-              <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6;">
-                Feel free to email me directly or connect across developer platforms. I typically respond within 24 hours.
-              </p>
-            </div>
+          <div class="contact-left-col">
+            <h3 style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: #ffffff;">Direct Channels</h3>
+            <p style="color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">
+              Reach out directly across any of the platforms below. I am prompt to respond.
+            </p>
 
-            <div class="contact-channels">
-              <a href="mailto:rj423513@gmail.com" class="contact-channel-item">
-                <div class="channel-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                  </svg>
+            <div class="contact-channels-stack">
+              <a href="mailto:rj423513@gmail.com" class="contact-channel-card">
+                <div class="channel-icon-pill">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                 </div>
-                <div class="channel-details">
-                  <h4>Email</h4>
+                <div class="channel-meta">
+                  <h4>Email Address</h4>
                   <p>rj423513@gmail.com</p>
                 </div>
               </a>
 
-              <a href="https://www.linkedin.com/in/rudrapatel217/" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
-                <div class="channel-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                    <rect x="2" y="9" width="4" height="12"></rect>
-                    <circle cx="4" cy="4" r="2"></circle>
-                  </svg>
+              <a href="https://www.linkedin.com/in/rudrapatel217/" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+                <div class="channel-icon-pill">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                 </div>
-                <div class="channel-details">
+                <div class="channel-meta">
                   <h4>LinkedIn</h4>
                   <p>linkedin.com/in/rudrapatel217</p>
                 </div>
               </a>
 
-              <a href="https://unstop.com/u/rudrapat96265" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
-                <div class="channel-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                  </svg>
+              <a href="https://unstop.com/u/rudrapat96265" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+                <div class="channel-icon-pill">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
                 </div>
-                <div class="channel-details">
+                <div class="channel-meta">
                   <h4>Unstop Profile</h4>
                   <p>unstop.com/u/rudrapat96265</p>
                 </div>
               </a>
 
-              <a href="https://github.com/RudraPatel217" target="_blank" rel="noopener noreferrer" class="contact-channel-item">
-                <div class="channel-icon">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
+              <a href="https://github.com/RudraPatel217" target="_blank" rel="noopener noreferrer" class="contact-channel-card">
+                <div class="channel-icon-pill">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                 </div>
-                <div class="channel-details">
+                <div class="channel-meta">
                   <h4>GitHub</h4>
                   <p>github.com/RudraPatel217</p>
                 </div>
@@ -687,29 +708,25 @@
           </div>
 
           <!-- Contact Form Box -->
-          <div class="contact-form-box">
+          <div class="contact-form-card">
             <form id="contact-form">
               <div class="form-group">
-                <label for="contact-name" class="form-label">Your Name</label>
-                <input type="text" id="contact-name" class="form-control" placeholder="e.g. Alex Johnson" required>
+                <label for="contact-name" class="form-label">Full Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Vance" required>
               </div>
 
               <div class="form-group">
                 <label for="contact-email" class="form-label">Email Address</label>
-                <input type="email" id="contact-email" class="form-control" placeholder="alex@company.com" required>
+                <input type="email" id="contact-email" class="form-input" placeholder="alex@company.com" required>
               </div>
 
               <div class="form-group">
-                <label for="contact-message" class="form-label">Message / Project Brief</label>
-                <textarea id="contact-message" class="form-control" placeholder="Hello Rudra, I'd like to discuss an opportunity..." required></textarea>
+                <label for="contact-message" class="form-label">Message / Opportunity Details</label>
+                <textarea id="contact-message" class="form-input" placeholder="Hi Rudra, we would love to connect regarding..." required></textarea>
               </div>
 
-              <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 14px;">
-                Dispatch Message
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="22" y1="2" x2="11" y2="13"></line>
-                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                </svg>
+              <button type="submit" class="btn-pill-primary" style="width: 100%; justify-content: center; padding: 14px;">
+                Dispatch Message ↗
               </button>
             </form>
           </div>
@@ -720,13 +737,13 @@
 
     <!-- Footer -->
     <footer>
-      <div class="container footer-content">
-        <div class="footer-text">
-          &copy; 2026 <strong>Rudra Patel</strong>. Engineered with <span>Three.js</span>, WebGL &amp; Precision.
+      <div class="container footer-inner">
+        <div class="footer-copy">
+          &copy; 2026 <strong>Rudra Patel</strong>. Engineered with Three.js, WebGL &amp; Swiss Editorial Precision.
         </div>
 
         <div>
-          <a href="#hero" class="btn-secondary" style="padding: 6px 14px; font-size: 0.8rem;">
+          <a href="#hero" class="btn-pill-secondary" style="padding: 6px 16px; font-size: 0.8rem;">
             Back to Top &uarr;
           </a>
         </div>
@@ -735,9 +752,9 @@
 
   </div>
 
-  <!-- Toast Notification Banner -->
+  <!-- Toast Notification -->
   <div class="toast-notice" id="toast-notice">
-    <span id="toast-message">Notification message here</span>
+    <span id="toast-message">Notification message</span>
   </div>
 
   <!-- Scripts -->
@@ -747,4 +764,3 @@
   <script src="scripts/app.js"></script>
 </body>
 </html>
-
