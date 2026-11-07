@@ -6,7 +6,9 @@
 class SoundEngine {
   constructor() {
     this.ctx = null;
-    this.isMuted = localStorage.getItem('rp_sound_muted') === 'true';
+    const saved = localStorage.getItem('rp_sound_muted');
+    // Muted by default so page loads completely silent
+    this.isMuted = saved !== null ? saved === 'true' : true;
     this.initElements();
   }
 
