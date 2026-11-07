@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgArt3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b131e"/>
+      <stop offset="100%" stop-color="#132235"/>
+    </linearGradient>
+    <radialGradient id="spikeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#f59e0b" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0b131e" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="500" rx="20" fill="url(#bgArt3)"/>
+  <circle cx="300" cy="250" r="190" fill="url(#spikeGlow)"/>
+
+  <!-- 3D Spiky Metallic Hemisphere (Blue Left / Gold Right) -->
+  <g transform="translate(300, 245) rotate(-15)" filter="url(#shadow3)">
+    <!-- Base Core Sphere -->
+    <circle cx="0" cy="0" r="130" fill="#0f263e"/>
+
+    <!-- Left Spikes: Cyan & Deep Blue Metallic -->
+    <!-- Row 1 -->
+    <polygon points="-120,-80 -160,-110 -100,-100" fill="#0284c7"/>
+    <polygon points="-100,-100 -160,-110 -130,-70" fill="#38bdf8"/>
+
+    <polygon points="-140,-30 -185,-40 -135,-10" fill="#0369a1"/>
+    <polygon points="-135,-10 -185,-40 -125,0" fill="#38bdf8"/>
+
+    <polygon points="-140,30 -185,45 -130,50" fill="#0284c7"/>
+    <polygon points="-130,50 -185,45 -110,65" fill="#7dd3fc"/>
+
+    <polygon points="-110,80 -150,115 -90,105" fill="#075985"/>
+    <polygon points="-90,105 -150,115 -80,95" fill="#38bdf8"/>
+
+    <!-- Left Mid Spikes -->
+    <polygon points="-80,-60 -115,-80 -60,-80" fill="#0284c7"/>
+    <polygon points="-60,-80 -115,-80 -70,-50" fill="#bae6fd"/>
+
+    <polygon points="-90,-10 -130,-15 -85,15" fill="#0369a1"/>
+    <polygon points="-85,15 -130,-15 -75,20" fill="#38bdf8"/>
+
+    <polygon points="-80,45 -115,65 -65,65" fill="#0284c7"/>
+    <polygon points="-65,65 -115,65 -55,50" fill="#7dd3fc"/>
+
+    <!-- Inner Blue Pyramid Clusters -->
+    <polygon points="-40,-40 -65,-55 -30,-60" fill="#0369a1"/>
+    <polygon points="-30,-60 -65,-55 -35,-30" fill="#38bdf8"/>
+    <polygon points="-45,0 -70,0 -40,20" fill="#0284c7"/>
+    <polygon points="-40,20 -70,0 -30,15" fill="#7dd3fc"/>
+    <polygon points="-35,35 -55,50 -25,45" fill="#0369a1"/>
+    <polygon points="-25,45 -55,50 -20,30" fill="#38bdf8"/>
+
+    <!-- Equator Dividing Ridge -->
+    <polygon points="-10,-140 0,-170 15,-135" fill="#0284c7"/>
+    <polygon points="15,-135 0,-170 20,-130" fill="#fbbf24"/>
+
+    <polygon points="-10,-80 0,-100 15,-75" fill="#38bdf8"/>
+    <polygon points="15,-75 0,-100 20,-70" fill="#f59e0b"/>
+
+    <polygon points="-5,-20 0,-35 15,-15" fill="#7dd3fc"/>
+    <polygon points="15,-15 0,-35 20,-10" fill="#fde047"/>
+
+    <polygon points="-5,35 0,55 15,40" fill="#38bdf8"/>
+    <polygon points="15,40 0,55 20,45" fill="#f59e0b"/>
+
+    <polygon points="-10,95 0,125 15,100" fill="#0284c7"/>
+    <polygon points="15,100 0,125 20,105" fill="#d97706"/>
+
+    <!-- Right Spikes: Rich Gold & Amber Metallic -->
+    <polygon points="40,-40 65,-55 30,-60" fill="#b45309"/>
+    <polygon points="30,-60 65,-55 35,-30" fill="#fbbf24"/>
+    <polygon points="45,0 70,0 40,20" fill="#d97706"/>
+    <polygon points="40,20 70,0 30,15" fill="#fde047"/>
+    <polygon points="35,35 55,50 25,45" fill="#b45309"/>
+    <polygon points="25,45 55,50 20,30" fill="#f59e0b"/>
+
+    <!-- Right Mid Spikes -->
+    <polygon points="80,-60 115,-80 60,-80" fill="#d97706"/>
+    <polygon points="60,-80 115,-80 70,-50" fill="#fde047"/>
+
+    <polygon points="90,-10 130,-15 85,15" fill="#b45309"/>
+    <polygon points="85,15 130,-15 75,20" fill="#fbbf24"/>
+
+    <polygon points="80,45 115,65 65,65" fill="#d97706"/>
+    <polygon points="65,65 115,65 55,50" fill="#fde047"/>
+
+    <!-- Right Outer Spikes -->
+    <polygon points="120,-80 160,-110 100,-100" fill="#b45309"/>
+    <polygon points="100,-100 160,-110 130,-70" fill="#fbbf24"/>
+
+    <polygon points="140,-30 185,-40 135,-10" fill="#d97706"/>
+    <polygon points="135,-10 185,-40 125,0" fill="#fde047"/>
+
+    <polygon points="140,30 185,45 130,50" fill="#b45309"/>
+    <polygon points="130,50 185,45 110,65" fill="#fbbf24"/>
+
+    <polygon points="110,80 150,115 90,105" fill="#92400e"/>
+    <polygon points="90,105 150,115 80,95" fill="#f59e0b"/>
+  </g>
+</svg>

@@ -58,7 +58,7 @@
       "techStack": ["Python", "Streamlit", "DOM Crawler", "SEO Diagnostics", "Excel Export"],
       "demoUrl": "https://website-analyser-rudra.streamlit.app/",
       "githubUrl": "https://github.com/RudraPatel217",
-      "image": "assets/images/projects/website-analyzer.svg"
+      "image": "assets/images/projects/domain-3d.svg"
     },
     {
       "title": "ThreatVision",
@@ -69,7 +69,7 @@
       "techStack": ["FastAPI", "React 18", "Vite", "XGBoost", "SHAP", "Docker"],
       "demoUrl": "",
       "githubUrl": "https://github.com/RudraPatel217",
-      "image": "assets/images/projects/threatvision.svg"
+      "image": "assets/images/projects/threatvision-3d.svg"
     },
     {
       "title": "DevRescue AI",
@@ -80,7 +80,7 @@
       "techStack": ["React 19", "FastAPI", "NVIDIA Nemotron-3.5", "XGBoost", "Docker", "GitHub API"],
       "demoUrl": "https://dev-rescue-ai.vercel.app",
       "githubUrl": "https://github.com/RudraPatel217/DevRescue-AI-",
-      "image": "assets/images/projects/devrescue-ai.svg"
+      "image": "assets/images/projects/devrescue-3d.svg"
     },
     {
       "title": "AssetFlow",
@@ -91,7 +91,7 @@
       "techStack": ["Enterprise ERP", "Clean Architecture", "RBAC", "State Machines", "Team Terminal"],
       "demoUrl": "",
       "githubUrl": "https://github.com/Darshilmodi15/odoo-hackathon---AssetFlow",
-      "image": "assets/images/projects/assetflow.svg"
+      "image": "assets/images/projects/assetflow-3d.svg"
     },
     {
       "title": "BhuSetu",
@@ -102,7 +102,7 @@
       "techStack": ["Next.js", "React 19", "MapLibre GL", "PostGIS", "Supabase", "MinIO S3", "Docker"],
       "demoUrl": "",
       "githubUrl": "https://github.com/Jenil-Mistry/BhuSetu",
-      "image": "assets/images/projects/bhusetu.svg"
+      "image": "assets/images/projects/bhusetu-3d.svg"
     },
     {
       "title": "TechFusion SafeSphere",
@@ -113,7 +113,7 @@
       "techStack": ["JavaScript", "Geolocation APIs", "Web Audio API", "Web Speech API", "Tailwind CSS"],
       "demoUrl": "https://koushik2024-code.github.io/TechFusion-v2v/",
       "githubUrl": "https://github.com/koushik2024-code/TechFusion-v2v",
-      "image": "assets/images/projects/safesphere.svg"
+      "image": "assets/images/projects/safesphere-3d.svg"
     },
     {
       "title": "Air Pollution & Environmental AQI Intelligence",
@@ -124,7 +124,7 @@
       "techStack": ["Python", "Data Analysis", "Predictive Analytics", "Hackathon Finalist"],
       "demoUrl": "",
       "githubUrl": "",
-      "image": "assets/images/projects/aqi-intelligence.svg"
+      "image": "assets/images/projects/aqi-3d.svg"
     }
   ],
   "hackathons": [

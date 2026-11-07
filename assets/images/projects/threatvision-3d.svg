@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgArt2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12101b"/>
+      <stop offset="100%" stop-color="#1b172a"/>
+    </linearGradient>
+    <radialGradient id="purpleGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#c084fc" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#38bdf8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#12101b" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.75"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="500" rx="20" fill="url(#bgArt2)"/>
+  <circle cx="300" cy="250" r="190" fill="url(#purpleGlow)"/>
+
+  <!-- 3D Faceted Origami Crystal Cluster -->
+  <g transform="translate(300, 240)" filter="url(#shadow2)">
+    <!-- Back/Dark Facets -->
+    <polygon points="-80,-140 40,-160 -20,-70" fill="#1e1832"/>
+    <polygon points="40,-160 120,-90 50,-50" fill="#2d224d"/>
+    <polygon points="120,-90 170,-20 80,10" fill="#1b152d"/>
+    <polygon points="170,-20 160,80 60,70" fill="#261c3e"/>
+    <polygon points="160,80 80,150 20,80" fill="#1a1429"/>
+    <polygon points="80,150 -40,160 -10,70" fill="#271b40"/>
+    <polygon points="-40,160 -130,90 -50,40" fill="#1f1633"/>
+    <polygon points="-130,90 -160,0 -70,-20" fill="#2c1e48"/>
+    <polygon points="-160,0 -120,-80 -60,-50" fill="#211837"/>
+
+    <!-- Mid Facets (Electric Slate & Violet Shading) -->
+    <polygon points="-20,-70 50,-50 0,0" fill="#4c327e"/>
+    <polygon points="50,-50 80,10 10,20" fill="#6b46b3"/>
+    <polygon points="80,10 60,70 0,40" fill="#583995"/>
+    <polygon points="60,70 20,80 -20,50" fill="#3f276c"/>
+    <polygon points="20,80 -10,70 -30,20" fill="#5b379d"/>
+    <polygon points="-10,70 -50,40 -40,0" fill="#4a2c82"/>
+    <polygon points="-50,40 -70,-20 -20,-10" fill="#633ba8"/>
+    <polygon points="-70,-20 -60,-50 0,-30" fill="#784cc9"/>
+
+    <!-- Top Highlighted Shards (Cyan & Amber Metallic Reflection) -->
+    <polygon points="-40,-110 30,-90 -10,-30" fill="#38bdf8"/>
+    <polygon points="30,-90 100,-40 30,10" fill="#60a5fa"/>
+    <polygon points="100,-40 130,40 50,30" fill="#818cf8"/>
+    <polygon points="30,10 70,90 0,60" fill="#c084fc"/>
+    <polygon points="0,60 -70,100 -30,30" fill="#f43f5e"/>
+    <polygon points="-30,30 -110,50 -50,-10" fill="#fb7185"/>
+    <polygon points="-50,-10 -90,-60 -20,-40" fill="#38bdf8"/>
+    <polygon points="-20,-40 10,-30 0,20" fill="#ffffff" fill-opacity="0.9"/>
+
+    <!-- Gold Accent Plates (like the warm gold reflection in the template) -->
+    <polygon points="10,-30 60,-10 30,10" fill="#f59e0b"/>
+    <polygon points="60,-10 90,30 50,30" fill="#fbbf24"/>
+    <polygon points="30,10 50,30 20,40" fill="#d97706"/>
+  </g>
+</svg>

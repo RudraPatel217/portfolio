@@ -169,11 +169,11 @@ function initProjectModal() {
 
   // Attach click listener to project card titles and media previews
   document.querySelectorAll('.project-case-card').forEach(card => {
-    const titleElem = card.querySelector('.case-title');
-    const mediaElem = card.querySelector('.case-media-preview');
+    const titleElem = card.querySelector('.work-condensed-title, .case-title');
+    const mediaElem = card.querySelector('.work-media-stage, .case-media-preview');
     if (!titleElem) return;
 
-    const key = titleElem.textContent.trim().toLowerCase();
+    const key = (titleElem.dataset.projectKey || titleElem.textContent).trim().toLowerCase();
     titleElem.style.cursor = 'pointer';
     titleElem.title = 'Click to inspect architectural details';
     titleElem.addEventListener('click', () => {
