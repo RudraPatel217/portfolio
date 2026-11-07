@@ -35,10 +35,13 @@ Builder of DevRescue AI (NVIDIA Nemotron), BhuSetu (PostGIS GIS), and ThreatVisi
   &bull; AI & ML: NVIDIA Nemotron-3.5, XGBoost, SHAP (Explainable AI), Multi-Agent Architecture
   &bull; DevOps: Docker, Git, GitHub Actions, Linux, Vercel`,
 
-    hackathons: `Hackathon Milestones:
-  &bull; <span style="color:#38bdf8">Odoo Hackathon</span> &mdash; AssetFlow Enterprise ERP (Team Terminal)
-  &bull; <span style="color:#38bdf8">Tech Eximius</span> &mdash; ThreatVision XAI Malware Detection
-  &bull; <span style="color:#38bdf8">HackX</span> &mdash; IoT & Air Quality Prototype System`,
+    hackathons: `7+ Hackathons & System Milestones:
+  &bull; <span style="color:#38bdf8">Smart India Hackathon (SIH 2026)</span> &mdash; Selected in internal round for national deployment
+  &bull; <span style="color:#38bdf8">Tech Eximius Hackathon</span> &mdash; Finalist with ThreatVision XAI malware classification
+  &bull; <span style="color:#38bdf8">Odoo Hackathon</span> &mdash; Built AssetFlow Enterprise ERP (Team Terminal)
+  &bull; <span style="color:#38bdf8">TechFusion / Vibe 2 Vision</span> &mdash; Built SafeSphere Women's Safety SOS Platform
+  &bull; <span style="color:#38bdf8">National Environmental Hackathon</span> &mdash; Finalist with Air Quality & AQI Intelligence
+  &bull; <span style="color:#38bdf8">Speaker Recognition</span> &mdash; Delivered talk on 'AI and Society' at Adani University`,
 
     contact: `Direct Channels:
   &bull; Email: <a href="mailto:rj423513@gmail.com" style="color:#38bdf8">rj423513@gmail.com</a>

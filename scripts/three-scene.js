@@ -275,15 +275,26 @@
         if (mode === 'neural') {
           this.coreGroup.visible = true;
           this.gridHelper.visible = true;
+          this.gridHelper.material.opacity = 0.12;
           this.starfield.visible = true;
+          if (this.innerCore) {
+            this.innerCore.material.color.setHex(0x38bdf8);
+            this.innerCore.material.wireframe = true;
+          }
         } else if (mode === 'galaxy') {
           this.coreGroup.visible = false;
           this.gridHelper.visible = false;
           this.starfield.visible = true;
-        } else if (mode === 'matrix') {
+        } else if (mode === 'cyber' || mode === 'matrix') {
           this.coreGroup.visible = true;
           this.gridHelper.visible = true;
-          this.gridHelper.material.opacity = 0.5;
+          this.gridHelper.material.opacity = 0.45;
+          this.starfield.visible = true;
+          if (this.innerCore) {
+            this.innerCore.material.color.setHex(0x00f5ff);
+            this.innerCore.material.wireframe = true;
+          }
+          this.triggerClickShockwave(window.innerWidth / 2, window.innerHeight / 2);
         }
       }
 
