@@ -1,14 +1,13 @@
 /**
  * Rudra Patel Portfolio - Main Application Logic
  * Elevated to Micheel / Gr8r Studio Editorial Standard
- * Includes: Project Filtering, 3D Tilt Physics, FAQ Accordion,
+ * Includes: Project Filtering, 3D Tilt Physics,
  * Architecture Deep-Dive Modal, Theme Color Switcher, and Confetti.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initProjectFiltering();
   initCardTiltPhysics();
-  initFaqAccordion();
   initProjectModal();
   initThemeSwitcher();
   initContactForm();
@@ -253,25 +252,6 @@ function initCardTiltPhysics() {
 
     card.addEventListener('mouseleave', () => {
       card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
-    });
-  });
-}
-
-/* --------------------------------------------------------------------------
-   Interactive FAQ Accordion (Micheel Signature)
-   -------------------------------------------------------------------------- */
-function initFaqAccordion() {
-  const faqItems = document.querySelectorAll('.faq-item');
-
-  faqItems.forEach(item => {
-    item.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
-      faqItems.forEach(other => other.classList.remove('active'));
-
-      if (!isActive) {
-        item.classList.add('active');
-        if (window.soundEngine) window.soundEngine.playBlip(550, 0.04);
-      }
     });
   });
 }
