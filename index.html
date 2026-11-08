@@ -482,7 +482,13 @@
           <!-- Case 04: AssetFlow ERP -->
           <div class="project-case-card" data-category="fullstack hackathon">
             <div class="case-media-preview" title="Click to inspect architectural details">
-              <img src="assets/images/projects/assetflow.svg" alt="AssetFlow Enterprise Resource Planning Architecture Mockup" loading="lazy">
+              <div class="media-preview-header">
+                <div class="preview-mode-switch" onclick="event.stopPropagation();">
+                  <button type="button" class="mode-pill active" data-img-target="assetflow-preview-img" data-src="assets/images/projects/assetflow.jpg" title="View Real App Screenshot">📸 Real App</button>
+                  <button type="button" class="mode-pill" data-img-target="assetflow-preview-img" data-src="assets/images/projects/assetflow.svg" title="View Architectural Console">⚡ System</button>
+                </div>
+              </div>
+              <img id="assetflow-preview-img" src="assets/images/projects/assetflow.jpg" alt="AssetFlow Enterprise Resource Planning Operations Dashboard Screenshot" loading="lazy">
             </div>
             <div class="case-top-meta">
               <span class="case-index">CASE 04</span>
