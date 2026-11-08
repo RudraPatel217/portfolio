@@ -58,7 +58,7 @@
       "techStack": ["Python", "Streamlit", "DOM Crawler", "SEO Diagnostics", "Excel Export"],
       "demoUrl": "https://website-analyser-rudra.streamlit.app/",
       "githubUrl": "https://github.com/RudraPatel217",
-      "image": "assets/images/projects/website-analyzer.svg"
+      "image": "assets/images/projects/website-analyzer.jpg"
     },
     {
       "title": "ThreatVision",
@@ -113,7 +113,7 @@
       "techStack": ["JavaScript", "Geolocation APIs", "Web Audio API", "Web Speech API", "Tailwind CSS"],
       "demoUrl": "https://koushik2024-code.github.io/TechFusion-v2v/",
       "githubUrl": "https://github.com/koushik2024-code/TechFusion-v2v",
-      "image": "assets/images/projects/safesphere.svg"
+      "image": "assets/images/projects/safesphere.jpg"
     },
     {
       "title": "Air Pollution & Environmental AQI Intelligence",
