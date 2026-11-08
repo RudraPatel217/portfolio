@@ -80,7 +80,7 @@
       "techStack": ["React 19", "FastAPI", "NVIDIA Nemotron-3.5", "XGBoost", "Docker", "GitHub API"],
       "demoUrl": "https://dev-rescue-ai.vercel.app",
       "githubUrl": "https://github.com/RudraPatel217/DevRescue-AI-",
-      "image": "assets/images/projects/devrescue-3d.svg"
+      "image": "assets/images/projects/devrescue-ai.jpg"
     },
     {
       "title": "AssetFlow",
