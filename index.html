@@ -518,7 +518,13 @@
           <!-- Case 05: BhuSetu -->
           <div class="project-case-card" data-category="fullstack">
             <div class="case-media-preview" title="Click to inspect architectural details">
-              <img src="assets/images/projects/bhusetu.svg" alt="BhuSetu National Cadastral GIS &amp; Land Intelligence Platform" loading="lazy">
+              <div class="media-preview-header">
+                <div class="preview-mode-switch" onclick="event.stopPropagation();">
+                  <button type="button" class="mode-pill active" data-img-target="bhusetu-preview-img" data-src="assets/images/projects/bhusetu.jpg" title="View Real App Screenshot">📸 Real App</button>
+                  <button type="button" class="mode-pill" data-img-target="bhusetu-preview-img" data-src="assets/images/projects/bhusetu.svg" title="View Architectural Console">⚡ System</button>
+                </div>
+              </div>
+              <img id="bhusetu-preview-img" src="assets/images/projects/bhusetu.jpg" alt="BhuSetu National Cadastral GIS &amp; Land Intelligence Platform Screenshot" loading="lazy">
             </div>
             <div class="case-top-meta">
               <span class="case-index">CASE 05</span>

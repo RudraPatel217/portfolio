@@ -102,7 +102,7 @@
       "techStack": ["Next.js", "React 19", "MapLibre GL", "PostGIS", "Supabase", "MinIO S3", "Docker"],
       "demoUrl": "",
       "githubUrl": "https://github.com/Jenil-Mistry/BhuSetu",
-      "image": "assets/images/projects/bhusetu.svg"
+      "image": "assets/images/projects/bhusetu.jpg"
     },
     {
       "title": "TechFusion SafeSphere",
