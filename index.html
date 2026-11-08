@@ -396,7 +396,13 @@
           <!-- Case 02: ThreatVision -->
           <div class="project-case-card" data-category="ai hackathon">
             <div class="case-media-preview" title="Click to inspect architectural details">
-              <img src="assets/images/projects/threatvision.svg" alt="ThreatVision Explainable AI PE Malware Defense Console" loading="lazy">
+              <div class="media-preview-header">
+                <div class="preview-mode-switch" onclick="event.stopPropagation();">
+                  <button type="button" class="mode-pill active" data-img-target="threatvision-preview-img" data-src="assets/images/projects/threatvision.jpg" title="View Real App Screenshot">📸 Real App</button>
+                  <button type="button" class="mode-pill" data-img-target="threatvision-preview-img" data-src="assets/images/projects/threatvision.svg" title="View Architectural Console">⚡ System</button>
+                </div>
+              </div>
+              <img id="threatvision-preview-img" src="assets/images/projects/threatvision.jpg" alt="ThreatVision Explainable AI PE Malware Defense Console Screenshot" loading="lazy">
             </div>
             <div class="case-top-meta">
               <span class="case-index">CASE 02</span>

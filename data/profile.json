@@ -69,7 +69,7 @@
       "techStack": ["FastAPI", "React 18", "Vite", "XGBoost", "SHAP", "Docker"],
       "demoUrl": "",
       "githubUrl": "https://github.com/RudraPatel217",
-      "image": "assets/images/projects/threatvision.svg"
+      "image": "assets/images/projects/threatvision.jpg"
     },
     {
       "title": "DevRescue AI",
