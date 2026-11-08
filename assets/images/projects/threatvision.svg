@@ -36,7 +36,7 @@
     <!-- Threat Verdict Pill -->
     <rect x="520" y="4" width="216" height="42" rx="8" fill="#29111c" stroke="#f43f5e" stroke-width="1.2"/>
     <text x="536" y="24" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700">VERDICT: MALICIOUS</text>
-    <text x="536" y="38" fill="#fda4af" font-family="'Inter', sans-serif" font-size="10">98.4% Confidence &bull; 18.2ms</text>
+    <text x="536" y="38" fill="#fda4af" font-family="'Inter', sans-serif" font-size="10">98.4% Confidence &#8226; 18.2ms</text>
   </g>
 
   <!-- Left: PE Metrics & Classification -->

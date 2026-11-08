@@ -183,10 +183,28 @@ function initProjectModal() {
     if (mediaElem) {
       mediaElem.style.cursor = 'pointer';
       mediaElem.title = 'Click to inspect architectural details';
-      mediaElem.addEventListener('click', () => {
+      mediaElem.addEventListener('click', (e) => {
+        // Prevent opening modal if clicking mode switch pills
+        if (e.target.closest('.preview-mode-switch')) return;
         if (PROJECT_DETAILS[key]) openModal(PROJECT_DETAILS[key]);
       });
     }
+  });
+
+  // Wire up media preview mode switchers (e.g. DevRescue real screenshot vs SVG console)
+  document.querySelectorAll('.preview-mode-switch .mode-pill').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const targetId = btn.dataset.imgTarget;
+      const newSrc = btn.dataset.src;
+      const targetImg = document.getElementById(targetId);
+      if (targetImg && newSrc) {
+        targetImg.src = newSrc;
+        btn.parentElement.querySelectorAll('.mode-pill').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        if (window.soundEngine) window.soundEngine.playBlip(950, 0.03);
+      }
+    });
   });
 }
 

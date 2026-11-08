@@ -185,7 +185,7 @@ svg_threatvision = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 4
     <!-- Threat Verdict Pill -->
     <rect x="520" y="4" width="216" height="42" rx="8" fill="#29111c" stroke="#f43f5e" stroke-width="1.2"/>
     <text x="536" y="24" fill="#f43f5e" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700">VERDICT: MALICIOUS</text>
-    <text x="536" y="38" fill="#fda4af" font-family="'Inter', sans-serif" font-size="10">98.4% Confidence &bull; 18.2ms</text>
+    <text x="536" y="38" fill="#fda4af" font-family="'Inter', sans-serif" font-size="10">98.4% Confidence &#8226; 18.2ms</text>
   </g>
 
   <!-- Left: PE Metrics & Classification -->
@@ -303,7 +303,7 @@ svg_devrescue = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480"
   <!-- Top Info Strip -->
   <g transform="translate(32, 64)">
     <text x="0" y="22" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="700">DevRescue AI // Autonomous Bug Repair</text>
-    <text x="0" y="42" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Multi-Agent System &bull; NVIDIA Nemotron LLM &bull; AST Syntax Parser &bull; Automated PR Generation</text>
+    <text x="0" y="42" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Multi-Agent System &#8226; NVIDIA Nemotron LLM &#8226; AST Syntax Parser &#8226; Automated PR Generation</text>
 
     <!-- Multi-Agent Badge -->
     <rect x="530" y="4" width="206" height="40" rx="8" fill="#102538" stroke="#38bdf8" stroke-width="1"/>
@@ -320,21 +320,21 @@ svg_devrescue = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480"
     <circle cx="30" cy="27" r="4" fill="#22c55e"/>
     <text x="42" y="31" fill="#ffffff" font-family="'Inter', sans-serif" font-size="11" font-weight="600">1. Log Ingestor</text>
 
-    <text x="186" y="32" fill="#38bdf8" font-size="14">&rarr;</text>
+    <text x="186" y="32" fill="#38bdf8" font-size="14">&#8594;</text>
 
     <!-- Step 2 -->
     <rect x="204" y="12" width="160" height="30" rx="6" fill="#12253b"/>
     <circle cx="218" cy="27" r="4" fill="#22c55e"/>
     <text x="230" y="31" fill="#ffffff" font-family="'Inter', sans-serif" font-size="11" font-weight="600">2. AST Triager</text>
 
-    <text x="374" y="32" fill="#38bdf8" font-size="14">&rarr;</text>
+    <text x="374" y="32" fill="#38bdf8" font-size="14">&#8594;</text>
 
     <!-- Step 3 -->
     <rect x="392" y="12" width="160" height="30" rx="6" fill="#163352" stroke="#38bdf8" stroke-width="1"/>
     <circle cx="406" cy="27" r="4" fill="#38bdf8"/>
     <text x="418" y="31" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="11" font-weight="700">3. Nemotron LLM</text>
 
-    <text x="562" y="32" fill="#38bdf8" font-size="14">&rarr;</text>
+    <text x="562" y="32" fill="#38bdf8" font-size="14">&#8594;</text>
 
     <!-- Step 4 -->
     <rect x="580" y="12" width="140" height="30" rx="6" fill="#12253b"/>
@@ -366,7 +366,7 @@ svg_devrescue = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480"
     <!-- Footer Bar -->
     <rect x="14" y="196" width="708" height="42" rx="6" fill="#132338"/>
     <text x="28" y="222" fill="#ffffff" font-family="'Inter', sans-serif" font-size="11" font-weight="600">Verified by Test Suite:</text>
-    <text x="170" y="222" fill="#22c55e" font-family="'JetBrains Mono', monospace" font-size="11">14 PASSING &bull; 0 REGRESSIONS</text>
+    <text x="170" y="222" fill="#22c55e" font-family="'JetBrains Mono', monospace" font-size="11">14 PASSING &#8226; 0 REGRESSIONS</text>
     <rect x="580" y="204" width="130" height="26" rx="4" fill="#38bdf8"/>
     <text x="598" y="221" fill="#090b0e" font-family="'Inter', sans-serif" font-size="11" font-weight="700">DEPLOYED PR ↗</text>
   </g>
@@ -404,8 +404,8 @@ svg_bhusetu = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" w
 
   <!-- Top Title Strip -->
   <g transform="translate(32, 64)">
-    <text x="0" y="22" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="700">BhuSetu &mdash; National Geospatial Land GIS</text>
-    <text x="0" y="42" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Next.js &bull; MapLibre GL JS Vector Tiles &bull; PostGIS Spatial Queries &bull; MinIO S3 Docs</text>
+    <text x="0" y="22" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="700">BhuSetu &#8212; National Geospatial Land GIS</text>
+    <text x="0" y="42" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Next.js &#8226; MapLibre GL JS Vector Tiles &#8226; PostGIS Spatial Queries &#8226; MinIO S3 Docs</text>
 
     <!-- Status pill -->
     <rect x="540" y="4" width="196" height="40" rx="8" fill="#133327" stroke="#34d399" stroke-width="1"/>
@@ -441,7 +441,7 @@ svg_bhusetu = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" w
     <rect x="380" y="20" width="30" height="60" rx="4" fill="#0d241c" stroke="#244f3e" stroke-width="1"/>
     <text x="390" y="42" fill="#ffffff" font-size="16" font-weight="700">+</text>
     <line x1="380" y1="50" x2="410" y2="50" stroke="#244f3e"/>
-    <text x="392" y="70" fill="#ffffff" font-size="16" font-weight="700">&minus;</text>
+    <text x="392" y="70" fill="#ffffff" font-size="16" font-weight="700">&#8722;</text>
   </g>
 
   <!-- Right: Parcel Details & Compensation HUD -->
@@ -501,8 +501,8 @@ svg_assetflow = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480"
 
   <!-- Top Title Strip -->
   <g transform="translate(32, 64)">
-    <text x="0" y="22" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="700">AssetFlow &mdash; Enterprise Asset &amp; Resource ERP</text>
-    <text x="0" y="42" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Team Terminal &bull; Clean Architecture &bull; Finite State Machines &bull; Role-Based Access Control</text>
+    <text x="0" y="22" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="700">AssetFlow &#8212; Enterprise Asset &amp; Resource ERP</text>
+    <text x="0" y="42" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">Team Terminal &#8226; Clean Architecture &#8226; Finite State Machines &#8226; Role-Based Access Control</text>
 
     <!-- Badge -->
     <rect x="520" y="4" width="216" height="40" rx="8" fill="#162238" stroke="#38bdf8" stroke-width="1"/>
@@ -517,22 +517,22 @@ svg_assetflow = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480"
     <rect x="16" y="12" width="130" height="30" rx="6" fill="#172033"/>
     <text x="36" y="31" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">1. Draft Request</text>
 
-    <text x="156" y="32" fill="#38bdf8" font-size="14">&rarr;</text>
+    <text x="156" y="32" fill="#38bdf8" font-size="14">&#8594;</text>
 
     <rect x="176" y="12" width="140" height="30" rx="6" fill="#1a2740" stroke="#38bdf8" stroke-width="1"/>
     <text x="194" y="31" fill="#38bdf8" font-family="'Inter', sans-serif" font-size="11" font-weight="700">2. RBAC Approval</text>
 
-    <text x="326" y="32" fill="#38bdf8" font-size="14">&rarr;</text>
+    <text x="326" y="32" fill="#38bdf8" font-size="14">&#8594;</text>
 
     <rect x="346" y="12" width="140" height="30" rx="6" fill="#172033"/>
     <text x="366" y="31" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">3. Active Allocation</text>
 
-    <text x="496" y="32" fill="#38bdf8" font-size="14">&rarr;</text>
+    <text x="496" y="32" fill="#38bdf8" font-size="14">&#8594;</text>
 
     <rect x="516" y="12" width="120" height="30" rx="6" fill="#172033"/>
     <text x="536" y="31" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">4. Maintenance</text>
 
-    <text x="646" y="32" fill="#38bdf8" font-size="14">&rarr;</text>
+    <text x="646" y="32" fill="#38bdf8" font-size="14">&#8594;</text>
 
     <rect x="666" y="12" width="54" height="30" rx="6" fill="#172033"/>
     <text x="674" y="31" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11" font-weight="600">End</text>
@@ -616,8 +616,8 @@ svg_safesphere = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480
 
   <!-- Top Title Strip -->
   <g transform="translate(32, 64)">
-    <text x="0" y="22" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="700">SafeSphere &mdash; Rapid SOS &amp; Safety Telemetry</text>
-    <text x="0" y="42" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">TechFusion Hackathon &bull; Web Audio Synthesizer Siren &bull; Web Speech Keyword &bull; Live Geolocation</text>
+    <text x="0" y="22" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="700">SafeSphere &#8212; Rapid SOS &amp; Safety Telemetry</text>
+    <text x="0" y="42" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">TechFusion Hackathon &#8226; Web Audio Synthesizer Siren &#8226; Web Speech Keyword &#8226; Live Geolocation</text>
 
     <!-- Beacon Status -->
     <rect x="540" y="4" width="196" height="40" rx="8" fill="#38101a" stroke="#f43f5e" stroke-width="1"/>
@@ -660,7 +660,7 @@ svg_safesphere = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480
       <text x="140" y="44" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">"HELP" / "EMERGENCY"</text>
 
       <text x="0" y="74" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">GPS Accuracy:</text>
-      <text x="140" y="74" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11">&plusmn;3.2 meters</text>
+      <text x="140" y="74" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11">&#177;3.2 meters</text>
 
       <text x="0" y="104" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">SMS Notification:</text>
       <text x="140" y="104" fill="#22c55e" font-family="'JetBrains Mono', monospace" font-size="11">3 CONTACTS DISPATCHED</text>
@@ -721,7 +721,7 @@ svg_aqi = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width
   <!-- Top Title Strip -->
   <g transform="translate(32, 64)">
     <text x="0" y="22" fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="19" font-weight="700">Air Pollution &amp; AQI Intelligence</text>
-    <text x="0" y="42" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">IoT Telemetry &bull; Predictive Smog Analytics &bull; National Hackathon Finalist System</text>
+    <text x="0" y="42" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="12">IoT Telemetry &#8226; Predictive Smog Analytics &#8226; National Hackathon Finalist System</text>
 
     <!-- Finalist Badge -->
     <rect x="520" y="4" width="216" height="40" rx="8" fill="#15314a" stroke="#38bdf8" stroke-width="1"/>
@@ -743,10 +743,10 @@ svg_aqi = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width
     <!-- Breakdown items -->
     <g transform="translate(20, 230)">
       <text x="0" y="14" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">PM 2.5:</text>
-      <text x="160" y="14" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">52.4 &mu;g/m&sup3;</text>
+      <text x="160" y="14" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">52.4 &#956;g/m&#179;</text>
 
       <text x="0" y="40" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">PM 10:</text>
-      <text x="160" y="40" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">98.1 &mu;g/m&sup3;</text>
+      <text x="160" y="40" fill="#ffffff" font-family="'JetBrains Mono', monospace" font-size="11">98.1 &#956;g/m&#179;</text>
 
       <text x="0" y="66" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="11">NO2 / CO:</text>
       <text x="160" y="66" fill="#38bdf8" font-family="'JetBrains Mono', monospace" font-size="11">0.42 ppm (Normal)</text>
