@@ -115,7 +115,7 @@ class SoundEngine {
 
     // Attach hover effects to buttons and cards
     document.addEventListener('mouseover', (e) => {
-      if (e.target.closest('.btn, .nav-link, .meta-card, .stat-box, .skill-card, .project-card, .credential-card, .timeline-card, .contact-item, .contact-channel-card, .scene-pill, .filter-pill')) {
+      if (e.target.closest('.btn, .nav-link, .meta-card, .stat-box, .skill-card, .project-card, .credential-card, .timeline-card, .contact-item, .contact-channel-card, .filter-pill')) {
         this.playBlip(750, 0.03);
       }
     });

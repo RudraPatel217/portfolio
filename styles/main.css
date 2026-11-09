@@ -572,21 +572,6 @@ img {
   letter-spacing: 0.08em !important;
 }
 
-/* Center 3D Scene Controls & Coordinates — active on default suit portrait; smoothly fades on hover so graphic banner text/icons are 100% unobstructed */
-.hud-center-overlay {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: auto;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 3;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
-}
-
 /* Bottom Caption Bar — active on default portrait; smoothly fades on hover so graphic banner text/icons are 100% unobstructed */
 .portrait-caption {
   display: flex;
@@ -595,16 +580,14 @@ img {
   align-items: flex-end;
   position: relative;
   z-index: 3;
+  margin-top: auto;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
 }
 
-/* On Hover / Touch: Hide center & bottom overlays so NO TEXT OR ICONS ON THE GRAPHIC ARE COVERED */
-.portrait-frame:hover .hud-center-overlay,
-.portrait-frame:active .hud-center-overlay,
-.portrait-frame.touch-active .hud-center-overlay,
+/* On Hover / Touch: Hide bottom caption so NO TEXT OR ICONS ON THE GRAPHIC ARE COVERED */
 .portrait-frame:hover .portrait-caption,
 .portrait-frame:active .portrait-caption,
 .portrait-frame.touch-active .portrait-caption {
@@ -612,42 +595,6 @@ img {
   visibility: hidden !important;
   pointer-events: none !important;
   transform: translateY(10px);
-}
-
-.hud-geo-coord {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  color: var(--cyan);
-  letter-spacing: .1em;
-}
-
-.hud-scene-controls {
-  display: flex;
-  gap: 8px;
-}
-
-.scene-pill {
-  background: rgba(5, 8, 14, 0.82) !important;
-  border: 1px solid rgba(111, 231, 255, 0.28) !important;
-  color: #ffffff !important;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  padding: 6px 12px;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: var(--dur-fast) var(--ease);
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5) !important;
-}
-
-.scene-pill:hover,
-.scene-pill.active {
-  background: linear-gradient(135deg, rgba(111, 231, 255, .35), rgba(143, 125, 255, .3)) !important;
-  border-color: var(--cyan) !important;
-  color: var(--cyan) !important;
-  font-weight: 600;
-  box-shadow: 0 0 16px rgba(111, 231, 255, .35) !important;
 }
 
 .portrait-caption .left,
