@@ -55,7 +55,7 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #030712;
+  background: #020612;
   color: var(--text);
   min-height: 100vh;
   overflow-x: hidden;
@@ -64,64 +64,20 @@ body {
   transition: background 0.6s var(--ease);
 }
 
-/* Neural Theme (Default on open): Clean, simple, luxury dark blue space background, no complex design */
+/* Neural Theme (Default on open): 100/10 Cosmic Deep Space for 3D Moving Galaxy Universe */
 body.mode-neural {
-  background: radial-gradient(ellipse at 50% 12%, #081636 0%, #050e24 45%, #020612 100%) !important;
+  background: radial-gradient(ellipse at 50% 15%, #050d24 0%, #030816 55%, #01040c 100%) !important;
 }
 
-/* Grid Theme: Sci-Fi Space Matrix */
-body.mode-grid {
-  background: radial-gradient(ellipse at 50% 20%, #061126 0%, #030814 60%, #01030a 100%) !important;
+/* Simple Theme: Pure, luxury, clean simple dark blue background — NO lines, NO grid */
+body.mode-simple {
+  background: radial-gradient(ellipse at 50% 15%, #091a3d 0%, #051028 50%, #020614 100%) !important;
 }
 
-/* Background Subtle 64px Grid Overlay */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: radial-gradient(circle at center, black 55%, transparent 100%);
-  -webkit-mask-image: radial-gradient(circle at center, black 55%, transparent 100%);
-  pointer-events: none;
-  opacity: .14;
-  z-index: 0;
-  transition: opacity 0.6s var(--ease);
-}
-
-body.mode-neural::before {
-  opacity: 0.06;
-}
-
-body.mode-grid::before {
-  opacity: 0.28;
-}
-
-/* Background Starry Dust Overlay */
+/* Zero grid lines or background texture noise */
+body::before,
 body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 10% 30%, rgba(255, 255, 255, .18) 0 1px, transparent 1.5px),
-    radial-gradient(circle at 32% 70%, rgba(255, 255, 255, .14) 0 1px, transparent 1.5px),
-    radial-gradient(circle at 72% 20%, rgba(255, 255, 255, .14) 0 1px, transparent 1.5px),
-    radial-gradient(circle at 85% 74%, rgba(255, 255, 255, .12) 0 1px, transparent 1.5px),
-    radial-gradient(circle at 55% 50%, rgba(255, 255, 255, .1) 0 1px, transparent 1.5px);
-  opacity: .25;
-  z-index: 0;
-  transition: opacity 0.6s var(--ease);
-}
-
-body.mode-neural::after {
-  opacity: 0.15;
-}
-
-body.mode-grid::after {
-  opacity: 0.45;
+  display: none !important;
 }
 
 /* 3D WebGL Background Canvas */
@@ -133,16 +89,17 @@ body.mode-grid::after {
   height: 100vh;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.35;
+  opacity: 0.85;
   transition: opacity 0.6s var(--ease);
 }
 
 body.mode-neural #webgl-canvas {
-  opacity: 0.32;
+  opacity: 0.85;
 }
 
-body.mode-grid #webgl-canvas {
-  opacity: 0.85;
+body.mode-simple #webgl-canvas {
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 /* Ambient Floating Glow Orbs */
@@ -651,10 +608,10 @@ img {
   transform: translateY(-1px);
 }
 
-.scene-toggle-pill.mode-grid-active {
-  color: #fbbf24 !important;
-  border-color: rgba(251, 191, 36, 0.65) !important;
-  box-shadow: 0 0 18px rgba(251, 191, 36, 0.4) !important;
+.scene-toggle-pill.mode-simple-active {
+  color: #93c5fd !important;
+  border-color: rgba(147, 197, 253, 0.6) !important;
+  box-shadow: 0 0 16px rgba(147, 197, 253, 0.35) !important;
 }
 
 .mode-pulse-dot {
@@ -666,9 +623,9 @@ img {
   animation: pulseMode 2s infinite ease-in-out;
 }
 
-.scene-toggle-pill.mode-grid-active .mode-pulse-dot {
-  background: #fbbf24;
-  box-shadow: 0 0 8px #fbbf24;
+.scene-toggle-pill.mode-simple-active .mode-pulse-dot {
+  background: #93c5fd;
+  box-shadow: 0 0 8px #93c5fd;
 }
 
 @keyframes pulseMode {

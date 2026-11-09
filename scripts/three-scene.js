@@ -387,14 +387,10 @@
       }
 
       /**
-       * Spacetime Coordinate Cyber Grid with Relativistic Curvature
+       * Spacetime Cyber Coordinate Grid — Cleanly omitted to ensure zero distracting lines
        */
       createCyberGrid() {
-        this.gridHelper = new THREE.GridHelper(56, 48, 0x38bdf8, 0x0f172a);
-        this.gridHelper.position.y = -3.2;
-        this.gridHelper.material.transparent = true;
-        this.gridHelper.material.opacity = 0.16;
-        this.scene.add(this.gridHelper);
+        this.gridHelper = null;
       }
 
       /**
@@ -464,7 +460,7 @@
       }
 
       initModeToggle() {
-        // Default on open is Neural theme (simple dark blue background, no complex design)
+        // Default on open is the Neural theme (the 100/10 3D moving cosmic galaxy simulation)
         this.setMode('neural', false);
 
         const toggleBtn = document.getElementById('scene-mode-toggle');
@@ -477,7 +473,7 @@
       }
 
       toggleMode() {
-        const nextMode = this.currentMode === 'neural' ? 'grid' : 'neural';
+        const nextMode = this.currentMode === 'neural' ? 'simple' : 'neural';
         this.setMode(nextMode, true);
       }
 
@@ -486,14 +482,33 @@
         const toggleBtn = document.getElementById('scene-mode-toggle');
         const label = document.getElementById('scene-mode-label');
 
-        if (mode === 'grid') {
-          // Grid Mode: Activate full moving 3D galaxy universe simulation & cyber grid
-          document.body.classList.add('mode-grid');
+        if (mode === 'simple') {
+          // Simple Theme: Pure, minimal, luxury dark blue background — NO lines, NO grid, NO 3D canvas
+          document.body.classList.add('mode-simple');
           document.body.classList.remove('mode-neural');
-          if (label) label.innerHTML = '&bull; Grid';
+          if (label) label.innerHTML = '&bull; Simple';
           if (toggleBtn) {
-            toggleBtn.classList.add('mode-grid-active');
-            toggleBtn.setAttribute('title', '3D Mode: Grid (Click to switch to Neural)');
+            toggleBtn.classList.add('mode-simple-active');
+            toggleBtn.setAttribute('title', 'Theme: Simple Dark Blue (Click to switch to 3D Neural Galaxy)');
+          }
+
+          if (this.galaxyPoints) {
+            this.galaxyPoints.visible = false;
+          }
+          if (this.coreGroup) {
+            this.coreGroup.visible = false;
+          }
+          if (this.outerFieldPoints) {
+            this.outerFieldPoints.visible = false;
+          }
+        } else {
+          // Neural Theme (Default): 100/10 Moving 3D Cosmic Galaxy Universe Simulation with Scroll Zoom
+          document.body.classList.remove('mode-simple');
+          document.body.classList.add('mode-neural');
+          if (label) label.innerHTML = '&bull; Neural';
+          if (toggleBtn) {
+            toggleBtn.classList.remove('mode-simple-active');
+            toggleBtn.setAttribute('title', 'Theme: 3D Neural Galaxy (Click to switch to Simple Dark Blue)');
           }
 
           if (this.galaxyPoints) {
@@ -502,46 +517,16 @@
           if (this.coreGroup) {
             this.coreGroup.visible = true;
           }
-          if (this.gridHelper) {
-            this.gridHelper.visible = true;
-            this.gridHelper.material.opacity = 0.58;
-            this.gridHelper.position.y = -2.4;
-          }
           if (this.outerFieldPoints) {
             this.outerFieldPoints.visible = true;
-            this.outerFieldPoints.material.opacity = 0.65;
-          }
-        } else {
-          // Neural Mode (Default): Clean, simple, luxury dark blue space background — no complex design
-          document.body.classList.remove('mode-grid');
-          document.body.classList.add('mode-neural');
-          if (label) label.innerHTML = '&bull; Neural';
-          if (toggleBtn) {
-            toggleBtn.classList.remove('mode-grid-active');
-            toggleBtn.setAttribute('title', '3D Mode: Neural (Click to switch to Grid)');
-          }
-
-          // Hide complex spiral galaxy, central rings, and grid
-          if (this.galaxyPoints) {
-            this.galaxyPoints.visible = false;
-          }
-          if (this.coreGroup) {
-            this.coreGroup.visible = false;
-          }
-          if (this.gridHelper) {
-            this.gridHelper.visible = false;
-          }
-          // Only faint, peaceful ambient dark-blue stardust drift
-          if (this.outerFieldPoints) {
-            this.outerFieldPoints.visible = true;
-            this.outerFieldPoints.material.opacity = 0.22;
+            this.outerFieldPoints.material.opacity = 0.55;
           }
         }
 
         if (playFeedback) {
           // Audio synthesizer feedback
           if (window.soundEngine && typeof window.soundEngine.playBlip === 'function') {
-            window.soundEngine.playBlip(mode === 'grid' ? 880 : 660, 0.05);
+            window.soundEngine.playBlip(mode === 'simple' ? 620 : 880, 0.05);
           }
           // Trigger interactive shockwave at screen center
           this.triggerClickShockwave(window.innerWidth / 2, window.innerHeight / 2);
