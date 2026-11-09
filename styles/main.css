@@ -98,7 +98,7 @@ body::after {
   z-index: 0;
 }
 
-/* 3D WebGL Background Canvas (Preserved exactly) */
+/* 3D WebGL Background Canvas — Dynamic Cosmic Galaxy Universe */
 #webgl-canvas {
   position: fixed;
   top: 0;
@@ -107,7 +107,8 @@ body::after {
   height: 100vh;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.65;
+  opacity: 0.82;
+  transition: opacity 0.5s var(--ease);
 }
 
 /* Ambient Floating Glow Orbs */
