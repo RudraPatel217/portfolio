@@ -11,11 +11,11 @@
   <!-- Favicon -->
   <link rel="icon" type="image/jpeg" href="assets/images/rudra-profile.jpg">
 
-  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <!-- Google Fonts: Inter, Playfair Display, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
   <!-- Main Stylesheet -->
@@ -24,49 +24,40 @@
 
 <body>
 
-  <!-- 3D WebGL Background Canvas -->
+  <!-- Ambient Floating Orbs -->
+  <div class="float-orb orb-1"></div>
+  <div class="float-orb orb-2"></div>
+
+  <!-- 3D WebGL Background Canvas (Preserved exactly) -->
   <canvas id="webgl-canvas"></canvas>
 
-  <div class="content-wrapper">
+  <div class="wrap content-wrapper">
 
-    <!-- Floating Navigation Bar (Micheel / Gr8r Style) -->
+    <!-- Sticky Glass Navigation Dock (Cleanly structured, zero raw text bug) -->
     <header>
-      <nav class="navbar" id="navbar">
-        <a href="#hero" class="nav-brand">
-          <div class="nav-logo-box">RP</div>
-          <span class="nav-brand-title">Rudra Patel</span>
+      <nav class="nav glass" id="navbar">
+        <a href="#home" class="brand">
+          <div class="nav-logo-circle">RP</div>
+          <span class="brand-name">Rudra Patel</span>
           <div class="nav-status-indicator">
             <span class="pulse-dot"></span>
             <span>Available</span>
           </div>
         </a>
 
-        <ul class="nav-menu" id="nav-menu">
-          <li><a href="#services" class="nav-link">Services</a></li>
-          <li><a href="#projects" class="nav-link">Selected Work</a></li>
-          <li><a href="#journey" class="nav-link">Journey</a></li>
-          <li><a href="#terminal" class="nav-link">Console</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-          <li class="mobile-only-resume">
-            <a href="assets/documents/Rudra_Patel_Resume.pdf" target="_blank" download="Rudra_Patel_Resume.pdf" class="btn-pill-primary" style="width: 100%; justify-content: center; margin-top: 8px; padding: 12px;">
-              Download Resume (PDF) ↗
-            </a>
-          </li>
-        </ul>
+        <div class="nav-links" id="nav-menu">
+          <a href="#about" class="nav-link">Focus</a>
+          <a href="#skills" class="nav-link">Capabilities</a>
+          <a href="#projects" class="nav-link">Selected Work</a>
+          <a href="#trajectory" class="nav-link">Journey</a>
+          <a href="#terminal" class="nav-link">Console</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
 
-        <div class="nav-right">
-          <!-- Theme Accent Color Cycle -->
-          <button class="icon-button" id="theme-color-btn" title="Cycle Accent Color (Cyan / Emerald / Violet)">
+        <div class="nav-actions">
+          <!-- Audio Toggle Button -->
+          <button class="icon-button" id="sound-toggle-btn" title="Toggle Synthesized Audio" aria-label="Toggle Sound Effects">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <circle cx="12" cy="12" r="4" fill="currentColor"></circle>
-            </svg>
-          </button>
-
-          <!-- Audio Toggle (Muted by default) -->
-          <button class="icon-button" id="sound-toggle-btn" title="Audio Muted (Click to Unmute)" aria-label="Toggle Cyber Sound Effects">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
               <line x1="23" y1="9" x2="17" y2="15"></line>
@@ -74,14 +65,12 @@
             </svg>
           </button>
 
-          <!-- Resume Link -->
+          <!-- Clean Resume Link Button -->
           <a href="assets/documents/Rudra_Patel_Resume.pdf" target="_blank" download="Rudra_Patel_Resume.pdf"
-            class="btn-pill-secondary" style="padding: 8px 18px; font-size: 0.85rem;">
-            class="btn-pill-secondary nav-resume-btn" style="padding: 8px 18px; font-size: 0.85rem;">
-            Resume (PDF) ↗
+            class="btn btn-primary nav-cta-btn">
+            <span>Resume (PDF)</span> &nearr;
           </a>
 
-          <!-- Mobile Toggle -->
           <button class="mobile-nav-toggle" id="mobile-nav-toggle" aria-label="Toggle Menu">
             &#9776;
           </button>
@@ -89,862 +78,752 @@
       </nav>
     </header>
 
-    <!-- Hero Section (Editorial High-Impact Layout) -->
-    <section class="section hero-section" id="hero">
-      <div class="container">
-        <div class="hero-editorial-wrap">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <div class="micro eyebrow">&bull; Full-Stack &amp; AI Systems Engineer</div>
+        <h1 class="serif">
+          Rudra<br>
+          <span class="gradient-text">Patel.</span>
+        </h1>
+        <p class="hero-sub">
+          Engineering high-performance systems from the ground up &mdash; specializing in autonomous multi-agent consoles (DevRescue AI), national geospatial GIS platforms (BhuSetu), and explainable cyber intelligence (ThreatVision).
+        </p>
 
-          <div class="hero-left-content">
-            <div class="hero-badge-strip">
-              <div class="section-badge">
-                <span class="dot"></span>
-                Full-Stack &amp; AI Systems Engineer
+        <!-- Meta 3-Card Strip with 3D Tilt -->
+        <div class="hero-meta">
+          <div class="meta-card glass">
+            <div class="label">Education</div>
+            <div class="value">B.Tech &bull; CSE (AI &amp; ML)</div>
+          </div>
+          <div class="meta-card glass">
+            <div class="label">Institution</div>
+            <div class="value">Adani University, Gujarat</div>
+          </div>
+          <div class="meta-card glass">
+            <div class="label">Academic Standing</div>
+            <div class="value">CGPA: 8.22 &bull; 93.27%ile</div>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">
+            <span>Explore Selected Work</span> &nearr;
+          </a>
+          <a class="btn btn-ghost" href="#terminal">
+            <span>✦ Open Cyber Console</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual / 3D HUD Stage -->
+      <div class="hero-visual">
+        <div class="portrait-frame glass">
+          <div class="portrait-inner">
+            <div class="portrait-hud">
+              <div class="hud-pill">Rudra Patel</div>
+              <div class="hud-pill">Ahmedabad &bull; India</div>
+            </div>
+
+            <!-- 3D Controls HUD Bar -->
+            <div class="hud-center-overlay">
+              <div class="hud-geo-coord">23&deg; 01' N &nbsp; 72&deg; 34' E</div>
+              <div class="hud-scene-controls">
+                <button class="scene-pill active" data-mode="neural">&bull; Neural</button>
+                <button class="scene-pill" data-mode="galaxy">&bull; Orbit</button>
+                <button class="scene-pill" data-mode="cyber">&bull; Grid</button>
               </div>
             </div>
 
-            <h1 class="hero-main-title">
-              Crafting Intelligent <br>
-              <span class="name-highlight">AI &amp; Distributed</span> <br>
-              Web Architectures.
-            </h1>
-
-            <p class="hero-lead-text">
-              I am <strong>Rudra Patel</strong>. I engineer high-performance systems from the ground up &mdash;
-              specializing in autonomous multi-agent consoles (DevRescue AI), national geospatial GIS platforms
-              (BhuSetu), and explainable cyber intelligence (ThreatVision).
-            </p>
-
-            <div class="hero-actions-group">
-              <a href="#projects" class="btn-pill-primary">
-                Selected Work
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="7" y1="17" x2="17" y2="7"></line>
-                  <polyline points="7 7 17 7 17 17"></polyline>
-                </svg>
-              </a>
-
-              <a href="#terminal" class="btn-pill-secondary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="4 17 10 11 4 5"></polyline>
-                  <line x1="12" y1="19" x2="20" y2="19"></line>
-                </svg>
-                Open Cyber Console
-              </a>
-            </div>
-
-            <!-- Stats Bar (Micheel Signature) -->
-            <div class="hero-stats-row">
-              <div class="hero-stat-item">
-                <div class="stat-metric">7+</div>
-                <div class="stat-label">Hackathons</div>
+            <div class="portrait-caption">
+              <div class="left">
+                <strong>AI &amp; Distributed Systems</strong>
+                <span>Adani University &bull; Class of 2029</span>
               </div>
-              <div class="hero-stat-item">
-                <div class="stat-metric">100%</div>
-                <div class="stat-label">Real-World Architectures</div>
-              </div>
-              <div class="hero-stat-item">
-                <div class="stat-metric">Top 5%</div>
-                <div class="stat-label">Hackathon Finalist</div>
-              </div>
-              <div class="hero-stat-item">
-                <div class="stat-metric">8.22</div>
-                <div class="stat-label">CGPA &bull; Adani Univ</div>
+              <div class="right">
+                <span class="status-indicator-pill">
+                  <span class="status-dot-pulse"></span>
+                  Available
+                </span>
               </div>
             </div>
           </div>
-
-          <!-- Hero Portrait & 3D Interactive Card -->
-          <div class="hero-portrait-card">
-            <div class="portrait-avatar-wrapper">
-              <img src="assets/images/rudra-profile.jpg" alt="Rudra Patel Profile" class="portrait-avatar-img">
-            </div>
-
-            <div class="portrait-info-block">
-              <h3 class="portrait-name">Rudra Patel</h3>
-              <p class="portrait-role">FULL-STACK &amp; AI SYSTEMS ENGINEER</p>
-              <div style="font-size: 0.95rem; font-weight: 700; color: #ffffff; margin-top: 8px; margin-bottom: 2px; line-height: 1.35;">
-                Adani<br>University
-              </div>
-              <div style="font-size: 0.82rem; color: var(--accent-cyan); font-family: var(--font-mono); margin-bottom: 12px;">
-                B.Tech in CSE (AI &amp; ML) &bull; CGPA: 8.22
-              </div>
-              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.5;">
-                Ahmedabad, Gujarat, India &bull; Building intelligent full-stack platforms, autonomous agents &amp; XAI threat intelligence.
-              </p>
-            </div>
-
-            <div class="scene-mode-controls">
-              <span style="font-size: 0.76rem; color: var(--text-muted); font-family: var(--font-mono);">3D WebGL:</span>
-              <div class="scene-btn-group">
-                <button class="scene-pill active" data-mode="neural">Neural</button>
-                <button class="scene-pill" data-mode="galaxy">Cosmic</button>
-                <button class="scene-pill" data-mode="cyber">Cyber Grid</button>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
 
-    <!-- Tech Brand / Stack Ticker (Micheel Signature) -->
-    <div class="brand-ticker-section">
-      <div class="container">
-        <div class="ticker-track">
-          <div class="ticker-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-            </svg>
-            FastAPI
-          </div>
-          <div class="ticker-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="m4.93 4.93 4.24 4.24"></path>
-              <path d="m14.83 9.17 4.24-4.24"></path>
-              <path d="m14.83 14.83 4.24 4.24"></path>
-              <path d="m9.17 14.83-4.24 4.24"></path>
-            </svg>
-            React 19
-          </div>
-          <div class="ticker-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-            </svg>
-            Next.js
-          </div>
-          <div class="ticker-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-            </svg>
-            NVIDIA Nemotron
-          </div>
-          <div class="ticker-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-            </svg>
-            XGBoost &amp; SHAP
-          </div>
-          <div class="ticker-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-            </svg>
-            PostGIS Spatial
-          </div>
-          <div class="ticker-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="3"></circle>
-            </svg>
-            Docker
-          </div>
-          <div class="ticker-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="16 18 22 12 16 6"></polyline>
-            </svg>
-            Three.js
-          </div>
+    <!-- Built With Ticker Strip -->
+    <div class="built-with-strip glass">
+      <div class="built-with-inner">
+        <span class="built-with-label">BUILT WITH</span>
+        <div class="built-with-tags">
+          <span class="built-item"><span class="dot"></span> Python</span>
+          <span class="built-item"><span class="dot"></span> React 19</span>
+          <span class="built-item"><span class="dot"></span> FastAPI</span>
+          <span class="built-item"><span class="dot"></span> PostGIS</span>
+          <span class="built-item"><span class="dot"></span> Next.js</span>
+          <span class="built-item"><span class="dot"></span> MapLibre</span>
+          <span class="built-item"><span class="dot"></span> NVIDIA Nemotron</span>
+          <span class="built-item"><span class="dot"></span> XGBoost</span>
         </div>
       </div>
     </div>
 
-    <!-- Developer Identity Banner Card -->
-    <section class="section" style="padding-top: 30px; padding-bottom: 30px;">
-      <div class="container">
-        <div
-          style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-medium); box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7); position: relative;">
-          <img src="assets/images/rudra-banner.jpg" alt="Rudra Patel — Adani University CSE AI/ML"
-            style="width: 100%; height: auto; display: block; object-fit: cover;">
+    <!-- Section: Focus / About -->
+    <section class="section" id="about">
+      <div class="section-head">
+        <div>
+          <div class="micro">Profile &bull; Disciplines</div>
+          <h2 class="serif">The focus.</h2>
         </div>
-      </div>
-    </section>
-
-    <!-- Structured Services & Engineering (01, 02, 03, 04 Gr8r Grid) -->
-    <section class="section" id="services">
-      <div class="container">
-        <div class="section-badge">
-          <span class="dot"></span>
-          Core Disciplines
-        </div>
-        <h2 class="section-heading">
-          Engineering Capabilities <br>
-          <span class="gradient-text">Built for Scale &amp; Speed.</span>
-        </h2>
-        <p class="section-subheading">
-          Bridging modern machine learning intelligence with production-grade backend infrastructures and responsive
-          user experiences.
+        <p class="section-lead">
+          Bridging modern machine learning intelligence with production-grade backend infrastructures and responsive user experiences.
         </p>
+      </div>
 
-        <div class="services-grid">
-
-          <!-- Service 01 -->
-          <div class="service-card">
-            <div class="service-num">/ 01</div>
-            <h3 class="service-title">Autonomous AI &amp; Multi-Agent Systems</h3>
-            <p class="service-desc">
-              Designing multi-agent orchestration frameworks that ingest source repositories, analyze AST syntax trees,
-              triage vulnerabilities, and generate automated repair PRs with LLMs (NVIDIA Nemotron).
-            </p>
+      <div class="about-grid">
+        <div class="panel glass about-copy">
+          <div class="micro">Engineering Philosophy</div>
+          <p>
+            I am a 2nd-year B.Tech student in Computer Science &amp; Engineering (AI &amp; ML) at Adani University with a CGPA of 8.22. My focus is engineering production-ready architectures &mdash; systems that ingest real-world data, reason through complex algorithms, and deliver reliable solutions.
+          </p>
+          <p>
+            From engineering automated AST repair consoles in <strong>DevRescue AI</strong> and national cadastral GIS platforms in <strong>BhuSetu</strong>, to explainable PE malware detection in <strong>ThreatVision</strong> &mdash; I bring technical rigor, clean code, and 3D architectural clarity to every build.
+          </p>
+          <div class="about-key-highlights">
+            <span class="tag-badge">Smart India Hackathon '26</span>
+            <span class="tag-badge online">Tech Eximius Finalist</span>
+            <span class="tag-badge workshop">Odoo Hackathon</span>
+            <span class="tag-badge course">SATVAWEB Intern</span>
           </div>
+        </div>
 
-          <!-- Service 02 -->
-          <div class="service-card">
-            <div class="service-num">/ 02</div>
-            <h3 class="service-title">Enterprise Web &amp; Distributed ERPs</h3>
-            <p class="service-desc">
-              Constructing scalable web platforms with clean architecture principles. Experienced in role-based
-              workflows (RBAC), finite state machine asset lifecycles, and high-concurrency RESTful APIs.
-            </p>
+        <div class="stat-grid">
+          <div class="stat-box glass">
+            <div class="micro">Academic Record</div>
+            <strong>8.22</strong>
+            <span>CGPA at Adani University &bull; JEE Mains: 93.27%ile</span>
           </div>
-
-          <!-- Service 03 -->
-          <div class="service-card">
-            <div class="service-num">/ 03</div>
-            <h3 class="service-title">Geospatial Infrastructure &amp; PostGIS GIS</h3>
-            <p class="service-desc">
-              Engineering high-throughput geospatial data systems for national infrastructure projects, handling
-              cadastral boundaries, MapLibre vector tile rendering, and S3/MinIO spatial document storage.
-            </p>
+          <div class="stat-box glass">
+            <div class="micro">Hackathons</div>
+            <strong>7+</strong>
+            <span>National hackathon rounds, podium finalist recognitions.</span>
           </div>
-
-          <!-- Service 04 -->
-          <div class="service-card">
-            <div class="service-num">/ 04</div>
-            <h3 class="service-title">Explainable AI (XAI) &amp; Threat Intelligence</h3>
-            <p class="service-desc">
-              Developing transparent machine learning solutions for cybersecurity and threat detection. Applying SHAP
-              feature attributions so engineers understand exactly why models make specific decisions.
-            </p>
+          <div class="stat-box glass">
+            <div class="micro">Architectures</div>
+            <strong>100%</strong>
+            <span>Production-grade code &mdash; Docker, FastAPI, React, PostGIS.</span>
           </div>
-
+          <div class="stat-box glass">
+            <div class="micro">Recognition</div>
+            <strong>Top 5%</strong>
+            <span>National finalist in Tech Eximius XAI malware defense.</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Selected Work (Framer Video Aesthetic / Staggered Masonry) -->
+    <!-- Section: Stack / Capabilities -->
+    <section class="section" id="skills">
+      <div class="section-head">
+        <div>
+          <div class="micro">Core Capabilities</div>
+          <h2 class="serif">What I engineer.</h2>
+        </div>
+        <p class="section-lead">
+          Architectural domains built for enterprise scale, precision telemetry, and verifiable reliability.
+        </p>
+      </div>
+
+      <div class="skill-grid">
+        <!-- Skill 01 -->
+        <article class="skill-card glass">
+          <div class="micro">Machine Learning</div>
+          <h3>Autonomous AI</h3>
+          <p>
+            Multi-agent frameworks, repository AST syntax ingestion, vulnerability triage, and automated PR repairs using LLMs (NVIDIA Nemotron).
+          </p>
+          <div class="tag-row">
+            <span class="tag">Nemotron</span>
+            <span class="tag">Agents</span>
+            <span class="tag">AST</span>
+            <span class="tag">Python</span>
+          </div>
+        </article>
+
+        <!-- Skill 02 -->
+        <article class="skill-card glass">
+          <div class="micro">Web Architecture</div>
+          <h3>Full-Stack Platforms</h3>
+          <p>
+            High-concurrency web architectures with clean principles, role-based workflows (RBAC), and reactive frontends.
+          </p>
+          <div class="tag-row">
+            <span class="tag">React 19</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">PostgreSQL</span>
+          </div>
+        </article>
+
+        <!-- Skill 03 -->
+        <article class="skill-card glass">
+          <div class="micro">GIS &amp; Spatial</div>
+          <h3>Geospatial Systems</h3>
+          <p>
+            Cadastral parcel mapping, vector tile rendering, and statutory land acquisition pipelines with PostGIS and MinIO S3.
+          </p>
+          <div class="tag-row">
+            <span class="tag">PostGIS</span>
+            <span class="tag">MapLibre</span>
+            <span class="tag">MinIO S3</span>
+            <span class="tag">Docker</span>
+          </div>
+        </article>
+
+        <!-- Skill 04 -->
+        <article class="skill-card glass">
+          <div class="micro">Cybersecurity</div>
+          <h3>Explainable AI (XAI)</h3>
+          <p>
+            Transparent classification models for binary PE malware detection applying mathematical SHAP waterfall feature attributions.
+          </p>
+          <div class="tag-row">
+            <span class="tag">XGBoost</span>
+            <span class="tag">SHAP</span>
+            <span class="tag">Cyber XAI</span>
+            <span class="tag">Vercel</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section: Selected Work / 3D Interactive Project Cards -->
     <section class="section" id="projects">
-      <div class="container">
-        
-        <div class="works-header-row">
-          <div>
-            <div class="section-badge" style="margin-bottom: 16px;">
-              <span class="dot"></span>
-              Selected Work
+      <div class="section-head">
+        <div>
+          <div class="micro">Selected Engineering Work</div>
+          <h2 class="serif">Proof of practice.</h2>
+        </div>
+        <div class="project-filter-actions">
+          <a href="https://github.com/RudraPatel217" target="_blank" rel="noopener noreferrer" class="btn btn-ghost" style="padding: 10px 16px; font-size: 13px;">
+            <span>GitHub Profile</span> &nearr;
+          </a>
+        </div>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar glass">
+        <span class="filter-count">06 SYSTEMS</span>
+        <div class="filter-pills">
+          <button class="filter-pill active" data-filter="all">All</button>
+          <button class="filter-pill" data-filter="ai">AI / ML</button>
+          <button class="filter-pill" data-filter="fullstack">Web / GIS</button>
+          <button class="filter-pill" data-filter="hackathon">Hackathons</button>
+        </div>
+      </div>
+
+      <!-- 3D Interactive Projects Grid (Featuring Real App & 3D Artwork Switcher on every card) -->
+      <div class="projects-grid">
+
+        <!-- Case 01: DevRescue AI -->
+        <article class="project-card glass" data-category="ai fullstack">
+          <div class="card-media">
+            <!-- 3D Mode Switcher Header -->
+            <div class="media-preview-header">
+              <div class="preview-mode-switch" onclick="event.stopPropagation();">
+                <button type="button" class="mode-pill active" data-img-target="devrescue-preview-img" data-src="assets/images/projects/devrescue-ai.jpg" title="View Real App Screenshot">📸 Real App</button>
+                <button type="button" class="mode-pill" data-img-target="devrescue-preview-img" data-src="assets/images/projects/devrescue-3d.svg" title="View 3D Artwork">⚡ 3D System</button>
+              </div>
             </div>
-            <h2 class="works-huge-title">SELECTED<br>WORK</h2>
+            <img id="devrescue-preview-img" src="assets/images/projects/devrescue-ai.jpg" alt="DevRescue AI Console" loading="lazy">
+            <span class="card-index">01 / 06</span>
           </div>
-          <div class="works-header-right">
-            <p class="works-header-desc">
-              A showcase of recent engineering work, highlighting practical systems across applied AI, backend architectures, and geospatial GIS. Each project reflects verifiable production code, clean architecture, and technical precision.
+          <div class="card-content">
+            <div class="card-top-row">
+              <span class="category-tag">AUTONOMOUS SYSTEMS</span>
+              <span class="type-pill">AI / ML</span>
+            </div>
+            <h3 class="card-title" data-project-key="devrescue ai">DevRescue AI</h3>
+            <p class="card-desc">
+              Autonomous engineering console providing continuous software reliability with AST vulnerability extraction and NVIDIA Nemotron repairs.
             </p>
-            <div class="project-filters-wrap">
-              <button class="filter-pill active" data-filter="all">All</button>
-              <button class="filter-pill" data-filter="ai">AI / ML</button>
-              <button class="filter-pill" data-filter="fullstack">Web / GIS</button>
-              <button class="filter-pill" data-filter="hackathon">Hackathons</button>
+            <div class="card-tech-row">
+              <span>React 19</span> &bull; <span>FastAPI</span> &bull; <span>Nemotron</span> &bull; <span>Docker</span>
             </div>
-          </div>
-        </div>
-
-        <div class="projects-editorial-grid">
-
-          <!-- Case 01: Domain Intelligence & SEO Auditor -->
-          <div class="project-case-card" data-category="ai fullstack">
-            <div class="case-media-preview" title="Click to inspect architectural details">
-              <div class="media-preview-header">
-                <div class="preview-mode-switch" onclick="event.stopPropagation();">
-                  <button type="button" class="mode-pill active" data-img-target="website-analyzer-preview-img" data-src="assets/images/projects/website-analyzer.jpg" title="View Real App Screenshot">📸 Real App</button>
-                  <button type="button" class="mode-pill" data-img-target="website-analyzer-preview-img" data-src="assets/images/projects/website-analyzer.svg" title="View Architectural Console">⚡ System</button>
-                </div>
-              </div>
-              <img id="website-analyzer-preview-img" src="assets/images/projects/website-analyzer.jpg" alt="Domain Intelligence &amp; SEO Auditor Streamlit Application Screenshot" loading="lazy">
-            </div>
-            <div class="case-top-meta">
-              <span class="case-index">CASE 01</span>
-              <span class="case-badge">LIVE STREAMLIT</span>
-            </div>
-            <h3 class="case-title" data-project-key="domain intelligence &amp; seo auditor">Domain Intelligence &amp; SEO Auditor</h3>
-            <p class="case-tagline">Automated DOM Extraction, Core Web Vitals &amp; Heuristics</p>
-            <p class="case-desc">High-speed Python diagnostics tool auditing DOM structure, critical SEO tags, canonical headers, and security protocols with direct Excel report generation.</p>
-            <div class="case-tags-bar">
-              <span class="case-tag">Python</span>
-              <span class="case-tag">Streamlit</span>
-              <span class="case-tag">DOM Crawler</span>
-              <span class="case-tag">Excel Export</span>
-            </div>
-            <div class="case-footer-actions">
-              <a href="https://website-analyser-rudra.streamlit.app/" target="_blank" rel="noopener noreferrer" class="case-action-btn primary" title="Open Live Streamlit App">
-                <span>Live App</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
+            <div class="card-action-bar">
+              <a href="https://dev-rescue-ai.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary card-action-btn">
+                <span>Live Console</span> &nearr;
               </a>
-              <a href="https://github.com/RudraPatel217" target="_blank" rel="noopener noreferrer" class="case-action-btn" title="Inspect GitHub Repository">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-                <span>GitHub</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Case 02: ThreatVision -->
-          <div class="project-case-card" data-category="ai hackathon">
-            <div class="case-media-preview" title="Click to inspect architectural details">
-              <div class="media-preview-header">
-                <div class="preview-mode-switch" onclick="event.stopPropagation();">
-                  <button type="button" class="mode-pill active" data-img-target="threatvision-preview-img" data-src="assets/images/projects/threatvision.jpg" title="View Real App Screenshot">📸 Real App</button>
-                  <button type="button" class="mode-pill" data-img-target="threatvision-preview-img" data-src="assets/images/projects/threatvision.svg" title="View Architectural Console">⚡ System</button>
-                </div>
-              </div>
-              <img id="threatvision-preview-img" src="assets/images/projects/threatvision.jpg" alt="ThreatVision Explainable AI PE Malware Defense Console Screenshot" loading="lazy">
-            </div>
-            <div class="case-top-meta">
-              <span class="case-index">CASE 02</span>
-              <span class="case-badge">TECH EXIMIUS FINALIST</span>
-            </div>
-            <h3 class="case-title" data-project-key="threatvision">ThreatVision</h3>
-            <p class="case-tagline">Explainable AI (XAI) Malware Detection Prototype</p>
-            <p class="case-desc">Pairs sub-millisecond static PE feature extraction with an XGBoost classifier and mathematical SHAP waterfall feature attributions, explaining exactly which byte anomalies drive suspicious verdicts.</p>
-            <div class="case-tags-bar">
-              <span class="case-tag">FastAPI</span>
-              <span class="case-tag">React 18</span>
-              <span class="case-tag">XGBoost</span>
-              <span class="case-tag">SHAP</span>
-              <span class="case-tag">Docker</span>
-            </div>
-            <div class="case-footer-actions">
-              <a href="https://github.com/RudraPatel217" target="_blank" rel="noopener noreferrer" class="case-action-btn primary" title="Inspect GitHub Repository">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-                <span>GitHub Repo</span>
-              </a>
-              <button type="button" class="case-action-btn" onclick="document.querySelector('[data-project-key=\'threatvision\']').click();" title="Inspect Architecture Details">
-                <span>Architecture</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="16" x2="12" y2="12"></line>
-                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                </svg>
+              <button type="button" class="btn btn-ghost card-action-btn" data-project-key="devrescue ai">
+                <span>Architecture</span> &nearr;
               </button>
             </div>
           </div>
+        </article>
 
-          <!-- Case 03: DevRescue AI -->
-          <div class="project-case-card" data-category="ai fullstack">
-            <div class="case-media-preview" title="Click to inspect architectural details">
-              <div class="media-preview-header">
-                <div class="preview-mode-switch" onclick="event.stopPropagation();">
-                  <button type="button" class="mode-pill active" data-img-target="devrescue-preview-img" data-src="assets/images/projects/devrescue-ai.jpg" title="View Real App Screenshot">📸 Real App</button>
-                  <button type="button" class="mode-pill" data-img-target="devrescue-preview-img" data-src="assets/images/projects/devrescue-ai.svg" title="View Architectural Console">⚡ System</button>
-                </div>
+        <!-- Case 02: BhuSetu GIS -->
+        <article class="project-card glass" data-category="fullstack">
+          <div class="card-media">
+            <!-- 3D Mode Switcher Header -->
+            <div class="media-preview-header">
+              <div class="preview-mode-switch" onclick="event.stopPropagation();">
+                <button type="button" class="mode-pill active" data-img-target="bhusetu-preview-img" data-src="assets/images/projects/bhusetu.jpg" title="View Real App Screenshot">📸 Real App</button>
+                <button type="button" class="mode-pill" data-img-target="bhusetu-preview-img" data-src="assets/images/projects/bhusetu-3d.svg" title="View 3D Artwork">⚡ 3D System</button>
               </div>
-              <img id="devrescue-preview-img" src="assets/images/projects/devrescue-ai.jpg" alt="DevRescue AI Dashboard Screenshot" loading="lazy">
             </div>
-            <div class="case-top-meta">
-              <span class="case-index">CASE 03</span>
-              <span class="case-badge">LIVE AGENT CONSOLE</span>
-            </div>
-            <h3 class="case-title" data-project-key="devrescue ai">DevRescue AI</h3>
-            <p class="case-tagline">Autonomous Bug Investigation &amp; Auto-Repair Agent</p>
-            <p class="case-desc">Multi-agent engineering console providing continuous software reliability. Automates repository log ingestion, AST vulnerability analysis with NVIDIA Nemotron, and issues real-time PR repairs.</p>
-            <div class="case-tags-bar">
-              <span class="case-tag">React 19</span>
-              <span class="case-tag">FastAPI</span>
-              <span class="case-tag">NVIDIA Nemotron</span>
-              <span class="case-tag">XGBoost</span>
-              <span class="case-tag">Docker</span>
-            </div>
-            <div class="case-footer-actions">
-              <a href="https://dev-rescue-ai.vercel.app" target="_blank" rel="noopener noreferrer" class="case-action-btn primary" title="Open Live Console">
-                <span>Live Console</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-              <a href="https://github.com/RudraPatel217/DevRescue-AI-" target="_blank" rel="noopener noreferrer" class="case-action-btn" title="Inspect GitHub Repository">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-                <span>GitHub Repo</span>
-              </a>
-            </div>
+            <img id="bhusetu-preview-img" src="assets/images/projects/bhusetu.jpg" alt="BhuSetu National GIS" loading="lazy">
+            <span class="card-index">02 / 06</span>
           </div>
-
-          <!-- Case 04: AssetFlow ERP -->
-          <div class="project-case-card" data-category="fullstack hackathon">
-            <div class="case-media-preview" title="Click to inspect architectural details">
-              <div class="media-preview-header">
-                <div class="preview-mode-switch" onclick="event.stopPropagation();">
-                  <button type="button" class="mode-pill active" data-img-target="assetflow-preview-img" data-src="assets/images/projects/assetflow.jpg" title="View Real App Screenshot">📸 Real App</button>
-                  <button type="button" class="mode-pill" data-img-target="assetflow-preview-img" data-src="assets/images/projects/assetflow.svg" title="View Architectural Console">⚡ System</button>
-                </div>
-              </div>
-              <img id="assetflow-preview-img" src="assets/images/projects/assetflow.jpg" alt="AssetFlow Enterprise Resource Planning Operations Dashboard Screenshot" loading="lazy">
+          <div class="card-content">
+            <div class="card-top-row">
+              <span class="category-tag">GEOSPATIAL INFRASTRUCTURE</span>
+              <span class="type-pill">Web / GIS</span>
             </div>
-            <div class="case-top-meta">
-              <span class="case-index">CASE 04</span>
-              <span class="case-badge">ODOO HACKATHON</span>
+            <h3 class="card-title" data-project-key="bhusetu">BhuSetu GIS</h3>
+            <p class="card-desc">
+              High-performance land acquisition GIS platform with cadastral parcel mapping, MapLibre GL JS vector rendering, and PostGIS spatial queries.
+            </p>
+            <div class="card-tech-row">
+              <span>Next.js</span> &bull; <span>PostGIS</span> &bull; <span>MapLibre</span> &bull; <span>FastAPI</span>
             </div>
-            <h3 class="case-title" data-project-key="assetflow">AssetFlow ERP</h3>
-            <p class="case-tagline">Enterprise Asset &amp; Resource Lifecycle Management</p>
-            <p class="case-desc">Engineered with Team Terminal for the Odoo Hackathon. Manages multi-department asset requisition, real-time depreciation calculation, role-based workflows, and automated maintenance scheduling.</p>
-            <div class="case-tags-bar">
-              <span class="case-tag">Clean Architecture</span>
-              <span class="case-tag">RBAC</span>
-              <span class="case-tag">State Machines</span>
-              <span class="case-tag">PostgreSQL</span>
-            </div>
-            <div class="case-footer-actions">
-              <a href="https://github.com/Darshilmodi15/odoo-hackathon---AssetFlow" target="_blank" rel="noopener noreferrer" class="case-action-btn primary" title="Inspect GitHub Repository">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-                <span>GitHub Repo</span>
+            <div class="card-action-bar">
+              <a href="https://github.com/Jenil-Mistry/BhuSetu" target="_blank" rel="noopener noreferrer" class="btn btn-primary card-action-btn">
+                <span>GitHub Repo</span> &nearr;
               </a>
-              <button type="button" class="case-action-btn" onclick="document.querySelector('[data-project-key=\'assetflow\']').click();" title="Inspect Architecture Details">
-                <span>Architecture</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="16" x2="12" y2="12"></line>
-                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                </svg>
+              <button type="button" class="btn btn-ghost card-action-btn" data-project-key="bhusetu">
+                <span>Architecture</span> &nearr;
               </button>
             </div>
           </div>
+        </article>
 
-          <!-- Case 05: BhuSetu -->
-          <div class="project-case-card" data-category="fullstack">
-            <div class="case-media-preview" title="Click to inspect architectural details">
-              <div class="media-preview-header">
-                <div class="preview-mode-switch" onclick="event.stopPropagation();">
-                  <button type="button" class="mode-pill active" data-img-target="bhusetu-preview-img" data-src="assets/images/projects/bhusetu.jpg" title="View Real App Screenshot">📸 Real App</button>
-                  <button type="button" class="mode-pill" data-img-target="bhusetu-preview-img" data-src="assets/images/projects/bhusetu.svg" title="View Architectural Console">⚡ System</button>
-                </div>
+        <!-- Case 03: ThreatVision -->
+        <article class="project-card glass" data-category="ai hackathon">
+          <div class="card-media">
+            <!-- 3D Mode Switcher Header -->
+            <div class="media-preview-header">
+              <div class="preview-mode-switch" onclick="event.stopPropagation();">
+                <button type="button" class="mode-pill active" data-img-target="threatvision-preview-img" data-src="assets/images/projects/threatvision.jpg" title="View Real App Screenshot">📸 Real App</button>
+                <button type="button" class="mode-pill" data-img-target="threatvision-preview-img" data-src="assets/images/projects/threatvision-3d.svg" title="View 3D Artwork">⚡ 3D System</button>
               </div>
-              <img id="bhusetu-preview-img" src="assets/images/projects/bhusetu.jpg" alt="BhuSetu National Cadastral GIS &amp; Land Intelligence Platform Screenshot" loading="lazy">
             </div>
-            <div class="case-top-meta">
-              <span class="case-index">CASE 05</span>
-              <span class="case-badge">GIS PLATFORM</span>
+            <img id="threatvision-preview-img" src="assets/images/projects/threatvision.jpg" alt="ThreatVision Explainable AI" loading="lazy">
+            <span class="card-index">03 / 06</span>
+          </div>
+          <div class="card-content">
+            <div class="card-top-row">
+              <span class="category-tag">CYBERSECURITY XAI</span>
+              <span class="type-pill">AI / ML</span>
             </div>
-            <h3 class="case-title" data-project-key="bhusetu">BhuSetu GIS</h3>
-            <p class="case-tagline">National Land Acquisition &amp; Geospatial Management</p>
-            <p class="case-desc">High-performance geospatial infrastructure platform streamlining cadastral parcel mapping, statutory compensation calculations, and boundary layer inspection powered by MapLibre GL JS and PostGIS.</p>
-            <div class="case-tags-bar">
-              <span class="case-tag">Next.js</span>
-              <span class="case-tag">MapLibre GL</span>
-              <span class="case-tag">PostGIS</span>
-              <span class="case-tag">MinIO S3</span>
-              <span class="case-tag">Docker</span>
+            <h3 class="card-title" data-project-key="threatvision">ThreatVision</h3>
+            <p class="card-desc">
+              PE binary malware defense prototype pairing XGBoost classifier with mathematical SHAP waterfall feature attributions.
+            </p>
+            <div class="card-tech-row">
+              <span>FastAPI</span> &bull; <span>XGBoost</span> &bull; <span>SHAP</span> &bull; <span>React</span>
             </div>
-            <div class="case-footer-actions">
-              <a href="https://github.com/Jenil-Mistry/BhuSetu" target="_blank" rel="noopener noreferrer" class="case-action-btn primary" title="Inspect GitHub Repository">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-                <span>GitHub Repo</span>
+            <div class="card-action-bar">
+              <a href="https://github.com/RudraPatel217" target="_blank" rel="noopener noreferrer" class="btn btn-primary card-action-btn">
+                <span>GitHub Repo</span> &nearr;
               </a>
-              <button type="button" class="case-action-btn" onclick="document.querySelector('[data-project-key=\'bhusetu\']').click();" title="Inspect Architecture Details">
-                <span>Architecture</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="16" x2="12" y2="12"></line>
-                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                </svg>
+              <button type="button" class="btn btn-ghost card-action-btn" data-project-key="threatvision">
+                <span>Architecture</span> &nearr;
               </button>
             </div>
           </div>
+        </article>
 
-          <!-- Case 06: TechFusion SafeSphere -->
-          <div class="project-case-card" data-category="fullstack hackathon">
-            <div class="case-media-preview" title="Click to inspect architectural details">
-              <div class="media-preview-header">
-                <div class="preview-mode-switch" onclick="event.stopPropagation();">
-                  <button type="button" class="mode-pill active" data-img-target="safesphere-preview-img" data-src="assets/images/projects/safesphere.jpg" title="View Real App Screenshot">📸 Real App</button>
-                  <button type="button" class="mode-pill" data-img-target="safesphere-preview-img" data-src="assets/images/projects/safesphere.svg" title="View Architectural Console">⚡ System</button>
-                </div>
+        <!-- Case 04: Domain Intelligence -->
+        <article class="project-card glass" data-category="ai fullstack">
+          <div class="card-media">
+            <!-- 3D Mode Switcher Header -->
+            <div class="media-preview-header">
+              <div class="preview-mode-switch" onclick="event.stopPropagation();">
+                <button type="button" class="mode-pill active" data-img-target="website-analyzer-preview-img" data-src="assets/images/projects/website-analyzer.jpg" title="View Real App Screenshot">📸 Real App</button>
+                <button type="button" class="mode-pill" data-img-target="website-analyzer-preview-img" data-src="assets/images/projects/domain-3d.svg" title="View 3D Artwork">⚡ 3D System</button>
               </div>
-              <img id="safesphere-preview-img" src="assets/images/projects/safesphere.jpg" alt="SafeSphere Women's Safety SOS &amp; Real-time Telemetry Web App Screenshot" loading="lazy">
             </div>
-            <div class="case-top-meta">
-              <span class="case-index">CASE 06</span>
-              <span class="case-badge">TECHFUSION LIVE</span>
-            </div>
-            <h3 class="case-title" data-project-key="techfusion safesphere">TechFusion SafeSphere</h3>
-            <p class="case-tagline">Women's Safety &amp; Rapid SOS Telemetry Platform</p>
-            <p class="case-desc">Safety web app integrating one-touch SOS emergency dispatch, real-time geolocation sharing, Web Audio dual-tone synthesized sirens, and Web Speech voice keyword triggers.</p>
-            <div class="case-tags-bar">
-              <span class="case-tag">Web Audio API</span>
-              <span class="case-tag">Web Speech</span>
-              <span class="case-tag">Geolocation</span>
-              <span class="case-tag">Tailwind CSS</span>
-            </div>
-            <div class="case-footer-actions">
-              <a href="https://koushik2024-code.github.io/TechFusion-v2v/" target="_blank" rel="noopener noreferrer" class="case-action-btn primary" title="Open Live Deployment">
-                <span>Live Demo</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-              <a href="https://github.com/koushik2024-code/TechFusion-v2v" target="_blank" rel="noopener noreferrer" class="case-action-btn" title="Inspect GitHub Repository">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-                <span>GitHub</span>
-              </a>
-            </div>
+            <img id="website-analyzer-preview-img" src="assets/images/projects/website-analyzer.jpg" alt="Domain Intelligence App" loading="lazy">
+            <span class="card-index">04 / 06</span>
           </div>
-
-          <!-- Case 07: Air Pollution & AQI Intelligence -->
-          <div class="project-case-card" data-category="ai hackathon">
-            <div class="case-media-preview" title="Click to inspect architectural details">
-              <img src="assets/images/projects/aqi-intelligence.svg" alt="Air Pollution &amp; AQI Intelligence Dashboard Mockup" loading="lazy">
+          <div class="card-content">
+            <div class="card-top-row">
+              <span class="category-tag">WEBSITE AUDITING</span>
+              <span class="type-pill">Web / GIS</span>
             </div>
-            <div class="case-top-meta">
-              <span class="case-index">CASE 07</span>
-              <span class="case-badge">HACKATHON FINALIST</span>
+            <h3 class="card-title" data-project-key="domain intelligence &amp; seo auditor">Domain Intelligence</h3>
+            <p class="card-desc">
+              Automated DOM extraction crawler auditing critical SEO tags, canonical headers, and security protocols with Excel report pipelines.
+            </p>
+            <div class="card-tech-row">
+              <span>Python</span> &bull; <span>Streamlit</span> &bull; <span>DOM Crawler</span> &bull; <span>Excel</span>
             </div>
-            <h3 class="case-title" data-project-key="air pollution &amp; aqi intelligence">Air Pollution &amp; AQI Intelligence</h3>
-            <p class="case-tagline">Environmental Monitoring &amp; Geospatial Smog Visualizer</p>
-            <p class="case-desc">Environmental monitoring dashboard synthesizing historical atmospheric parameters and real-time Air Quality Index (AQI) readings with predictive pollution trend visualizers.</p>
-            <div class="case-tags-bar">
-              <span class="case-tag">Python</span>
-              <span class="case-tag">Data Science</span>
-              <span class="case-tag">Predictive Analytics</span>
-              <span class="case-tag">IoT Grid</span>
-            </div>
-            <div class="case-footer-actions">
-              <a href="#terminal" class="case-action-btn primary" title="Inspect Terminal Intelligence" onclick="document.querySelector('#terminal-input').value='projects'; document.querySelector('#terminal-input').focus();">
-                <span>Inspect in Terminal</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="4 17 10 11 4 5"></polyline>
-                  <line x1="12" y1="19" x2="20" y2="19"></line>
-                </svg>
+            <div class="card-action-bar">
+              <a href="https://website-analyser-rudra.streamlit.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary card-action-btn">
+                <span>Live App</span> &nearr;
               </a>
-              <button type="button" class="case-action-btn" onclick="document.querySelector('[data-project-key=\'air pollution &amp; aqi intelligence\']').click();" title="Inspect Architecture Details">
-                <span>Architecture</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="16" x2="12" y2="12"></line>
-                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                </svg>
+              <button type="button" class="btn btn-ghost card-action-btn" data-project-key="domain intelligence &amp; seo auditor">
+                <span>Architecture</span> &nearr;
               </button>
             </div>
           </div>
+        </article>
 
-        </div>
-      </div>
-    </section>
+        <!-- Case 05: AssetFlow ERP -->
+        <article class="project-card glass" data-category="fullstack hackathon">
+          <div class="card-media">
+            <!-- 3D Mode Switcher Header -->
+            <div class="media-preview-header">
+              <div class="preview-mode-switch" onclick="event.stopPropagation();">
+                <button type="button" class="mode-pill active" data-img-target="assetflow-preview-img" data-src="assets/images/projects/assetflow.jpg" title="View Real App Screenshot">📸 Real App</button>
+                <button type="button" class="mode-pill" data-img-target="assetflow-preview-img" data-src="assets/images/projects/assetflow-3d.svg" title="View 3D Artwork">⚡ 3D System</button>
+              </div>
+            </div>
+            <img id="assetflow-preview-img" src="assets/images/projects/assetflow.jpg" alt="AssetFlow ERP System" loading="lazy">
+            <span class="card-index">05 / 06</span>
+          </div>
+          <div class="card-content">
+            <div class="card-top-row">
+              <span class="category-tag">ENTERPRISE ERP</span>
+              <span class="type-pill">Hackathons</span>
+            </div>
+            <h3 class="card-title" data-project-key="assetflow">AssetFlow ERP</h3>
+            <p class="card-desc">
+              Built for Odoo Hackathon with Team Terminal. Streamlines asset requisitions, depreciation computation, and role-based custody workflows.
+            </p>
+            <div class="card-tech-row">
+              <span>Clean Arch</span> &bull; <span>RBAC</span> &bull; <span>State Machines</span> &bull; <span>Postgres</span>
+            </div>
+            <div class="card-action-bar">
+              <a href="https://github.com/Darshilmodi15/odoo-hackathon---AssetFlow" target="_blank" rel="noopener noreferrer" class="btn btn-primary card-action-btn">
+                <span>GitHub Repo</span> &nearr;
+              </a>
+              <button type="button" class="btn btn-ghost card-action-btn" data-project-key="assetflow">
+                <span>Architecture</span> &nearr;
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Case 06: SafeSphere -->
+        <article class="project-card glass" data-category="fullstack hackathon">
+          <div class="card-media">
+            <!-- 3D Mode Switcher Header -->
+            <div class="media-preview-header">
+              <div class="preview-mode-switch" onclick="event.stopPropagation();">
+                <button type="button" class="mode-pill active" data-img-target="safesphere-preview-img" data-src="assets/images/projects/safesphere.jpg" title="View Real App Screenshot">📸 Real App</button>
+                <button type="button" class="mode-pill" data-img-target="safesphere-preview-img" data-src="assets/images/projects/safesphere-3d.svg" title="View 3D Artwork">⚡ 3D System</button>
+              </div>
+            </div>
+            <img id="safesphere-preview-img" src="assets/images/projects/safesphere.jpg" alt="SafeSphere Platform" loading="lazy">
+            <span class="card-index">06 / 06</span>
+          </div>
+          <div class="card-content">
+            <div class="card-top-row">
+              <span class="category-tag">SAFETY TELEMETRY</span>
+              <span class="type-pill">Hackathons</span>
+            </div>
+            <h3 class="card-title" data-project-key="techfusion safesphere">SafeSphere</h3>
+            <p class="card-desc">
+              Transit safety web app integrating one-touch SOS dispatch, real-time geolocation sharing, synthesized Web Audio sirens, and voice triggers.
+            </p>
+            <div class="card-tech-row">
+              <span>Web Audio</span> &bull; <span>Web Speech</span> &bull; <span>Geolocation</span> &bull; <span>Tailwind</span>
+            </div>
+            <div class="card-action-bar">
+              <a href="https://koushik2024-code.github.io/TechFusion-v2v/" target="_blank" rel="noopener noreferrer" class="btn btn-primary card-action-btn">
+                <span>Live Demo</span> &nearr;
+              </a>
+              <button type="button" class="btn btn-ghost card-action-btn" data-project-key="techfusion safesphere">
+                <span>Architecture</span> &nearr;
+              </button>
+            </div>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <!-- Journey & Hackathon Timeline Section -->
-    <section class="section" id="journey">
-      <div class="container">
-        <div class="section-badge">
-          <span class="dot"></span>
-          Timeline &amp; Recognition
+    <!-- Section: Trajectory / Timeline -->
+    <section class="section" id="trajectory">
+      <div class="section-head">
+        <div>
+          <div class="micro">Experience &amp; Education</div>
+          <h2 class="serif">The trajectory.</h2>
         </div>
-        <h2 class="section-heading">
-          Engineering Journey <br>
-          <span class="gradient-text">&amp; Track Record.</span>
-        </h2>
-        <p class="section-subheading">
-          Key milestones, hackathons, and systems built across rapid innovation cycles.
+        <p class="section-lead">
+          Milestones, internships, and engineering recognitions across rapid innovation cycles.
         </p>
+      </div>
 
-        <div class="timeline-track">
+      <div class="timeline-wrap">
+        <div class="timeline-line"></div>
+        <div class="timeline-year top">2026</div>
+        <div class="timeline-year bottom">2029</div>
 
-          <!-- Milestone: SATVAWEB -->
-          <div class="timeline-milestone">
-            <div class="timeline-node"></div>
-            <div class="timeline-card">
-              <div class="timeline-meta-row">
-                <span class="timeline-year">JUNE 2026 &ndash; JULY 2026 // INDUSTRY INTERNSHIP</span>
-                <span class="case-badge">SOFTWARE ENGINEERING</span>
-              </div>
-              <h3 class="timeline-role-title">SATVAWEB &mdash; Software Engineering &amp; Web Intern</h3>
-              <div class="timeline-context">Remote / Work from Home</div>
-              <p class="timeline-text">
-                Engineered automated website diagnostic utilities in Python and JavaScript to audit Core Web Vitals,
-                latency, and technical SEO health. Built automated Excel data pipelines and created internal employee
-                activity tracking platforms.
-              </p>
+        <!-- Node 01: SATVAWEB -->
+        <article class="timeline-card cyan glass">
+          <div class="micro">Industry Internship &bull; June &ndash; July 2026</div>
+          <h3>SATVAWEB &mdash; Software Engineering Intern</h3>
+          <div class="org">Remote / Work from Home</div>
+          <ul>
+            <li>Engineered automated website diagnostic tools in Python/JS to audit Core Web Vitals and technical SEO.</li>
+            <li>Built automated Excel reporting pipelines eliminating hours of manual documentation weekly.</li>
+            <li>Created internal employee workflow tracking systems to monitor milestones and team productivity metrics.</li>
+          </ul>
+        </article>
+
+        <!-- Node 02: DevRescue AI -->
+        <article class="timeline-card violet glass">
+          <div class="micro">Autonomous AI &bull; 2026</div>
+          <h3>DevRescue AI &mdash; Autonomous Bug Repair Console</h3>
+          <div class="org">Lead Full-Stack &amp; AI Architect</div>
+          <ul>
+            <li>Connected AST parsing, NVIDIA Nemotron-3.5, and XGBoost risk classification into a live reliability console.</li>
+            <li>Automated real-time PR repairs directly linked to GitHub repository error webhooks.</li>
+          </ul>
+        </article>
+
+        <!-- Node 03: BhuSetu GIS -->
+        <article class="timeline-card green glass">
+          <div class="micro">Geospatial GIS &bull; 2026</div>
+          <h3>BhuSetu &mdash; National Land Acquisition GIS</h3>
+          <div class="org">Geospatial Backend &amp; Vector Tile Engineering</div>
+          <ul>
+            <li>Designed cadastral parcel mapping infrastructure using PostgreSQL/PostGIS and MapLibre GL JS vector rendering.</li>
+            <li>Engineered zero-ORM FastAPI high-throughput endpoints and MinIO S3 spatial document storage.</li>
+          </ul>
+        </article>
+
+        <!-- Node 04: Academic Foundation -->
+        <article class="timeline-card gold glass">
+          <div class="micro">Academic Foundation &bull; 2025 &ndash; 2029</div>
+          <h3>B.Tech &bull; CSE (AI &amp; ML) &mdash; Adani University</h3>
+          <div class="org">Ahmedabad, Gujarat &bull; CGPA: 8.22 / 10 &bull; JEE: 93.27%ile</div>
+          <ul>
+            <li>Rigorous coursework in Data Structures, Algorithms, Distributed Computing, and Deep Learning.</li>
+            <li>Selected in university internal round for Smart India Hackathon (SIH 2026).</li>
+            <li>Finalist in Tech Eximius with ThreatVision XAI malware classification platform.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Section: Credentials & Recognitions -->
+    <section class="section" id="credentials">
+      <div class="section-head">
+        <div>
+          <div class="micro">Hackathons &bull; Recognitions</div>
+          <h2 class="serif">Credentials.</h2>
+        </div>
+        <p class="section-lead">
+          A track record of competitive coding, national hackathon podiums, and technical presentations.
+        </p>
+      </div>
+
+      <div class="credentials-grid">
+        <div class="credentials-column">
+          <h3 class="col-title">Hackathons &amp; Podiums</h3>
+
+          <article class="credential-card glass">
+            <div class="card-header">
+              <span class="tag-badge">National</span>
+              <span class="year">2026</span>
             </div>
-          </div>
+            <h4>Smart India Hackathon (SIH 2026)</h4>
+            <div class="org">Adani University Selection</div>
+            <p class="desc">Cleared university-level internal selection round for national deployment solutions.</p>
+          </article>
 
-          <!-- Milestone: DevRescue AI -->
-          <div class="timeline-milestone">
-            <div class="timeline-node"></div>
-            <div class="timeline-card">
-              <div class="timeline-meta-row">
-                <span class="timeline-year">2026 // AUTONOMOUS AI</span>
-                <span class="case-badge">FEATURED LAUNCH</span>
-              </div>
-              <h3 class="timeline-role-title">DevRescue AI &mdash; Autonomous Bug Repair Console</h3>
-              <div class="timeline-context">Lead Full-Stack &amp; AI Architect</div>
-              <p class="timeline-text">
-                Architected continuous software reliability console integrating AST parsing, NVIDIA Nemotron-3.5, and an
-                XGBoost risk classification model for automated PR repairs.
-              </p>
+          <article class="credential-card glass">
+            <div class="card-header">
+              <span class="tag-badge online">Finalist</span>
+              <span class="year">2026</span>
             </div>
-          </div>
+            <h4>Tech Eximius Hackathon</h4>
+            <div class="org">National Engineering Finals</div>
+            <p class="desc">Advanced to national finals with ThreatVision explainable AI PE malware classification platform.</p>
+          </article>
 
-          <!-- Milestone: BhuSetu -->
-          <div class="timeline-milestone">
-            <div class="timeline-node"></div>
-            <div class="timeline-card">
-              <div class="timeline-meta-row">
-                <span class="timeline-year">2026 // GEOSPATIAL GIS</span>
-                <span class="case-badge">NATIONAL INFRASTRUCTURE</span>
-              </div>
-              <h3 class="timeline-role-title">BhuSetu &mdash; National Land Acquisition GIS</h3>
-              <div class="timeline-context">Geospatial Backend &amp; Map Engineering</div>
-              <p class="timeline-text">
-                Designed cadastral parcel mapping infrastructure using PostgreSQL/PostGIS, MapLibre GL JS vector
-                rendering, and zero-ORM FastAPI high-throughput endpoints.
-              </p>
+          <article class="credential-card glass">
+            <div class="card-header">
+              <span class="tag-badge workshop">ERP Finalist</span>
+              <span class="year">2026</span>
             </div>
-          </div>
+            <h4>Odoo Hackathon</h4>
+            <div class="org">Team Terminal</div>
+            <p class="desc">Built AssetFlow enterprise asset lifecycle management ERP with clean RBAC architecture.</p>
+          </article>
+        </div>
 
-          <!-- Milestone: Hackathons -->
-          <div class="timeline-milestone">
-            <div class="timeline-node"></div>
-            <div class="timeline-card">
-              <div class="timeline-meta-row">
-                <span class="timeline-year">2026 // HACKATHON RECOGNITIONS</span>
-                <span class="case-badge">SIH &bull; EXIMIUS &bull; ODOO</span>
-              </div>
-              <h3 class="timeline-role-title">Smart India Hackathon, Tech Eximius &amp; Odoo Finalist</h3>
-              <div class="timeline-context">Team Terminal &bull; National Finalist</div>
-              <p class="timeline-text">
-                Cleared university selection round for SIH 2026; reached finals in Tech Eximius with ThreatVision XAI
-                malware platform; built AssetFlow ERP in Odoo Hackathon; and speaker on "AI &amp; Society" at Adani
-                University.
-              </p>
+        <div class="credentials-column">
+          <h3 class="col-title">Leadership &amp; Certifications</h3>
+
+          <article class="credential-card glass">
+            <div class="card-header">
+              <span class="tag-badge course">Keynote</span>
+              <span class="year">2026</span>
             </div>
-          </div>
+            <h4>Technical Speaker &mdash; AI &amp; Society</h4>
+            <div class="org">Adani University</div>
+            <p class="desc">Delivered technical keynote on artificial intelligence ethics, autonomous agents, and society.</p>
+          </article>
 
-          <!-- Milestone: Education -->
-          <div class="timeline-milestone">
-            <div class="timeline-node"></div>
-            <div class="timeline-card">
-              <div class="timeline-meta-row">
-                <span class="timeline-year">2025 &ndash; 2029 // ACADEMIC FOUNDATION</span>
-                <span class="case-badge">ADANI UNIVERSITY</span>
-              </div>
-              <h3 class="timeline-role-title">B.Tech in Computer Science &amp; Engineering (AI &amp; ML)</h3>
-              <div class="timeline-context">CGPA: 8.22 / 10 &bull; JEE Mains: 93.27%ile</div>
-              <p class="timeline-text">
-                Current 2nd Year student at Adani University, Gujarat. Rigorous coursework in Algorithms, Data
-                Structures, Discrete Math, Artificial Intelligence, and Distributed Systems.
-              </p>
+          <article class="credential-card glass">
+            <div class="card-header">
+              <span class="tag-badge">Developer</span>
+              <span class="year">2026</span>
             </div>
-          </div>
+            <h4>GitHub Student Developer Pack</h4>
+            <div class="org">GitHub Education</div>
+            <p class="desc">Awarded developer recognition for continuous open-source contribution and technical prototypes.</p>
+          </article>
 
+          <article class="credential-card glass">
+            <div class="card-header">
+              <span class="tag-badge online">Hackathon</span>
+              <span class="year">2026</span>
+            </div>
+            <h4>TechFusion / Vibe 2 Vision</h4>
+            <div class="org">National Hackathon</div>
+            <p class="desc">Architected SafeSphere transit safety web app with Web Audio synthesis and geolocation telemetry.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Interactive Cyber Terminal -->
+    <!-- Section: Direct Line / Interactive Console -->
     <section class="section" id="terminal">
-      <div class="container">
-        <div class="section-badge">
-          <span class="dot"></span>
-          Developer Console
+      <div class="section-head">
+        <div>
+          <div class="micro">Direct Line &bull; CLI Interface</div>
+          <h2 class="serif">A little less small talk.</h2>
         </div>
-        <h2 class="section-heading">
-          Interactive Shell <br>
-          <span class="gradient-text">Direct Profile Query.</span>
-        </h2>
-        <p class="section-subheading">
-          Recruiters and engineers can explore credentials, projects, and skills through an interactive zsh-style
-          terminal interface. Type <code>help</code> to begin.
+        <p class="section-lead">
+          Query credentials, project architectures, and contact links straight from an interactive zsh-style console.
         </p>
+      </div>
 
-        <div class="terminal-wrapper">
-          <div class="terminal-header">
-            <div class="terminal-dots">
-              <span class="dot dot-red"></span>
-              <span class="dot dot-yellow"></span>
-              <span class="dot dot-green"></span>
-            </div>
-            <div class="terminal-title">rudra@cyber-console: ~ (zsh)</div>
-            <div style="font-family: var(--font-mono); font-size: 0.75rem; color: #10b981;">SYS_READY</div>
+      <div class="terminal-container glass">
+        <div class="terminal-bar">
+          <div class="term-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
           </div>
+          <div class="term-title">rudra@portfolio: ~ (zsh)</div>
+          <div class="term-status">&bull; READY</div>
+        </div>
 
-          <div class="terminal-body" id="terminal-body">
-            <div>Welcome to <strong>Rudra Patel's Interactive Cyber Terminal [v2.4.0]</strong>.</div>
-            <div style="color: var(--text-muted); margin-bottom: 12px;">Type <span
-                style="color: var(--accent-cyan); font-weight: bold;">help</span> to inspect available operational
-              commands.</div>
-            <div><span style="color: #38bdf8;">rudra@cyber-console:~$</span> <span style="color: #ffffff;">about</span>
-            </div>
-            <div style="margin-top: 4px; margin-bottom: 12px;">
-              <span style="color: #38bdf8; font-weight: 600;">Rudra Patel</span> &mdash; Full-Stack &amp; AI Systems
-              Engineer. Builder of autonomous cyber-consoles, geospatial land acquisition platforms, and explainable AI
-              malware detectors.
-            </div>
+        <div class="terminal-output" id="terminal-body">
+          <div class="term-row">
+            <span class="prompt">rudra@cyber-console:~$</span> <span class="term-cmd-highlight">about</span>
           </div>
-
-          <div class="terminal-input-row">
-            <span class="terminal-prompt">rudra@cyber-console:~$</span>
-            <input type="text" id="terminal-input" class="terminal-input"
-              placeholder="Type command here (e.g. 'help', 'projects', 'resume', 'sudo hire')..." autocomplete="off"
-              spellcheck="false">
+          <div class="term-res">
+            <strong>Rudra Patel</strong> &mdash; Full-Stack &amp; AI Systems Engineer (Adani University, CGPA: 8.22). Builder of DevRescue AI, BhuSetu GIS, and ThreatVision XAI.
+          </div>
+          <div class="term-res-hint">
+            Type <span class="prompt-hint">help</span> to inspect all available commands (projects, skills, journey, resume, sudo hire).
           </div>
         </div>
 
+        <div class="terminal-input-bar">
+          <span class="prompt">rudra@cyber-console:~$</span>
+          <input type="text" id="terminal-input" class="term-input" placeholder="Type a command (e.g. 'help', 'projects', 'resume')..." autocomplete="off" spellcheck="false">
+          <button type="button" class="term-btn" onclick="const ev = new KeyboardEvent('keydown', {key:'Enter'}); document.getElementById('terminal-input').dispatchEvent(ev);">
+            &nearr;
+          </button>
+        </div>
       </div>
     </section>
 
-    <!-- Contact & Direct Channels -->
+    <!-- Section: Open Channel / Contact -->
     <section class="section" id="contact">
-      <div class="container">
-        <div class="section-badge">
-          <span class="dot"></span>
-          Get In Touch
+      <div class="section-head">
+        <div>
+          <div class="micro">Get In Touch</div>
+          <h2 class="serif">Have a problem worth solving?</h2>
         </div>
-        <h2 class="section-heading">
-          Have an Opportunity or Project? <br>
-          <span class="gradient-text">Let's Connect.</span>
-        </h2>
-        <p class="section-subheading">
-          Whether you want to discuss engineering roles, collaborate on hackathons, or chat about multi-agent systems
-          &mdash; feel free to reach out.
+        <p class="section-lead">
+          Whether you want to discuss engineering roles, hackathon collaboration, or distributed AI architectures &mdash; feel free to reach out.
         </p>
+      </div>
 
-        <div class="contact-editorial-grid">
+      <div class="contact-grid">
+        <div class="contact-card glass">
+          <div class="micro">Direct Message</div>
+          <h3 class="contact-title serif">Let's connect.</h3>
+          <p>
+            I am prompt to respond across email and professional platforms. Open for internships, collaborative engineering projects, and research opportunities.
+          </p>
 
-          <div class="contact-left-col">
-            <h3 style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: #ffffff;">Direct
-              Channels</h3>
-            <p style="color: var(--text-secondary); margin-top: 8px; line-height: 1.6;">
-              Reach out directly across any of the platforms below. I am prompt to respond.
-            </p>
+          <div class="contact-list">
+            <div class="contact-item">
+              <div>
+                <div class="name">Email Address</div>
+                <div class="value"><a href="mailto:rj423513@gmail.com">rj423513@gmail.com</a></div>
+              </div>
+              <a href="mailto:rj423513@gmail.com" class="contact-arrow">&nearr;</a>
+            </div>
 
-            <div class="contact-channels-stack">
-              <a href="mailto:rj423513@gmail.com" class="contact-channel-card">
-                <div class="channel-icon-pill">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                  </svg>
-                </div>
-                <div class="channel-meta">
-                  <h4>Email Address</h4>
-                  <p>rj423513@gmail.com</p>
-                </div>
-              </a>
+            <div class="contact-item">
+              <div>
+                <div class="name">LinkedIn Profile</div>
+                <div class="value"><a href="https://www.linkedin.com/in/rudrapatel217/" target="_blank" rel="noopener noreferrer">linkedin.com/in/rudrapatel217</a></div>
+              </div>
+              <a href="https://www.linkedin.com/in/rudrapatel217/" target="_blank" rel="noopener noreferrer" class="contact-arrow">&nearr;</a>
+            </div>
 
-              <a href="https://www.linkedin.com/in/rudrapatel217/" target="_blank" rel="noopener noreferrer"
-                class="contact-channel-card">
-                <div class="channel-icon-pill">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                    <rect x="2" y="9" width="4" height="12"></rect>
-                    <circle cx="4" cy="4" r="2"></circle>
-                  </svg>
-                </div>
-                <div class="channel-meta">
-                  <h4>LinkedIn</h4>
-                  <p>linkedin.com/in/rudrapatel217</p>
-                </div>
-              </a>
+            <div class="contact-item">
+              <div>
+                <div class="name">GitHub Organization</div>
+                <div class="value"><a href="https://github.com/RudraPatel217" target="_blank" rel="noopener noreferrer">github.com/RudraPatel217</a></div>
+              </div>
+              <a href="https://github.com/RudraPatel217" target="_blank" rel="noopener noreferrer" class="contact-arrow">&nearr;</a>
+            </div>
 
-              <a href="https://unstop.com/u/rudrapat96265" target="_blank" rel="noopener noreferrer"
-                class="contact-channel-card">
-                <div class="channel-icon-pill">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                  </svg>
-                </div>
-                <div class="channel-meta">
-                  <h4>Unstop Profile</h4>
-                  <p>unstop.com/u/rudrapat96265</p>
-                </div>
-              </a>
-
-              <a href="https://github.com/RudraPatel217" target="_blank" rel="noopener noreferrer"
-                class="contact-channel-card">
-                <div class="channel-icon-pill">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path
-                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                    </path>
-                  </svg>
-                </div>
-                <div class="channel-meta">
-                  <h4>GitHub</h4>
-                  <p>github.com/RudraPatel217</p>
-                </div>
-              </a>
+            <div class="contact-item">
+              <div>
+                <div class="name">Unstop Profile</div>
+                <div class="value"><a href="https://unstop.com/u/rudrapat96265" target="_blank" rel="noopener noreferrer">unstop.com/u/rudrapat96265</a></div>
+              </div>
+              <a href="https://unstop.com/u/rudrapat96265" target="_blank" rel="noopener noreferrer" class="contact-arrow">&nearr;</a>
             </div>
           </div>
+        </div>
 
-          <!-- Contact Form Box -->
-          <div class="contact-form-card">
-            <form id="contact-form">
-              <div class="form-group">
-                <label for="contact-name" class="form-label">Full Name</label>
-                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Vance" required>
-              </div>
-
-              <div class="form-group">
-                <label for="contact-email" class="form-label">Email Address</label>
-                <input type="email" id="contact-email" class="form-input" placeholder="alex@company.com" required>
-              </div>
-
-              <div class="form-group">
-                <label for="contact-message" class="form-label">Message / Opportunity Details</label>
-                <textarea id="contact-message" class="form-input"
-                  placeholder="Hi Rudra, we would love to connect regarding..." required></textarea>
-              </div>
-
-              <button type="submit" class="btn-pill-primary"
-                style="width: 100%; justify-content: center; padding: 14px;">
-                Dispatch Message ↗
-              </button>
-            </form>
+        <div class="contact-side">
+          <div class="mini-panel glass">
+            <div>
+              <div class="micro">Location &bull; Base</div>
+              <h4>Ahmedabad, India</h4>
+            </div>
+            <p>Based in Gujarat, India. Available for remote global roles, hybrid internships, and on-site opportunities.</p>
           </div>
 
+          <div class="mini-panel glass">
+            <div>
+              <div class="micro">Curriculum Vitae</div>
+              <h4>Rudra Patel Resume</h4>
+            </div>
+            <p>Complete academic transcript, hackathon awards, and verifiable code repositories.</p>
+            <a href="assets/documents/Rudra_Patel_Resume.pdf" target="_blank" download="Rudra_Patel_Resume.pdf" class="btn btn-primary" style="margin-top: 14px; align-self: flex-start;">
+              <span>Download PDF Resume</span> &nearr;
+            </a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
     <footer>
-      <div class="container footer-inner">
-        <div class="footer-copy">
-          &copy; 2026 <strong>Rudra Patel</strong>. Engineered with Three.js, WebGL &amp; Swiss Editorial Precision.
-        </div>
-
+      <div class="footer-row">
         <div>
-          <a href="#hero" class="btn-pill-secondary" style="padding: 6px 16px; font-size: 0.8rem;">
-            Back to Top &uarr;
-          </a>
+          &copy; 2026 <strong>Rudra Patel</strong>. Engineered with Three.js, WebGL &amp; 3D Glassmorphism.
+        </div>
+        <div>
+          <a href="#home" class="btn btn-ghost" style="padding: 6px 14px; font-size: 12px;">Back to top &uarr;</a>
         </div>
       </div>
     </footer>
@@ -953,10 +832,10 @@
 
   <!-- Project Architecture Modal -->
   <div class="modal-backdrop" id="project-modal">
-    <div class="modal-content-card">
+    <div class="modal-content-card glass">
       <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
       <span class="modal-project-badge" id="modal-badge">ARCHITECTURAL OVERVIEW</span>
-      <h2 class="modal-project-title" id="modal-title">Project Title</h2>
+      <h2 class="modal-project-title serif" id="modal-title">Project Title</h2>
       <p class="modal-project-tagline" id="modal-tagline">Tagline goes here</p>
 
       <div class="modal-section-title">Deep Dive &amp; Engineering Decisions</div>
@@ -974,7 +853,7 @@
   </div>
 
   <!-- Toast Notification -->
-  <div class="toast-notice" id="toast-notice">
+  <div class="toast-notice glass" id="toast-notice">
     <span id="toast-message">Notification message</span>
   </div>
 

@@ -1,5 +1,6 @@
 /**
- * Rudra Patel Portfolio - Interactive Cyber Terminal
+ * Rudra Patel Portfolio - Interactive Profile Console
+ * Styled in Cinematic Cyan & Violet Glass Theme
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,50 +10,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const commands = {
     help: `Available commands:
-  <span class="cmd">about</span>       - Learn about Rudra Patel & technical focus
-  <span class="cmd">projects</span>    - View featured engineering systems & live links
-  <span class="cmd">skills</span>      - Display technical stacks & frameworks
-  <span class="cmd">hackathons</span>  - Display hackathons & podium recognitions
-  <span class="cmd">contact</span>     - View direct contact channels & social links
-  <span class="cmd">resume</span>      - Open professional CV / resume
-  <span class="cmd">sudo hire</span>   - Initialize executive interview protocol
-  <span class="cmd">clear</span>       - Clear terminal output`,
+  <span style="color:#6fe7ff;font-weight:600;">about</span>       - Learn about Rudra Patel & technical focus
+  <span style="color:#6fe7ff;font-weight:600;">projects</span>    - View featured engineering systems & live links
+  <span style="color:#6fe7ff;font-weight:600;">skills</span>      - Display technical stacks & frameworks
+  <span style="color:#6fe7ff;font-weight:600;">trajectory</span>  - Display career & hackathon milestones
+  <span style="color:#6fe7ff;font-weight:600;">contact</span>     - View direct contact channels & social links
+  <span style="color:#6fe7ff;font-weight:600;">resume</span>      - Open professional CV / resume
+  <span style="color:#6fe7ff;font-weight:600;">sudo hire</span>   - Initialize executive interview protocol
+  <span style="color:#6fe7ff;font-weight:600;">clear</span>       - Clear console output`,
 
-    about: `<span class="res">Rudra Patel</span> &mdash; Full-Stack & AI Systems Engineer
-Location: India | Focus: Autonomous AI Agents, Geospatial Platforms, Enterprise ERPs
-Builder of DevRescue AI (NVIDIA Nemotron), BhuSetu (PostGIS GIS), and ThreatVision (XAI).`,
+    about: `<span style="color:#ffffff;font-weight:600;">Rudra Patel</span> &mdash; Full-Stack &amp; AI Systems Engineer
+Location: Ahmedabad, India &bull; Adani University B.Tech CSE (AI &amp; ML, CGPA: 8.22)
+Specialization: Autonomous AI agents, high-throughput geospatial GIS, and explainable AI threat architectures.`,
 
     projects: `Featured Systems:
-  1. <a href="https://dev-rescue-ai.vercel.app" target="_blank" style="color:#38bdf8">DevRescue AI</a> &mdash; Autonomous Bug Investigation & Repair Console (React 19, FastAPI, NVIDIA Nemotron, Docker)
-  2. <a href="https://github.com/Jenil-Mistry/BhuSetu" target="_blank" style="color:#38bdf8">BhuSetu</a> &mdash; National Land Acquisition & Geospatial GIS (Next.js, PostGIS, MapLibre GL, MinIO)
-  3. <span style="color:#38bdf8">ThreatVision</span> &mdash; Explainable AI Malware Detection & Threat Intel (XGBoost, SHAP, React)
-  4. <a href="https://github.com/Darshilmodi15/odoo-hackathon---AssetFlow" target="_blank" style="color:#38bdf8">AssetFlow</a> &mdash; Enterprise Asset & Resource ERP (Odoo Hackathon Finalist)
-  5. <a href="https://koushik2024-code.github.io/TechFusion-v2v/" target="_blank" style="color:#38bdf8">TechFusion SafeSphere</a> &mdash; Real-Time Safety & Telemetry Dashboard`,
+  1. <a href="https://dev-rescue-ai.vercel.app" target="_blank" style="color:#6fe7ff;text-decoration:underline;">DevRescue AI</a> &mdash; Autonomous Bug Investigation &amp; Auto-Repair Agent (React 19, FastAPI, NVIDIA Nemotron, Docker)
+  2. <a href="https://github.com/Jenil-Mistry/BhuSetu" target="_blank" style="color:#6fe7ff;text-decoration:underline;">BhuSetu GIS</a> &mdash; National Land Acquisition &amp; Geospatial Platform (PostGIS, MapLibre GL, Next.js)
+  3. <a href="https://github.com/RudraPatel217" target="_blank" style="color:#6fe7ff;text-decoration:underline;">ThreatVision</a> &mdash; Explainable AI PE Malware Detection Console (XGBoost, SHAP, Python)
+  4. <a href="https://website-analyser-rudra.streamlit.app/" target="_blank" style="color:#6fe7ff;text-decoration:underline;">Domain Intelligence</a> &mdash; Automated DOM Inspection &amp; SEO Diagnostics Suite
+  5. <a href="https://github.com/Darshilmodi15/odoo-hackathon---AssetFlow" target="_blank" style="color:#6fe7ff;text-decoration:underline;">AssetFlow ERP</a> &mdash; Enterprise Asset &amp; Lifecycle Management (Odoo Hackathon)
+  6. <a href="https://koushik2024-code.github.io/TechFusion-v2v/" target="_blank" style="color:#6fe7ff;text-decoration:underline;">SafeSphere</a> &mdash; Women's Safety &amp; Rapid SOS Telemetry (TechFusion Live)`,
 
     skills: `Technical Matrix:
-  &bull; Frontend: React 19, Next.js, TypeScript, Tailwind CSS, Vite, Three.js, MapLibre GL
-  &bull; Backend: Python, FastAPI, Supabase, PostgreSQL, PostGIS, MinIO / S3, RESTful APIs
-  &bull; AI & ML: NVIDIA Nemotron-3.5, XGBoost, SHAP (Explainable AI), Multi-Agent Architecture
-  &bull; DevOps: Docker, Git, GitHub Actions, Linux, Vercel`,
+  &bull; Languages: Python, JavaScript (ES6+), TypeScript, C, SQL
+  &bull; Frontend: React 19, Next.js, Tailwind CSS, Vite, Three.js, MapLibre GL
+  &bull; Backend: FastAPI, Flask, Streamlit, PostgreSQL, PostGIS, MinIO / S3, RESTful APIs
+  &bull; AI &amp; ML: NVIDIA Nemotron-3.5, XGBoost, SHAP (Explainable AI), Multi-Agent AST Ingestion
+  &bull; Tooling: Docker, Git, GitHub Actions, Linux`,
 
-    hackathons: `7+ Hackathons & System Milestones:
-  &bull; <span style="color:#38bdf8">Smart India Hackathon (SIH 2026)</span> &mdash; Selected in internal round for national deployment
-  &bull; <span style="color:#38bdf8">Tech Eximius Hackathon</span> &mdash; Finalist with ThreatVision XAI malware classification
-  &bull; <span style="color:#38bdf8">Odoo Hackathon</span> &mdash; Built AssetFlow Enterprise ERP (Team Terminal)
-  &bull; <span style="color:#38bdf8">TechFusion / Vibe 2 Vision</span> &mdash; Built SafeSphere Women's Safety SOS Platform
-  &bull; <span style="color:#38bdf8">National Environmental Hackathon</span> &mdash; Finalist with Air Quality & AQI Intelligence
-  &bull; <span style="color:#38bdf8">Speaker Recognition</span> &mdash; Delivered talk on 'AI and Society' at Adani University`,
+    trajectory: `Milestones & Recognitions:
+  &bull; <span style="color:#6fe7ff;">SATVAWEB Internship</span> (June &ndash; July 2026) &mdash; Software Engineering &amp; Web Diagnostics Intern
+  &bull; <span style="color:#6fe7ff;">Smart India Hackathon (SIH 2026)</span> &mdash; Selected in university internal round
+  &bull; <span style="color:#8f7dff;">Tech Eximius Hackathon</span> &mdash; Finalist with ThreatVision XAI
+  &bull; <span style="color:#f3d38b;">Odoo Hackathon</span> &mdash; Finalist with AssetFlow ERP (Team Terminal)
+  &bull; <span style="color:#8dffbf;">Speaker Recognition</span> &mdash; Keynote on "AI and Society" at Adani University`,
+
+    hackathons: `Milestones & Recognitions:
+  &bull; <span style="color:#6fe7ff;">Smart India Hackathon (SIH 2026)</span> &mdash; University Internal Selection
+  &bull; <span style="color:#8f7dff;">Tech Eximius</span> &mdash; Finalist with ThreatVision
+  &bull; <span style="color:#f3d38b;">Odoo Hackathon</span> &mdash; Finalist with AssetFlow ERP`,
 
     contact: `Direct Channels:
-  &bull; Email: <a href="mailto:rj423513@gmail.com" style="color:#38bdf8">rj423513@gmail.com</a>
-  &bull; GitHub: <a href="https://github.com/RudraPatel217" target="_blank" style="color:#38bdf8">github.com/RudraPatel217</a>
-  &bull; LinkedIn: <a href="https://www.linkedin.com/in/rudrapatel217/" target="_blank" style="color:#38bdf8">linkedin.com/in/rudrapatel217</a>
-  &bull; Unstop: <a href="https://unstop.com/u/rudrapat96265" target="_blank" style="color:#38bdf8">unstop.com/u/rudrapat96265</a>`,
-
-    experience: `Work & Education:
-  &bull; <span style="color:#38bdf8;">SATVAWEB</span> (June 2026 – July 2026) — Software Engineering & Web Development Intern (Remote)
-  &bull; <span style="color:#38bdf8;">Adani University, Gujarat</span> — B.Tech in CSE (AI & ML), CGPA: 8.22 / 10 (2025–2029)
-  &bull; JEE Mains: 93.27%ile | Class XII: 84.87%ile | Class X: 89.77%ile`,
+  &bull; Email: <a href="mailto:rj423513@gmail.com" style="color:#6fe7ff;">rj423513@gmail.com</a>
+  &bull; LinkedIn: <a href="https://www.linkedin.com/in/rudrapatel217/" target="_blank" style="color:#6fe7ff;">linkedin.com/in/rudrapatel217</a>
+  &bull; GitHub: <a href="https://github.com/RudraPatel217" target="_blank" style="color:#6fe7ff;">github.com/RudraPatel217</a>
+  &bull; Unstop: <a href="https://unstop.com/u/rudrapat96265" target="_blank" style="color:#6fe7ff;">unstop.com/u/rudrapat96265</a>`,
 
     resume: () => {
       window.open('assets/documents/Rudra_Patel_Resume.pdf', '_blank');
@@ -61,7 +63,7 @@ Builder of DevRescue AI (NVIDIA Nemotron), BhuSetu (PostGIS GIS), and ThreatVisi
 
     'sudo hire': () => {
       if (window.triggerConfetti) window.triggerConfetti();
-      return `<span style="color:#10b981;font-weight:bold;">[SUCCESS]</span> High-priority offer protocol initialized! Emailing rj423513@gmail.com...`;
+      return `<span style="color:#8dffbf;font-weight:bold;">[SUCCESS]</span> High-priority offer protocol initialized! Redirecting to rj423513@gmail.com...`;
     },
 
     clear: () => {
@@ -89,7 +91,7 @@ Builder of DevRescue AI (NVIDIA Nemotron), BhuSetu (PostGIS GIS), and ThreatVisi
       if (!raw) return;
 
       // Print prompt echo
-      appendOutput(`<span style="color:#38bdf8;">rudra@cyber-console:~$</span> <span style="color:#ffffff;">${raw}</span>`);
+      appendOutput(`<span style="color:#6fe7ff;">rudra@cyber-console:~$</span> <span style="color:#ffffff;">${raw}</span>`);
 
       if (cmd in commands) {
         const handler = commands[cmd];
@@ -98,9 +100,8 @@ Builder of DevRescue AI (NVIDIA Nemotron), BhuSetu (PostGIS GIS), and ThreatVisi
       } else if (cmd === 'sudo hire-rudra' || cmd === 'sudo hire rudra') {
         appendOutput(commands['sudo hire']());
       } else {
-        appendOutput(`<span style="color:#ef4444;">Command not recognized: '${raw}'. Type <span style="color:#38bdf8;">help</span> for a list of commands.</span>`);
+        appendOutput(`<span style="color:#f87171;">Command not recognized: '${raw}'. Type <span style="color:#6fe7ff;">help</span> for a list of commands.</span>`);
       }
     }
   });
 });
-
