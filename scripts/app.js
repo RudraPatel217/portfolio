@@ -442,6 +442,23 @@ function initMobileMenu() {
 
   if (!toggle || !menu) return;
 
+  toggle.addEventListener('click', () => {
+    const isVisible = menu.style.display === 'flex';
+    if (isVisible) {
+      menu.style.display = '';
+    } else {
+      menu.style.display = 'flex';
+      menu.style.flexDirection = 'column';
+      menu.style.position = 'absolute';
+      menu.style.top = '78px';
+      menu.style.left = '0';
+      menu.style.width = '100%';
+      menu.style.background = 'rgba(14, 18, 26, 0.98)';
+      menu.style.backdropFilter = 'blur(20px)';
+      menu.style.padding = '24px';
+      menu.style.borderRadius = '20px';
+      menu.style.border = '1px solid rgba(255, 255, 255, 0.1)';
+      menu.style.boxShadow = '0 20px 50px rgba(0, 0, 0, 0.8)';
   toggle.addEventListener('click', (e) => {
     e.stopPropagation();
     const isOpen = menu.classList.toggle('open');
@@ -459,9 +476,13 @@ function initMobileMenu() {
     }
   });
 
+  menu.querySelectorAll('.nav-link').forEach(link => {
   // Close on nav link or mobile resume click
   menu.querySelectorAll('.nav-link, .mobile-only-resume a').forEach(link => {
     link.addEventListener('click', () => {
+      if (window.innerWidth <= 768) {
+        menu.style.display = '';
+      }
       menu.classList.remove('open');
       toggle.classList.remove('active');
       toggle.innerHTML = '&#9776;';
