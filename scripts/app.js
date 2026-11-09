@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCardTiltPhysics();
   initScrollSpy();
   initMobileMenu();
+  initContactForm();
   setupConfetti();
 });
 
@@ -405,4 +406,43 @@ function setupConfetti() {
     }
     render();
   };
+}
+
+/* --------------------------------------------------------------------------
+   Direct Mail Component Form Handler (Image 1)
+   -------------------------------------------------------------------------- */
+function initContactForm() {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const nameInput = document.getElementById('contact-name');
+    const emailInput = document.getElementById('contact-email');
+    const messageInput = document.getElementById('contact-message');
+
+    const name = nameInput ? nameInput.value.trim() : '';
+    const email = emailInput ? emailInput.value.trim() : '';
+    const message = messageInput ? messageInput.value.trim() : '';
+
+    if (!name || !email || !message) {
+      showToast('Please complete all contact transmission fields.');
+      return;
+    }
+
+    if (window.triggerConfetti) {
+      window.triggerConfetti();
+    }
+
+    const mailSubject = encodeURIComponent(`Portfolio Transmission from ${name}`);
+    const mailBody = encodeURIComponent(`Hi Rudra,\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\nSent from Portfolio Console.`);
+    const mailtoLink = `mailto:rj423513@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+
+    showToast(`Transmission received from ${name}! Opening mail dispatch...`);
+    form.reset();
+
+    setTimeout(() => {
+      window.location.href = mailtoLink;
+    }, 700);
+  });
 }

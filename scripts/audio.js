@@ -115,13 +115,13 @@ class SoundEngine {
 
     // Attach hover effects to buttons and cards
     document.addEventListener('mouseover', (e) => {
-      if (e.target.closest('.btn, .nav-link, .meta-card, .stat-box, .skill-card, .project-card, .credential-card, .timeline-card, .contact-item, .scene-pill, .filter-pill')) {
+      if (e.target.closest('.btn, .nav-link, .meta-card, .stat-box, .skill-card, .project-card, .credential-card, .timeline-card, .contact-item, .contact-channel-card, .scene-pill, .filter-pill')) {
         this.playBlip(750, 0.03);
       }
     });
 
     document.addEventListener('click', (e) => {
-      if (e.target.closest('button, .btn, .contact-item, .project-card, .inspect-btn')) {
+      if (e.target.closest('button, .btn, .contact-item, .contact-channel-card, .project-card, .inspect-btn')) {
         this.playClick();
       }
     });

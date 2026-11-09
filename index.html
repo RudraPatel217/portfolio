@@ -120,6 +120,9 @@
       <div class="hero-visual">
         <div class="portrait-frame glass">
           <div class="portrait-inner">
+            <!-- Professional Portrait Photo (Image 4 placed in 3D HUD card) -->
+            <img src="assets/images/rudra-portrait.jpg" alt="Rudra Patel - Full-Stack & AI Systems Engineer" class="portrait-photo" loading="eager">
+
             <div class="portrait-hud">
               <div class="hud-pill">Rudra Patel</div>
               <div class="hud-pill">Ahmedabad &bull; India</div>
@@ -693,15 +696,26 @@
       </div>
     </section>
 
-    <!-- Section: Direct Line / Interactive Console -->
-    <section class="section" id="terminal">
+    <!-- Section: Direct Line / Interactive Shell (Image 2) -->
+    <section class="section terminal-section" id="terminal">
+      <!-- 3D Orbital Rings Background -->
+      <div class="terminal-orbital-backdrop">
+        <svg class="orbital-sphere-svg" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="300" cy="300" r="240" stroke="rgba(111, 231, 255, 0.09)" stroke-width="1" stroke-dasharray="4 6"/>
+          <ellipse cx="300" cy="300" rx="270" ry="95" stroke="rgba(111, 231, 255, 0.16)" stroke-width="1.2" transform="rotate(-25 300 300)"/>
+          <ellipse cx="300" cy="300" rx="270" ry="95" stroke="rgba(143, 125, 255, 0.13)" stroke-width="1.2" transform="rotate(35 300 300)"/>
+          <ellipse cx="300" cy="300" rx="240" ry="140" stroke="rgba(111, 231, 255, 0.08)" stroke-width="1"/>
+          <circle cx="300" cy="300" r="160" stroke="rgba(143, 125, 255, 0.07)" stroke-width="1"/>
+        </svg>
+      </div>
+
       <div class="section-head">
         <div>
-          <div class="micro">Direct Line &bull; CLI Interface</div>
-          <h2 class="serif">A little less small talk.</h2>
+          <div class="micro">Developer Console</div>
+          <h2 class="serif">Interactive Shell<br><span class="gradient-text">Direct Profile Query.</span></h2>
         </div>
         <p class="section-lead">
-          Query credentials, project architectures, and contact links straight from an interactive zsh-style console.
+          Recruiters and engineers can explore credentials, projects, and skills through an interactive zsh-style terminal interface. Type <code>help</code> to begin.
         </p>
       </div>
 
@@ -712,106 +726,136 @@
             <span class="dot-yellow"></span>
             <span class="dot-green"></span>
           </div>
-          <div class="term-title">rudra@portfolio: ~ (zsh)</div>
-          <div class="term-status">&bull; READY</div>
+          <div class="term-title">rudra@cyber-console: ~ (zsh)</div>
+          <div class="term-status">SYS_READY</div>
         </div>
 
         <div class="terminal-output" id="terminal-body">
+          <div class="term-welcome-msg">Welcome to <strong>Rudra Patel's Interactive Cyber Terminal [v2.4.0]</strong>.</div>
+          <div class="term-hint-msg" style="color: var(--muted); margin-bottom: 14px;">Type <span class="prompt-hint" style="color: var(--cyan); font-weight: 600;">help</span> to inspect available operational commands.</div>
           <div class="term-row">
             <span class="prompt">rudra@cyber-console:~$</span> <span class="term-cmd-highlight">about</span>
           </div>
-          <div class="term-res">
-            <strong>Rudra Patel</strong> &mdash; Full-Stack &amp; AI Systems Engineer (Adani University, CGPA: 8.22). Builder of DevRescue AI, BhuSetu GIS, and ThreatVision XAI.
-          </div>
-          <div class="term-res-hint">
-            Type <span class="prompt-hint">help</span> to inspect all available commands (projects, skills, journey, resume, sudo hire).
+          <div class="term-res" style="margin-top: 4px; margin-bottom: 14px; line-height: 1.6;">
+            <strong style="color: var(--cyan);">Rudra Patel</strong> &mdash; Full-Stack &amp; AI Systems Engineer. Builder of autonomous cyber-consoles, geospatial land acquisition platforms, and explainable AI malware detectors.
           </div>
         </div>
 
         <div class="terminal-input-bar">
           <span class="prompt">rudra@cyber-console:~$</span>
-          <input type="text" id="terminal-input" class="term-input" placeholder="Type a command (e.g. 'help', 'projects', 'resume')..." autocomplete="off" spellcheck="false">
-          <button type="button" class="term-btn" onclick="const ev = new KeyboardEvent('keydown', {key:'Enter'}); document.getElementById('terminal-input').dispatchEvent(ev);">
+          <input type="text" id="terminal-input" class="term-input" placeholder="Type command here (e.g. 'help', 'projects', 'resume', 'sudo hire')..." autocomplete="off" spellcheck="false">
+          <button type="button" class="term-btn" onclick="const ev = new KeyboardEvent('keydown', {key:'Enter'}); document.getElementById('terminal-input').dispatchEvent(ev);" title="Dispatch Command">
             &nearr;
           </button>
         </div>
       </div>
     </section>
 
-    <!-- Section: Open Channel / Contact -->
+    <!-- Section: Open Channel / Contact (Image 1: Let's Connect & Mail Component) -->
     <section class="section" id="contact">
       <div class="section-head">
         <div>
           <div class="micro">Get In Touch</div>
-          <h2 class="serif">Have a problem worth solving?</h2>
+          <h2 class="serif">Let's Connect.</h2>
         </div>
         <p class="section-lead">
-          Whether you want to discuss engineering roles, hackathon collaboration, or distributed AI architectures &mdash; feel free to reach out.
+          Whether you want to discuss engineering roles, collaborate on hackathons, or chat about multi-agent systems &mdash; feel free to reach out.
         </p>
       </div>
 
-      <div class="contact-grid">
-        <div class="contact-card glass">
-          <div class="micro">Direct Message</div>
-          <h3 class="contact-title serif">Let's connect.</h3>
-          <p>
-            I am prompt to respond across email and professional platforms. Open for internships, collaborative engineering projects, and research opportunities.
+      <div class="contact-editorial-grid">
+        <!-- Left: Direct Channels -->
+        <div class="contact-left-col">
+          <h3 class="channels-title">Direct Channels</h3>
+          <p class="channels-sub">
+            Reach out directly across any of the platforms below. I am prompt to respond.
           </p>
 
-          <div class="contact-list">
-            <div class="contact-item">
-              <div>
-                <div class="name">Email Address</div>
-                <div class="value"><a href="mailto:rj423513@gmail.com">rj423513@gmail.com</a></div>
+          <div class="contact-channels-stack">
+            <!-- Email -->
+            <a href="mailto:rj423513@gmail.com" class="contact-channel-card glass">
+              <div class="channel-icon-pill">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
               </div>
-              <a href="mailto:rj423513@gmail.com" class="contact-arrow">&nearr;</a>
-            </div>
+              <div class="channel-meta">
+                <h4>Email Address</h4>
+                <p>rj423513@gmail.com</p>
+              </div>
+              <div class="channel-arrow">&nearr;</div>
+            </a>
 
-            <div class="contact-item">
-              <div>
-                <div class="name">LinkedIn Profile</div>
-                <div class="value"><a href="https://www.linkedin.com/in/rudrapatel217/" target="_blank" rel="noopener noreferrer">linkedin.com/in/rudrapatel217</a></div>
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/rudrapatel217/" target="_blank" rel="noopener noreferrer" class="contact-channel-card glass">
+              <div class="channel-icon-pill">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
               </div>
-              <a href="https://www.linkedin.com/in/rudrapatel217/" target="_blank" rel="noopener noreferrer" class="contact-arrow">&nearr;</a>
-            </div>
+              <div class="channel-meta">
+                <h4>LinkedIn</h4>
+                <p>linkedin.com/in/rudrapatel217</p>
+              </div>
+              <div class="channel-arrow">&nearr;</div>
+            </a>
 
-            <div class="contact-item">
-              <div>
-                <div class="name">GitHub Organization</div>
-                <div class="value"><a href="https://github.com/RudraPatel217" target="_blank" rel="noopener noreferrer">github.com/RudraPatel217</a></div>
+            <!-- Unstop -->
+            <a href="https://unstop.com/u/rudrapat96265" target="_blank" rel="noopener noreferrer" class="contact-channel-card glass">
+              <div class="channel-icon-pill">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                </svg>
               </div>
-              <a href="https://github.com/RudraPatel217" target="_blank" rel="noopener noreferrer" class="contact-arrow">&nearr;</a>
-            </div>
+              <div class="channel-meta">
+                <h4>Unstop Profile</h4>
+                <p>unstop.com/u/rudrapat96265</p>
+              </div>
+              <div class="channel-arrow">&nearr;</div>
+            </a>
 
-            <div class="contact-item">
-              <div>
-                <div class="name">Unstop Profile</div>
-                <div class="value"><a href="https://unstop.com/u/rudrapat96265" target="_blank" rel="noopener noreferrer">unstop.com/u/rudrapat96265</a></div>
+            <!-- GitHub -->
+            <a href="https://github.com/RudraPatel217" target="_blank" rel="noopener noreferrer" class="contact-channel-card glass">
+              <div class="channel-icon-pill">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
               </div>
-              <a href="https://unstop.com/u/rudrapat96265" target="_blank" rel="noopener noreferrer" class="contact-arrow">&nearr;</a>
-            </div>
+              <div class="channel-meta">
+                <h4>GitHub</h4>
+                <p>github.com/RudraPatel217</p>
+              </div>
+              <div class="channel-arrow">&nearr;</div>
+            </a>
           </div>
         </div>
 
-        <div class="contact-side">
-          <div class="mini-panel glass">
-            <div>
-              <div class="micro">Location &bull; Base</div>
-              <h4>Ahmedabad, India</h4>
+        <!-- Right: The Mail Component Form (Image 1) -->
+        <div class="contact-form-card glass">
+          <form id="contact-form" class="mail-component-form">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Full Name</label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Alex Vance" required>
             </div>
-            <p>Based in Gujarat, India. Available for remote global roles, hybrid internships, and on-site opportunities.</p>
-          </div>
 
-          <div class="mini-panel glass">
-            <div>
-              <div class="micro">Curriculum Vitae</div>
-              <h4>Rudra Patel Resume</h4>
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Email Address</label>
+              <input type="email" id="contact-email" name="email" class="form-input" placeholder="alex@company.com" required>
             </div>
-            <p>Complete academic transcript, hackathon awards, and verifiable code repositories.</p>
-            <a href="assets/documents/Rudra_Patel_Resume.pdf" target="_blank" download="Rudra_Patel_Resume.pdf" class="btn btn-primary" style="margin-top: 14px; align-self: flex-start;">
-              <span>Download PDF Resume</span> &nearr;
-            </a>
-          </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message / Opportunity Details</label>
+              <textarea id="contact-message" name="message" class="form-input" rows="4" placeholder="Hi Rudra, we would love to connect regarding..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary dispatch-mail-btn">
+              <span>Dispatch Message</span> &nearr;
+            </button>
+          </form>
         </div>
       </div>
     </section>
