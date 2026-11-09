@@ -464,6 +464,8 @@ img {
   flex-direction: column;
   justify-content: space-between;
   padding: 18px;
+  cursor: pointer;
+  user-select: none;
 }
 
 .portrait-photo {
@@ -472,15 +474,39 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 10%;
   z-index: 1;
-  transition: transform 0.6s var(--ease), filter 0.6s var(--ease);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s var(--ease),
+              filter 0.55s var(--ease);
+}
+
+.portrait-default {
+  object-position: center 10%;
+  opacity: 1;
+  transform: scale(1);
   filter: contrast(1.05) brightness(0.95);
 }
 
-.portrait-frame:hover .portrait-photo {
-  transform: scale(1.03);
-  filter: contrast(1.08) brightness(1.02);
+.portrait-hover {
+  object-position: center center;
+  opacity: 0;
+  transform: scale(1.04);
+  filter: contrast(1.06) brightness(1.02);
+}
+
+/* Touch & Hover Reveal States */
+.portrait-frame:hover .portrait-default,
+.portrait-frame:active .portrait-default,
+.portrait-frame.touch-active .portrait-default {
+  opacity: 0;
+  transform: scale(0.97);
+}
+
+.portrait-frame:hover .portrait-hover,
+.portrait-frame:active .portrait-hover,
+.portrait-frame.touch-active .portrait-hover {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .portrait-inner::after {
@@ -496,6 +522,47 @@ img {
   );
   z-index: 1;
   pointer-events: none;
+  transition: opacity 0.5s var(--ease);
+}
+
+.portrait-frame:hover .portrait-inner::after,
+.portrait-frame:active .portrait-inner::after,
+.portrait-frame.touch-active .portrait-inner::after {
+  opacity: 0.3;
+}
+
+/* Subtle soft fade on HUD controls when hover graphic is active */
+.hud-center-overlay,
+.portrait-caption {
+  transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
+}
+
+.portrait-frame:hover .hud-center-overlay,
+.portrait-frame:active .hud-center-overlay,
+.portrait-frame.touch-active .hud-center-overlay {
+  opacity: 0.18;
+  transform: translateY(6px);
+  pointer-events: none;
+}
+
+.portrait-frame:hover .portrait-caption,
+.portrait-frame:active .portrait-caption,
+.portrait-frame.touch-active .portrait-caption {
+  opacity: 0.25;
+  transform: translateY(4px);
+}
+
+.hud-hint-pill {
+  border-color: rgba(111, 231, 255, 0.35);
+  color: var(--cyan);
+  background: rgba(111, 231, 255, 0.1);
+  transition: all 0.3s var(--ease);
+}
+
+.portrait-frame:hover .hud-hint-pill,
+.portrait-frame.touch-active .hud-hint-pill {
+  background: rgba(111, 231, 255, 0.25);
+  box-shadow: 0 0 10px rgba(111, 231, 255, 0.35);
 }
 
 .portrait-hud {

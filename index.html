@@ -118,13 +118,17 @@
 
       <!-- Hero Visual / 3D HUD Stage -->
       <div class="hero-visual">
-        <div class="portrait-frame glass">
+        <div class="portrait-frame glass" id="hero-portrait-frame">
           <div class="portrait-inner">
-            <!-- Professional Portrait Photo (Image 4 placed in 3D HUD card) -->
-            <img src="assets/images/rudra-portrait.jpg" alt="Rudra Patel - Full-Stack & AI Systems Engineer" class="portrait-photo" loading="eager">
+            <!-- Professional Portrait Photo (Default State) -->
+            <img src="assets/images/rudra-portrait.jpg" alt="Rudra Patel - Full-Stack & AI Systems Engineer" class="portrait-photo portrait-default" loading="eager">
+
+            <!-- Interactive Touch / Hover Tech Banner (Revealed on Touch/Hover) -->
+            <img src="assets/images/rudra-hover.jpg" alt="Rudra Patel - AI & Technology Solutions" class="portrait-photo portrait-hover" loading="lazy">
 
             <div class="portrait-hud">
               <div class="hud-pill">Rudra Patel</div>
+              <div class="hud-pill hud-hint-pill">&bull; Touch / Hover</div>
               <div class="hud-pill">Ahmedabad &bull; India</div>
             </div>
 
