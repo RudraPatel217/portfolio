@@ -38,6 +38,13 @@ Specialization: Autonomous AI agents, high-throughput geospatial GIS, and explai
   &bull; AI &amp; ML: NVIDIA Nemotron-3.5, XGBoost, SHAP (Explainable AI), Multi-Agent AST Ingestion
   &bull; Tooling: Docker, Git, GitHub Actions, Linux`,
 
+    journey: `Milestones & Recognitions:
+  &bull; <span style="color:#6fe7ff;">SATVAWEB Internship</span> (June &ndash; July 2026) &mdash; Software Engineering &amp; Web Diagnostics Intern
+  &bull; <span style="color:#6fe7ff;">Smart India Hackathon (SIH 2026)</span> &mdash; Selected in university internal round
+  &bull; <span style="color:#8f7dff;">Tech Eximius Hackathon</span> &mdash; Finalist with ThreatVision XAI
+  &bull; <span style="color:#f3d38b;">Odoo Hackathon</span> &mdash; Finalist with AssetFlow ERP (Team Terminal)
+  &bull; <span style="color:#8dffbf;">Speaker Recognition</span> &mdash; Keynote on "AI and Society" at Adani University`,
+
     trajectory: `Milestones & Recognitions:
   &bull; <span style="color:#6fe7ff;">SATVAWEB Internship</span> (June &ndash; July 2026) &mdash; Software Engineering &amp; Web Diagnostics Intern
   &bull; <span style="color:#6fe7ff;">Smart India Hackathon (SIH 2026)</span> &mdash; Selected in university internal round
