@@ -52,6 +52,7 @@
         this.createCosmicOuterField();
         this.createCyberGrid();
         this.setupEvents();
+        this.initModeToggle();
         this.animate();
       }
 
@@ -460,6 +461,74 @@
           if (['INPUT', 'TEXTAREA', 'BUTTON', 'A'].includes(e.target.tagName) || e.target.closest('button, a')) return;
           this.triggerClickShockwave(e.clientX, e.clientY);
         });
+      }
+
+      initModeToggle() {
+        this.currentMode = 'neural';
+        const toggleBtn = document.getElementById('scene-mode-toggle');
+        if (!toggleBtn) return;
+
+        toggleBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          this.toggleMode();
+        });
+      }
+
+      toggleMode() {
+        const nextMode = this.currentMode === 'neural' ? 'grid' : 'neural';
+        this.setMode(nextMode);
+      }
+
+      setMode(mode) {
+        this.currentMode = mode;
+        const toggleBtn = document.getElementById('scene-mode-toggle');
+        const label = document.getElementById('scene-mode-label');
+
+        if (mode === 'grid') {
+          document.body.classList.add('mode-grid');
+          document.body.classList.remove('mode-neural');
+          if (label) label.innerHTML = '&bull; Grid';
+          if (toggleBtn) {
+            toggleBtn.classList.add('mode-grid-active');
+            toggleBtn.setAttribute('title', '3D Mode: Grid (Click to switch to Neural)');
+          }
+
+          // In Grid Mode: elevate cyber grid visibility & relativistic motion
+          if (this.gridHelper) {
+            this.gridHelper.visible = true;
+            this.gridHelper.material.opacity = 0.58;
+            this.gridHelper.position.y = -2.4;
+          }
+          if (this.galaxyUniforms) {
+            this.galaxyUniforms.uBaseSize.value = window.innerWidth < 768 ? 2.0 : 2.5;
+          }
+        } else {
+          document.body.classList.remove('mode-grid');
+          document.body.classList.add('mode-neural');
+          if (label) label.innerHTML = '&bull; Neural';
+          if (toggleBtn) {
+            toggleBtn.classList.remove('mode-grid-active');
+            toggleBtn.setAttribute('title', '3D Mode: Neural (Click to switch to Grid)');
+          }
+
+          // In Neural Mode: celestial galaxy universe balance
+          if (this.gridHelper) {
+            this.gridHelper.visible = true;
+            this.gridHelper.material.opacity = 0.16;
+            this.gridHelper.position.y = -3.2;
+          }
+          if (this.galaxyUniforms) {
+            this.galaxyUniforms.uBaseSize.value = window.innerWidth < 768 ? 2.4 : 3.0;
+          }
+        }
+
+        // Audio synthesizer feedback
+        if (window.soundEngine && typeof window.soundEngine.playBlip === 'function') {
+          window.soundEngine.playBlip(mode === 'grid' ? 880 : 660, 0.05);
+        }
+
+        // Trigger interactive shockwave at screen center
+        this.triggerClickShockwave(window.innerWidth / 2, window.innerHeight / 2);
       }
 
       animate() {
