@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollSpy();
   initMobileMenu();
   initContactForm();
-  initPortraitTouchToggle();
   setupConfetti();
 });
 
@@ -445,31 +444,5 @@ function initContactForm() {
     setTimeout(() => {
       window.location.href = mailtoLink;
     }, 700);
-  });
-}
-
-/* --------------------------------------------------------------------------
-   Hero Portrait Touch & Click Toggle
-   -------------------------------------------------------------------------- */
-function initPortraitTouchToggle() {
-  const frame = document.getElementById('hero-portrait-frame');
-  if (!frame) return;
-
-  // Mobile touch toggle
-  frame.addEventListener('touchstart', (e) => {
-    if (e.target.closest('button, a')) return;
-    frame.classList.toggle('touch-active');
-    if (window.soundEngine) {
-      window.soundEngine.playBlip(820, 0.04);
-    }
-  }, { passive: true });
-
-  // Desktop click toggle
-  frame.addEventListener('click', (e) => {
-    if (e.target.closest('button, a')) return;
-    frame.classList.toggle('touch-active');
-    if (window.soundEngine) {
-      window.soundEngine.playBlip(820, 0.04);
-    }
   });
 }
