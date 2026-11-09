@@ -427,7 +427,7 @@ img {
 }
 
 .portrait-frame {
-  width: min(460px, 100%);
+  width: min(500px, 100%);
   border-radius: 30px;
   padding: 12px;
   position: relative;
@@ -518,10 +518,10 @@ img {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(6, 8, 14, 0.4) 0%,
+    rgba(6, 8, 14, 0.45) 0%,
     rgba(6, 8, 14, 0.04) 30%,
-    rgba(6, 8, 14, 0.2) 65%,
-    rgba(6, 8, 14, 0.85) 100%
+    rgba(6, 8, 14, 0.15) 65%,
+    rgba(6, 8, 14, 0.88) 100%
   );
   z-index: 1;
   pointer-events: none;
@@ -531,67 +531,87 @@ img {
 .portrait-frame:hover .portrait-inner::after,
 .portrait-frame:active .portrait-inner::after,
 .portrait-frame.touch-active .portrait-inner::after {
-  opacity: 0.18;
+  opacity: 0.05;
 }
 
-/* Ensure all HUD telemetry & time information remains 100% visible & legible */
-.portrait-hud,
-.hud-center-overlay,
-.portrait-caption {
-  position: relative;
-  z-index: 3;
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto;
-}
-
-.hud-pill,
-.scene-pill,
-.portrait-caption .left,
-.portrait-caption .right {
-  background: rgba(5, 8, 14, 0.82) !important;
-  backdrop-filter: blur(14px) !important;
-  -webkit-backdrop-filter: blur(14px) !important;
-  border: 1px solid rgba(111, 231, 255, 0.28) !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5) !important;
-}
-
-.hud-time-pill {
-  color: var(--cyan) !important;
-  border-color: rgba(111, 231, 255, 0.45) !important;
-  font-weight: 700 !important;
-  letter-spacing: 0.08em !important;
-}
-
+/* Top Telemetry HUD Bar — 100% Visible & Crisp at all times with Live Clock */
 .portrait-hud {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  z-index: 2;
+  gap: 8px;
+  position: relative;
+  z-index: 4;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto;
+  transition: all 0.35s var(--ease);
 }
 
 .hud-pill {
   padding: 7px 12px;
   border-radius: 999px;
-  background: rgba(5, 8, 13, .65);
-  border: 1px solid rgba(255, 255, 255, .14);
-  color: rgba(255, 255, 255, .8);
+  background: rgba(5, 8, 14, 0.85) !important;
+  border: 1px solid rgba(111, 231, 255, 0.32) !important;
+  color: #ffffff !important;
   font-size: 10px;
-  letter-spacing: .14em;
+  letter-spacing: .12em;
   text-transform: uppercase;
   font-family: 'JetBrains Mono', monospace;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6) !important;
+  white-space: nowrap;
 }
 
+.hud-time-pill {
+  color: var(--cyan) !important;
+  border-color: rgba(111, 231, 255, 0.6) !important;
+  box-shadow: 0 0 16px rgba(111, 231, 255, 0.3) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
+}
+
+/* Center 3D Scene Controls & Coordinates — active on default suit portrait; smoothly fades on hover so graphic banner text/icons are 100% unobstructed */
 .hud-center-overlay {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-top: auto;
   margin-bottom: 20px;
-  z-index: 2;
+  position: relative;
+  z-index: 3;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+}
+
+/* Bottom Caption Bar — active on default portrait; smoothly fades on hover so graphic banner text/icons are 100% unobstructed */
+.portrait-caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-end;
+  position: relative;
+  z-index: 3;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+}
+
+/* On Hover / Touch: Hide center & bottom overlays so NO TEXT OR ICONS ON THE GRAPHIC ARE COVERED */
+.portrait-frame:hover .hud-center-overlay,
+.portrait-frame:active .hud-center-overlay,
+.portrait-frame.touch-active .hud-center-overlay,
+.portrait-frame:hover .portrait-caption,
+.portrait-frame:active .portrait-caption,
+.portrait-frame.touch-active .portrait-caption {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(10px);
 }
 
 .hud-geo-coord {
@@ -607,42 +627,39 @@ img {
 }
 
 .scene-pill {
-  background: rgba(5, 8, 13, .7);
-  border: 1px solid rgba(255, 255, 255, .12);
-  color: var(--muted);
+  background: rgba(5, 8, 14, 0.82) !important;
+  border: 1px solid rgba(111, 231, 255, 0.28) !important;
+  color: #ffffff !important;
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
   padding: 6px 12px;
   border-radius: 999px;
   cursor: pointer;
   transition: var(--dur-fast) var(--ease);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5) !important;
 }
 
 .scene-pill:hover,
 .scene-pill.active {
-  background: linear-gradient(135deg, rgba(111, 231, 255, .2), rgba(143, 125, 255, .2));
-  border-color: var(--cyan);
-  color: var(--cyan);
+  background: linear-gradient(135deg, rgba(111, 231, 255, .35), rgba(143, 125, 255, .3)) !important;
+  border-color: var(--cyan) !important;
+  color: var(--cyan) !important;
   font-weight: 600;
-  box-shadow: 0 0 12px rgba(111, 231, 255, .25);
-}
-
-.portrait-caption {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  align-items: flex-end;
-  z-index: 2;
+  box-shadow: 0 0 16px rgba(111, 231, 255, .35) !important;
 }
 
 .portrait-caption .left,
 .portrait-caption .right {
   padding: 12px 14px;
   border-radius: 16px;
-  background: rgba(5, 8, 13, .78);
-  border: 1px solid rgba(255, 255, 255, .1);
-  backdrop-filter: blur(12px);
+  background: rgba(5, 8, 14, 0.82) !important;
+  border: 1px solid rgba(111, 231, 255, 0.28) !important;
+  color: #ffffff !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5) !important;
 }
 
 .portrait-caption .left strong {
@@ -1976,5 +1993,21 @@ footer {
   .timeline-card {
     padding: 18px 16px;
     margin-left: 0;
+  }
+
+  .portrait-hud {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .hud-pill {
+    font-size: 9px;
+    padding: 5px 9px;
+  }
+
+  .portrait-inner {
+    min-height: 420px;
+    padding: 14px;
   }
 }
