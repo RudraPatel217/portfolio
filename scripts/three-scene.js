@@ -486,10 +486,10 @@
           // Simple Theme: Pure, minimal, luxury dark blue background — NO lines, NO grid, NO 3D canvas
           document.body.classList.add('mode-simple');
           document.body.classList.remove('mode-neural');
-          if (label) label.innerHTML = '&bull; Simple';
+          if (label) label.innerHTML = '&bull; Neural';
           if (toggleBtn) {
             toggleBtn.classList.add('mode-simple-active');
-            toggleBtn.setAttribute('title', 'Theme: Simple Dark Blue (Click to switch to 3D Neural Galaxy)');
+            toggleBtn.setAttribute('title', 'Current: Simple Theme (Click to switch to 3D Neural Galaxy)');
           }
 
           if (this.galaxyPoints) {
@@ -505,10 +505,10 @@
           // Neural Theme (Default): 100/10 Moving 3D Cosmic Galaxy Universe Simulation with Scroll Zoom
           document.body.classList.remove('mode-simple');
           document.body.classList.add('mode-neural');
-          if (label) label.innerHTML = '&bull; Neural';
+          if (label) label.innerHTML = '&bull; Simple';
           if (toggleBtn) {
             toggleBtn.classList.remove('mode-simple-active');
-            toggleBtn.setAttribute('title', 'Theme: 3D Neural Galaxy (Click to switch to Simple Dark Blue)');
+            toggleBtn.setAttribute('title', 'Current: 3D Neural Galaxy (Click to switch to Simple Theme)');
           }
 
           if (this.galaxyPoints) {
