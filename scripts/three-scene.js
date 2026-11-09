@@ -460,8 +460,8 @@
       }
 
       initModeToggle() {
-        // Default on open is the Neural theme (the 100/10 3D moving cosmic galaxy simulation)
-        this.setMode('neural', false);
+        // Default on open is the Simple theme (pure, minimal, luxury dark blue)
+        this.setMode('simple', false);
 
         const toggleBtn = document.getElementById('scene-mode-toggle');
         if (toggleBtn) {
