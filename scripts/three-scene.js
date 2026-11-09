@@ -464,15 +464,11 @@
       }
 
       initModeToggle() {
-        this.currentMode = 'neural';
-        document.body.classList.remove('mode-grid');
-        document.body.classList.add('mode-neural');
+        // Default on open is Neural theme (simple dark blue background, no complex design)
+        this.setMode('neural', false);
+
         const toggleBtn = document.getElementById('scene-mode-toggle');
-        const label = document.getElementById('scene-mode-label');
-        if (label) label.innerHTML = '&bull; Neural';
         if (toggleBtn) {
-          toggleBtn.classList.remove('mode-grid-active');
-          toggleBtn.setAttribute('title', '3D Mode: Neural (Click to switch to Grid)');
           toggleBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             this.toggleMode();
@@ -482,15 +478,16 @@
 
       toggleMode() {
         const nextMode = this.currentMode === 'neural' ? 'grid' : 'neural';
-        this.setMode(nextMode);
+        this.setMode(nextMode, true);
       }
 
-      setMode(mode) {
+      setMode(mode, playFeedback = true) {
         this.currentMode = mode;
         const toggleBtn = document.getElementById('scene-mode-toggle');
         const label = document.getElementById('scene-mode-label');
 
         if (mode === 'grid') {
+          // Grid Mode: Activate full moving 3D galaxy universe simulation & cyber grid
           document.body.classList.add('mode-grid');
           document.body.classList.remove('mode-neural');
           if (label) label.innerHTML = '&bull; Grid';
@@ -499,16 +496,23 @@
             toggleBtn.setAttribute('title', '3D Mode: Grid (Click to switch to Neural)');
           }
 
-          // In Grid Mode: elevate cyber grid visibility & relativistic motion
+          if (this.galaxyPoints) {
+            this.galaxyPoints.visible = true;
+          }
+          if (this.coreGroup) {
+            this.coreGroup.visible = true;
+          }
           if (this.gridHelper) {
             this.gridHelper.visible = true;
             this.gridHelper.material.opacity = 0.58;
             this.gridHelper.position.y = -2.4;
           }
-          if (this.galaxyUniforms) {
-            this.galaxyUniforms.uBaseSize.value = window.innerWidth < 768 ? 2.0 : 2.5;
+          if (this.outerFieldPoints) {
+            this.outerFieldPoints.visible = true;
+            this.outerFieldPoints.material.opacity = 0.65;
           }
         } else {
+          // Neural Mode (Default): Clean, simple, luxury dark blue space background — no complex design
           document.body.classList.remove('mode-grid');
           document.body.classList.add('mode-neural');
           if (label) label.innerHTML = '&bull; Neural';
@@ -517,24 +521,31 @@
             toggleBtn.setAttribute('title', '3D Mode: Neural (Click to switch to Grid)');
           }
 
-          // In Neural Mode: celestial galaxy universe balance
+          // Hide complex spiral galaxy, central rings, and grid
+          if (this.galaxyPoints) {
+            this.galaxyPoints.visible = false;
+          }
+          if (this.coreGroup) {
+            this.coreGroup.visible = false;
+          }
           if (this.gridHelper) {
-            this.gridHelper.visible = true;
-            this.gridHelper.material.opacity = 0.16;
-            this.gridHelper.position.y = -3.2;
+            this.gridHelper.visible = false;
           }
-          if (this.galaxyUniforms) {
-            this.galaxyUniforms.uBaseSize.value = window.innerWidth < 768 ? 2.4 : 3.0;
+          // Only faint, peaceful ambient dark-blue stardust drift
+          if (this.outerFieldPoints) {
+            this.outerFieldPoints.visible = true;
+            this.outerFieldPoints.material.opacity = 0.22;
           }
         }
 
-        // Audio synthesizer feedback
-        if (window.soundEngine && typeof window.soundEngine.playBlip === 'function') {
-          window.soundEngine.playBlip(mode === 'grid' ? 880 : 660, 0.05);
+        if (playFeedback) {
+          // Audio synthesizer feedback
+          if (window.soundEngine && typeof window.soundEngine.playBlip === 'function') {
+            window.soundEngine.playBlip(mode === 'grid' ? 880 : 660, 0.05);
+          }
+          // Trigger interactive shockwave at screen center
+          this.triggerClickShockwave(window.innerWidth / 2, window.innerHeight / 2);
         }
-
-        // Trigger interactive shockwave at screen center
-        this.triggerClickShockwave(window.innerWidth / 2, window.innerHeight / 2);
       }
 
       animate() {
@@ -542,8 +553,8 @@
 
         const elapsedTime = this.clock.getElapsedTime();
 
-        // 1. Advance GPU Galaxy Shader Time Uniform
-        if (this.galaxyUniforms) {
+        // 1. Advance GPU Galaxy Shader Time Uniform (only when galaxy is visible in Grid mode)
+        if (this.galaxyPoints && this.galaxyPoints.visible && this.galaxyUniforms) {
           this.galaxyUniforms.uTime.value = elapsedTime;
         }
 
@@ -558,9 +569,8 @@
 
         /**
          * SCROLL ZOOM CHOREOGRAPHY:
-         *   - Scroll = 0 (Hero / Top): Camera at distance z = 23.5, y = 9.2 (Zoomed OUT, full panoramic galaxy view)
-         *   - Scroll Down: Camera dives directly into the galaxy!
-         *     z zooms from 23.5 down to 5.4, y descends from 9.2 down to 1.1 (Zoomed IN, flying through stars)
+         *   - Scroll = 0 (Hero / Top): Camera at distance z = 23.5, y = 9.2 (Zoomed OUT, full panoramic view)
+         *   - Scroll Down: Camera dives directly into the 3D scene (z zooms from 23.5 down to 5.4)
          *   - Scroll Up: Camera smoothly zooms OUT back to z = 23.5!
          */
         const zoomOutZ = 23.5;
@@ -582,13 +592,13 @@
         this.camera.position.y = targetY + parallaxY;
         this.camera.position.z = targetZ;
 
-        // Smooth look-at point drifting through the cosmic core
+        // Smooth look-at point drifting through the scene
         const lookTargetY = -scrollFraction * 0.8;
         const lookTargetX = Math.sin(scrollFraction * Math.PI * 1.5) * 0.6;
         this.camera.lookAt(lookTargetX, lookTargetY, 0);
 
-        // 4. Rotate Galactic Accretion Rings & Singularity Core
-        if (this.coreGroup) {
+        // 4. Rotate Galactic Accretion Rings & Singularity Core (only in Grid mode when visible)
+        if (this.coreGroup && this.coreGroup.visible) {
           this.coreRing1.rotation.z += 0.009;
           this.coreRing2.rotation.z -= 0.007;
           this.coreRing2.rotation.x += 0.005;
@@ -602,12 +612,12 @@
         }
 
         // 5. Outer Cosmic Field Slow Ambient Drift
-        if (this.outerFieldPoints) {
+        if (this.outerFieldPoints && this.outerFieldPoints.visible) {
           this.outerFieldPoints.rotation.y = elapsedTime * 0.008;
         }
 
-        // 6. Spacetime Grid Relativistic Wave Oscillation
-        if (this.gridHelper) {
+        // 6. Spacetime Grid Relativistic Wave Oscillation (only in Grid mode when visible)
+        if (this.gridHelper && this.gridHelper.visible) {
           this.gridHelper.position.z = (elapsedTime * 0.8) % 2;
           this.gridHelper.rotation.y = Math.sin(elapsedTime * 0.15) * 0.03;
         }
