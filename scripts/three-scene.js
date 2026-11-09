@@ -465,13 +465,19 @@
 
       initModeToggle() {
         this.currentMode = 'neural';
+        document.body.classList.remove('mode-grid');
+        document.body.classList.add('mode-neural');
         const toggleBtn = document.getElementById('scene-mode-toggle');
-        if (!toggleBtn) return;
-
-        toggleBtn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          this.toggleMode();
-        });
+        const label = document.getElementById('scene-mode-label');
+        if (label) label.innerHTML = '&bull; Neural';
+        if (toggleBtn) {
+          toggleBtn.classList.remove('mode-grid-active');
+          toggleBtn.setAttribute('title', '3D Mode: Neural (Click to switch to Grid)');
+          toggleBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.toggleMode();
+          });
+        }
       }
 
       toggleMode() {

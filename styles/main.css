@@ -178,36 +178,29 @@ img {
   line-height: .94;
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #7dd3fc 45%, #c084fc 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #7dd3fc;
+.hero-name-white {
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
   display: inline-block;
-  filter: drop-shadow(0 3px 18px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 24px rgba(125, 211, 252, 0.35));
-  transition: all 0.45s var(--ease);
 }
 
-/* Hero Heading High-Contrast Drop Shadow */
+/* Hero Heading High-Contrast Solid White */
 .hero h1 {
+  font-size: clamp(64px, 10vw, 128px);
+  max-width: 720px;
+  margin-bottom: 24px;
+  text-wrap: balance;
+  color: #ffffff !important;
   text-shadow: 0 4px 30px rgba(0, 0, 0, 0.95), 0 2px 10px rgba(0, 0, 0, 0.98);
 }
 
-/* Grid Mode: Transform "Patel." and accent headings to luminous Gold / Amber so they contrast boldly against blue/cyan grid lines */
-body.mode-grid .gradient-text,
-body.mode-grid .hero h1 .gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #fef08a 35%, #fbbf24 75%, #f59e0b 100%) !important;
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  color: #fbbf24 !important;
-  filter: drop-shadow(0 4px 22px rgba(0, 0, 0, 0.98)) drop-shadow(0 0 32px rgba(251, 191, 36, 0.65)) !important;
-}
-
-body.mode-grid .eyebrow {
-  color: #fbbf24 !important;
-  text-shadow: 0 0 14px rgba(251, 191, 36, 0.55);
+.gradient-text {
+  color: #ffffff !important;
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  display: inline-block;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.9);
 }
 
 /* Glassmorphism Surface Base */
@@ -596,67 +589,52 @@ body.mode-grid .eyebrow {
   letter-spacing: 0.08em !important;
 }
 
-/* Single Interactive 3D Mode Toggle Container */
-.hud-toggle-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: auto;
-  margin-bottom: 14px;
-  position: relative;
-  z-index: 3;
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
-}
-
+/* Corner 3D Mode Toggle Pill in Top Status Bar */
 .scene-toggle-pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 7px 16px;
-  border-radius: 999px;
-  background: rgba(5, 8, 14, 0.85);
-  border: 1px solid rgba(111, 231, 255, 0.35);
-  color: #ffffff;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  gap: 6px;
   cursor: pointer;
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6), 0 0 14px rgba(111, 231, 255, 0.22);
-  transition: all 0.3s var(--ease);
+  background: rgba(5, 8, 14, 0.85) !important;
+  border: 1px solid rgba(111, 231, 255, 0.45) !important;
+  color: #ffffff !important;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6), 0 0 14px rgba(111, 231, 255, 0.25) !important;
+  transition: all 0.25s var(--ease);
+  white-space: nowrap;
 }
 
 .scene-toggle-pill:hover {
-  background: rgba(10, 18, 32, 0.95);
-  border-color: var(--cyan);
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.7), 0 0 20px rgba(111, 231, 255, 0.45);
-  transform: translateY(-2px);
+  background: rgba(14, 28, 54, 0.95) !important;
+  border-color: var(--cyan) !important;
+  box-shadow: 0 0 18px rgba(111, 231, 255, 0.5) !important;
+  transform: translateY(-1px);
 }
 
 .scene-toggle-pill.mode-grid-active {
-  color: #fbbf24;
-  border-color: rgba(251, 191, 36, 0.65);
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.6), 0 0 20px rgba(251, 191, 36, 0.35);
+  color: #fbbf24 !important;
+  border-color: rgba(251, 191, 36, 0.65) !important;
+  box-shadow: 0 0 18px rgba(251, 191, 36, 0.4) !important;
 }
 
 .mode-pulse-dot {
-  width: 7px;
-  height: 7px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--cyan);
-  box-shadow: 0 0 10px var(--cyan);
+  box-shadow: 0 0 8px var(--cyan);
   animation: pulseMode 2s infinite ease-in-out;
 }
 
 .scene-toggle-pill.mode-grid-active .mode-pulse-dot {
   background: #fbbf24;
-  box-shadow: 0 0 10px #fbbf24;
+  box-shadow: 0 0 8px #fbbf24;
 }
 
 @keyframes pulseMode {
@@ -667,21 +645,18 @@ body.mode-grid .eyebrow {
 /* Bottom Caption Bar — active on default portrait; smoothly fades on hover so graphic banner text/icons are 100% unobstructed */
 .portrait-caption {
   display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  justify-content: flex-start;
   align-items: flex-end;
   position: relative;
   z-index: 3;
+  margin-top: auto;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
   transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
 }
 
-/* On Hover / Touch: Hide toggle pill & bottom caption so NO TEXT OR ICONS ON THE GRAPHIC ARE COVERED */
-.portrait-frame:hover .hud-toggle-container,
-.portrait-frame:active .hud-toggle-container,
-.portrait-frame.touch-active .hud-toggle-container,
+/* On Hover / Touch: Hide bottom caption so NO TEXT OR ICONS ON THE GRAPHIC ARE COVERED */
 .portrait-frame:hover .portrait-caption,
 .portrait-frame:active .portrait-caption,
 .portrait-frame.touch-active .portrait-caption {
