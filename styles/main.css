@@ -427,7 +427,7 @@ img {
 }
 
 .portrait-frame {
-  width: min(440px, 100%);
+  width: min(460px, 100%);
   border-radius: 30px;
   padding: 12px;
   position: relative;
@@ -458,12 +458,14 @@ img {
   border-radius: 22px;
   overflow: hidden;
   background: #080c14;
-  min-height: 520px;
+  min-height: 530px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 18px;
+  cursor: pointer;
+  user-select: none;
 }
 
 .portrait-photo {
@@ -471,16 +473,43 @@ img {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 10%;
   z-index: 1;
-  transition: transform 0.6s var(--ease), filter 0.6s var(--ease);
-  filter: contrast(1.05) brightness(0.95);
+  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.55s var(--ease),
+              filter 0.45s var(--ease);
 }
 
-.portrait-frame:hover .portrait-photo {
-  transform: scale(1.03);
+.portrait-default {
+  object-fit: cover;
+  object-position: center 10%;
+  opacity: 1;
+  transform: scale(1);
+  filter: contrast(1.05) brightness(0.96);
+}
+
+.portrait-hover {
+  object-fit: contain;
+  object-position: center center;
+  background: radial-gradient(circle at center, #0a1324 0%, #05070d 95%);
+  opacity: 0;
+  transform: scale(0.96);
   filter: contrast(1.08) brightness(1.02);
+  padding: 0;
+}
+
+/* Touch & Hover Reveal States */
+.portrait-frame:hover .portrait-default,
+.portrait-frame:active .portrait-default,
+.portrait-frame.touch-active .portrait-default {
+  opacity: 0;
+  transform: scale(0.94);
+}
+
+.portrait-frame:hover .portrait-hover,
+.portrait-frame:active .portrait-hover,
+.portrait-frame.touch-active .portrait-hover {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .portrait-inner::after {
@@ -489,13 +518,50 @@ img {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(6, 8, 14, 0.45) 0%,
-    rgba(6, 8, 14, 0.05) 30%,
-    rgba(6, 8, 14, 0.25) 60%,
-    rgba(6, 8, 14, 0.88) 100%
+    rgba(6, 8, 14, 0.4) 0%,
+    rgba(6, 8, 14, 0.04) 30%,
+    rgba(6, 8, 14, 0.2) 65%,
+    rgba(6, 8, 14, 0.85) 100%
   );
   z-index: 1;
   pointer-events: none;
+  transition: opacity 0.45s var(--ease);
+}
+
+.portrait-frame:hover .portrait-inner::after,
+.portrait-frame:active .portrait-inner::after,
+.portrait-frame.touch-active .portrait-inner::after {
+  opacity: 0.18;
+}
+
+/* Ensure all HUD telemetry & time information remains 100% visible & legible */
+.portrait-hud,
+.hud-center-overlay,
+.portrait-caption {
+  position: relative;
+  z-index: 3;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto;
+}
+
+.hud-pill,
+.scene-pill,
+.portrait-caption .left,
+.portrait-caption .right {
+  background: rgba(5, 8, 14, 0.82) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(111, 231, 255, 0.28) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5) !important;
+}
+
+.hud-time-pill {
+  color: var(--cyan) !important;
+  border-color: rgba(111, 231, 255, 0.45) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.08em !important;
 }
 
 .portrait-hud {

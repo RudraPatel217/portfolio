@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollSpy();
   initMobileMenu();
   initContactForm();
+  initPortraitTouchToggle();
+  initLiveClock();
   setupConfetti();
 });
 
@@ -445,4 +447,52 @@ function initContactForm() {
       window.location.href = mailtoLink;
     }, 700);
   });
+}
+
+/* --------------------------------------------------------------------------
+   Hero Portrait Touch & Hover Toggle (Zero Cropping)
+   -------------------------------------------------------------------------- */
+function initPortraitTouchToggle() {
+  const frame = document.getElementById('hero-portrait-frame');
+  if (!frame) return;
+
+  frame.addEventListener('touchstart', (e) => {
+    if (e.target.closest('button, a')) return;
+    frame.classList.toggle('touch-active');
+    if (window.soundEngine) {
+      window.soundEngine.playBlip(820, 0.04);
+    }
+  }, { passive: true });
+
+  frame.addEventListener('click', (e) => {
+    if (e.target.closest('button, a')) return;
+    frame.classList.toggle('touch-active');
+    if (window.soundEngine) {
+      window.soundEngine.playBlip(820, 0.04);
+    }
+  });
+}
+
+/* --------------------------------------------------------------------------
+   Live Indian Standard Time (IST) Clock
+   -------------------------------------------------------------------------- */
+function initLiveClock() {
+  const clockEl = document.getElementById('live-ist-clock');
+  if (!clockEl) return;
+
+  function update() {
+    const now = new Date();
+    const options = {
+      timeZone: 'Asia/Kolkata',
+      hour12: true,
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit'
+    };
+    const timeStr = now.toLocaleTimeString('en-US', options);
+    clockEl.innerHTML = `IST &bull; ${timeStr}`;
+  }
+
+  update();
+  setInterval(update, 1000);
 }
